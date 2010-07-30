@@ -1,0 +1,7 @@
+[DEFAULT]
+BASEURL=http://www.google.co.jp/ie
+[InternetShortcut]
+URL=http://www.google.co.jp/ie
+Modified=B0F43124ED8FC20138
+IconFile=http://www.google.co.jp/favicon.ico
+IconIndex=1

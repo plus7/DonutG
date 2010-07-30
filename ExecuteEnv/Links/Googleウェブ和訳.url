@@ -1,0 +1,10 @@
+[InternetShortcut]
+URL=http://www.google.co.jp/language_tools?hl=ja
+IDList=
+IconFile=http://www.google.co.jp/favicon.ico
+IconIndex=1
+[unDonut]
+FrontURL=http://translate.google.com/translate?u=
+BackURL=&sl=en&tl=ja&hl=ja&ie=UTF-8&oe=UTF-8&prev=/language_tools
+Encode=3
+ExPropOpt=1

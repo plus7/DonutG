@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+<script type="text/javascript">
+function Demo(){
+	var DonutP = new ActiveXObject("DONUTP.API");
+
+	var nTabCnt = DonutP.GetTabCount();
+	if (nTabCnt!=0){
+		var WindowEx = DonutP.GetWindowObject(DonutP.TabIndex);
+		var DocumentEx = DonutP.GetDocumentObject(DonutP.TabIndex);
+
+		var str = new String ("toolbar=yes,location=no,directories=no,status=yes,menubar=no,scrollbars=yes, resizable=yes, top=0, left=0, width=400, height=");
+
+		str = str + (screen.height - 100);
+
+		document.writeln ("<html>");
+		document.writeln ("<head>");
+		document.writeln ("</head>");
+		document.writeln ("<body topmargin=0 leftmargin=0 rightmargin=0 bottommargin=0>");
+		document.writeln ("<font style=\"font:8pt Verdana, Arial, Helvetica, Sans-serif; line-height:18pt;\">");
+		document.writeln ("<BR>");
+		document.writeln (" List of all links in <b>" + DocumentEx.title + "</b>:<ol>");
+		var links = DocumentEx.links;
+
+		for (i = 0; i < links.length; i++)
+		{
+			if ( links(i).innerText != "" && links(i).innerText != " ")
+				document.writeln ("<A HREF=\"" + links(i).href + "\" TITLE=" + links(i).href + ">" + links(i).innerText + "</a><BR>");
+			else
+				document.writeln ("<A HREF=\"" + links(i).href + "\">" + links(i).href + "</a><BR>");
+		}
+		document.writeln ("</ol></body>");
+		document.writeln ("</font></html>");
+	}
+}
+</script>
+
+</head>
+<body onLoad="Demo()";>
+
+</body>
+</html>

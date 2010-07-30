@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>JavaScript Sample</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+<script type="text/javascript">
+function Demo(){
+	var DonutP = new ActiveXObject("DONUTP.API");
+
+	var ii;
+	var nTabCnt = DonutP.GetTabCount();
+	window.alert("タブ数 = "+nTabCnt);
+	for (ii=0; ii<nTabCnt; ii++)
+	{
+		window.alert(ii+"番目をアクティブにします。");
+		DonutP.TabIndex = ii;
+	}
+}
+</script>
+
+</head>
+<body>
+
+<input type="button" value="Demo" onclick="Demo()">
+<form action="#">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+a:link,a:visited,a:hover {text-decoration: none;}
+a:link		{color:#993333;}
+a:visited	{color:#6666cc;}
+a:hover		{color:#FF00FF;}
+body		{background-color:#FFCCCC ; margin:32px;}
+body,th,td,h1	{line-height:125%;}
+
+body,th,td { color:#333333 ; font-family:'Tahoma','verdana','MS UI Gothic','‚l‚r ‚oƒSƒVƒbƒN' ;}
+
+hr {color:#333333 ; width:100% ; border-style:dashed ;height:2 ;}
+hr.tensen {color:#000000 ; width:95% ; border-style:dotted ; height:2 ; margin : 0px,4px ;}
+
+
+h1 {
+	padding: 10px;
+	font:bold 20pt;
+	color: #330000;
+	background: #8080FF;
+	width:100%;
+	filter:Alpha( Opacity=70, FinishOpacity=100, Style=3);
+}
+
+H2{
+	padding : 0px 2px;padding-bottom : 0px;padding-left : 2px;
+	font:bold 10pt;
+	color:#333333;
+	background:#FFAAAA;
+	border-left:8px solid #996666;
+	
+
+  margin-top : 4px;
+  margin-bottom : 4px;
+}
+
+H3 {
+	padding : -1px;padding-right : 2px;padding-bottom : -1px;padding-left : 2px;
+	font:bold 10pt;
+	color:#333333;
+	background:#FFAAAA;
+	border-left : solid #996666;border-left-width : 8px;
+	width:100%;
+  margin-top : 10px;
+  margin-bottom : 0px;
+}
+
+h4 {
+	padding:4px;
+	font:bold 10pt;
+	color: #333333;
+	background:#FFAAAA;
+	border-left:8px solid #996666;
+	width:70%;
+}

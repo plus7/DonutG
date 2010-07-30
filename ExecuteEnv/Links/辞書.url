@@ -1,0 +1,10 @@
+[InternetShortcut]
+URL=http://dictionary.goo.ne.jp/index.html
+IDList=
+IconFile=http://dictionary.goo.ne.jp/favicon.ico
+IconIndex=1
+[unDonut]
+FrontURL=http://dictionary.goo.ne.jp/search.php?MT=
+BackURL=&kind=all&mode=0&kwassist=0
+Encode=1
+ExPropOpt=0
