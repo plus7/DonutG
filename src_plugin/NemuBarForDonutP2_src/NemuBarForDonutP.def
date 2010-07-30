@@ -1,0 +1,9 @@
+; NemuBarForDonutP.def : モジュール パラメータを宣言します。
+
+LIBRARY      "NemuBarForDonutP.DLL"
+
+EXPORTS
+	CreateToolBar		@1
+	ShowToolBarMenu		@2
+	PluginSetting		@3
+	GetPluginInfo		@4

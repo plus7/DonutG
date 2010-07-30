@@ -1,0 +1,381 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.21022.08 (b72b4f09).
+//
+// e:\proj\und\src_plugin\pluginmaking\linkextractbar\debug\undonut.tlh
+//
+// C++ source equivalent of Win32 type library C:\\ut\unDonut\\unDonut.exe
+// compiler-generated file created 07/07/08 at 02:28:34 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("2bcc2287-aaef-4f0e-a86b-c206ecabf44d"))
+/* LIBID */ __DONUTPLib;
+struct __declspec(uuid("cff8cb23-2580-4be4-bb49-4a2c1b645164"))
+/* dispinterface */ IDonutPEvents;
+struct /* coclass */ API;
+struct __declspec(uuid("1413c5b5-0352-47aa-85c6-9219f243f5e8"))
+/* dual interface */ IAPI;
+struct __declspec(uuid("a7b5128a-e147-41d2-8155-4b9bae449df4"))
+/* dual interface */ IAPI2;
+struct __declspec(uuid("738a9354-d4e7-4dd9-861b-15d79f2c46f5"))
+/* dual interface */ IAPI3;
+struct __declspec(uuid("b437832f-a3a8-4948-9d42-64d1b91c604e"))
+/* dual interface */ IAPI4;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IDonutPEvents, __uuidof(IDonutPEvents));
+_COM_SMARTPTR_TYPEDEF(IAPI, __uuidof(IAPI));
+_COM_SMARTPTR_TYPEDEF(IAPI2, __uuidof(IAPI2));
+_COM_SMARTPTR_TYPEDEF(IAPI3, __uuidof(IAPI3));
+_COM_SMARTPTR_TYPEDEF(IAPI4, __uuidof(IAPI4));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("cff8cb23-2580-4be4-bb49-4a2c1b645164"))
+IDonutPEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT DocumentComplete (
+        long nIndex,
+        IDispatch * pDisp,
+        _bstr_t bstrURL );
+};
+
+struct __declspec(uuid("dfa77729-9333-4e33-8d52-7d4684cf9867"))
+API;
+    // interface IAPI
+    // interface IAPI2
+    // interface IAPI3
+    // [ default ] interface IAPI4
+    // [ default, source ] dispinterface IDonutPEvents
+
+struct __declspec(uuid("1413c5b5-0352-47aa-85c6-9219f243f5e8"))
+IAPI : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetTabIndex,put=PutTabIndex))
+    long TabIndex;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Close (
+        int nIndex );
+    IDispatchPtr GetDocumentObject (
+        int nIndex );
+    IDispatchPtr GetWindowObject (
+        int nIndex );
+    IDispatchPtr GetWebBrowserObject (
+        int nIndex );
+    long GetTabIndex ( );
+    void PutTabIndex (
+        long pVal );
+    long GetTabCount ( );
+    HRESULT MoveToTab (
+        unsigned short wBefor,
+        unsigned short wAfter );
+    long NewWindow (
+        _bstr_t bstrURL,
+        long bActive );
+    long MessageBox (
+        _bstr_t bstrText,
+        _bstr_t bstrCaption,
+        unsigned int uType );
+    HRESULT ShowPanelBar ( );
+    IDispatchPtr GetPanelDocumentObject ( );
+    IDispatchPtr GetPanelWindowObject ( );
+    IDispatchPtr GetPanelWebBrowserObject ( );
+    long GetTabState (
+        int nIndex );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Close (
+        int nIndex ) = 0;
+      virtual HRESULT __stdcall raw_GetDocumentObject (
+        int nIndex,
+        /*[out,retval]*/ IDispatch * * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetWindowObject (
+        int nIndex,
+        /*[out,retval]*/ IDispatch * * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetWebBrowserObject (
+        int nIndex,
+        /*[out,retval]*/ IDispatch * * pVal ) = 0;
+      virtual HRESULT __stdcall get_TabIndex (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_TabIndex (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetTabCount (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_MoveToTab (
+        unsigned short wBefor,
+        unsigned short wAfter ) = 0;
+      virtual HRESULT __stdcall raw_NewWindow (
+        BSTR bstrURL,
+        long bActive,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_MessageBox (
+        BSTR bstrText,
+        BSTR bstrCaption,
+        unsigned int uType,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_ShowPanelBar ( ) = 0;
+      virtual HRESULT __stdcall raw_GetPanelDocumentObject (
+        /*[out,retval]*/ IDispatch * * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetPanelWindowObject (
+        /*[out,retval]*/ IDispatch * * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetPanelWebBrowserObject (
+        /*[out,retval]*/ IDispatch * * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetTabState (
+        int nIndex,
+        /*[out,retval]*/ long * pVal ) = 0;
+};
+
+struct __declspec(uuid("a7b5128a-e147-41d2-8155-4b9bae449df4"))
+IAPI2 : IAPI
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT ExecuteCommand (
+        int nCommand );
+    _bstr_t GetSearchText ( );
+    HRESULT SetSearchText (
+        _bstr_t bstrText );
+    _bstr_t GetAddressText ( );
+    HRESULT SetAddressText (
+        _bstr_t bstrText );
+    long GetExtendedTabState (
+        int nIndex );
+    HRESULT SetExtendedTabState (
+        int nIndex,
+        long nState );
+    long GetKeyState (
+        int nKey );
+    long GetProfileInt (
+        _bstr_t bstrFile,
+        _bstr_t bstrSection,
+        _bstr_t bstrKey,
+        int nDefault );
+    HRESULT WriteProfileInt (
+        _bstr_t bstrFile,
+        _bstr_t bstrSection,
+        _bstr_t bstrKey,
+        int nValue );
+    _bstr_t GetProfileString (
+        _bstr_t bstrFile,
+        _bstr_t bstrSection,
+        _bstr_t bstrKey,
+        _bstr_t bstrDefault );
+    HRESULT WriteProfileString (
+        _bstr_t bstrFile,
+        _bstr_t bstrSection,
+        _bstr_t bstrKey,
+        _bstr_t bstrText );
+    _bstr_t GetScriptFolder ( );
+    _bstr_t GetCSSFolder ( );
+    _bstr_t GetBaseFolder ( );
+    _bstr_t GetExePath ( );
+    HRESULT SetStyleSheet (
+        int nIndex,
+        _bstr_t bstrStyleSheet,
+        long bOff );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_ExecuteCommand (
+        int nCommand ) = 0;
+      virtual HRESULT __stdcall raw_GetSearchText (
+        /*[out,retval]*/ BSTR * pbstrText ) = 0;
+      virtual HRESULT __stdcall raw_SetSearchText (
+        BSTR bstrText ) = 0;
+      virtual HRESULT __stdcall raw_GetAddressText (
+        /*[out,retval]*/ BSTR * pbstrText ) = 0;
+      virtual HRESULT __stdcall raw_SetAddressText (
+        BSTR bstrText ) = 0;
+      virtual HRESULT __stdcall raw_GetExtendedTabState (
+        int nIndex,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_SetExtendedTabState (
+        int nIndex,
+        long nState ) = 0;
+      virtual HRESULT __stdcall raw_GetKeyState (
+        int nKey,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetProfileInt (
+        BSTR bstrFile,
+        BSTR bstrSection,
+        BSTR bstrKey,
+        int nDefault,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_WriteProfileInt (
+        BSTR bstrFile,
+        BSTR bstrSection,
+        BSTR bstrKey,
+        int nValue ) = 0;
+      virtual HRESULT __stdcall raw_GetProfileString (
+        BSTR bstrFile,
+        BSTR bstrSection,
+        BSTR bstrKey,
+        BSTR bstrDefault,
+        /*[out,retval]*/ BSTR * pbstrText ) = 0;
+      virtual HRESULT __stdcall raw_WriteProfileString (
+        BSTR bstrFile,
+        BSTR bstrSection,
+        BSTR bstrKey,
+        BSTR bstrText ) = 0;
+      virtual HRESULT __stdcall raw_GetScriptFolder (
+        /*[out,retval]*/ BSTR * pbstrFolder ) = 0;
+      virtual HRESULT __stdcall raw_GetCSSFolder (
+        /*[out,retval]*/ BSTR * pbstrFolder ) = 0;
+      virtual HRESULT __stdcall raw_GetBaseFolder (
+        /*[out,retval]*/ BSTR * pbstrFolder ) = 0;
+      virtual HRESULT __stdcall raw_GetExePath (
+        /*[out,retval]*/ BSTR * pbstrPath ) = 0;
+      virtual HRESULT __stdcall raw_SetStyleSheet (
+        int nIndex,
+        BSTR bstrStyleSheet,
+        long bOff ) = 0;
+};
+
+struct __declspec(uuid("738a9354-d4e7-4dd9-861b-15d79f2c46f5"))
+IAPI3 : IAPI2
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SaveGroup (
+        _bstr_t bstrGroupFile );
+    HRESULT LoadGroup (
+        _bstr_t bstrGroupFile,
+        long bClose );
+    _bstr_t EncryptString (
+        _bstr_t bstrString,
+        _bstr_t bstrPass );
+    _bstr_t DecryptString (
+        _bstr_t bstrString );
+    long InputBox (
+        _bstr_t bstrTitle,
+        _bstr_t bstrDescript,
+        _bstr_t bstrDefault,
+        int nFlag );
+    long NewWindow3 (
+        _bstr_t bstrURL,
+        long bActive,
+        long ExStyle,
+        int * pHistInfo );
+    long AddGroupItem (
+        _bstr_t bstrGroupFile,
+        int nIndex );
+    long DeleteGroupItem (
+        _bstr_t bstrGroupFile,
+        int nIndex );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SaveGroup (
+        BSTR bstrGroupFile ) = 0;
+      virtual HRESULT __stdcall raw_LoadGroup (
+        BSTR bstrGroupFile,
+        long bClose ) = 0;
+      virtual HRESULT __stdcall raw_EncryptString (
+        BSTR bstrString,
+        BSTR bstrPass,
+        /*[out,retval]*/ BSTR * bstrRet ) = 0;
+      virtual HRESULT __stdcall raw_DecryptString (
+        BSTR bstrString,
+        /*[out,retval]*/ BSTR * bstrRet ) = 0;
+      virtual HRESULT __stdcall raw_InputBox (
+        BSTR bstrTitle,
+        BSTR bstrDescript,
+        BSTR bstrDefault,
+        int nFlag,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_NewWindow3 (
+        BSTR bstrURL,
+        long bActive,
+        long ExStyle,
+        /*[in]*/ int * pHistInfo,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_AddGroupItem (
+        BSTR bstrGroupFile,
+        int nIndex,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_DeleteGroupItem (
+        BSTR bstrGroupFile,
+        int nIndex,
+        /*[out,retval]*/ long * pVal ) = 0;
+};
+
+struct __declspec(uuid("b437832f-a3a8-4948-9d42-64d1b91c604e"))
+IAPI4 : IAPI3
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetHWND (
+        long nType );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetHWND (
+        long nType,
+        /*[out,retval]*/ long * pVal ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_DONUTPLib =
+    {0x2bcc2287,0xaaef,0x4f0e,{0xa8,0x6b,0xc2,0x06,0xec,0xab,0xf4,0x4d}};
+extern "C" const GUID __declspec(selectany) DIID_IDonutPEvents =
+    {0xcff8cb23,0x2580,0x4be4,{0xbb,0x49,0x4a,0x2c,0x1b,0x64,0x51,0x64}};
+extern "C" const GUID __declspec(selectany) CLSID_API =
+    {0xdfa77729,0x9333,0x4e33,{0x8d,0x52,0x7d,0x46,0x84,0xcf,0x98,0x67}};
+extern "C" const GUID __declspec(selectany) IID_IAPI =
+    {0x1413c5b5,0x0352,0x47aa,{0x85,0xc6,0x92,0x19,0xf2,0x43,0xf5,0xe8}};
+extern "C" const GUID __declspec(selectany) IID_IAPI2 =
+    {0xa7b5128a,0xe147,0x41d2,{0x81,0x55,0x4b,0x9b,0xae,0x44,0x9d,0xf4}};
+extern "C" const GUID __declspec(selectany) IID_IAPI3 =
+    {0x738a9354,0xd4e7,0x4dd9,{0x86,0x1b,0x15,0xd7,0x9f,0x2c,0x46,0xf5}};
+extern "C" const GUID __declspec(selectany) IID_IAPI4 =
+    {0xb437832f,0xa3a8,0x4948,{0x9d,0x42,0x64,0xd1,0xb9,0x1c,0x60,0x4e}};
+
+//
+// Wrapper method implementations
+//
+
+#include "e:\proj\und\src_plugin\pluginmaking\linkextractbar\debug\undonut.tli"
+
+#pragma pack(pop)

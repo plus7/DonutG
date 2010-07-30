@@ -1,0 +1,9 @@
+; TabMoveBar.def : DLL 用のモジュール パラメータ宣言
+
+LIBRARY      "TabMoveBar"
+; DESCRIPTION  'TabMoveBar Windows Dynamic Link Library'
+
+EXPORTS
+    CreateToolBar	@1
+	GetPluginInfo	@2
+	PreTranslateMessage	@3

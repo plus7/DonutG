@@ -1,0 +1,226 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\LinkExtractBar.rc2""  // Microsoft Visual C++ 以外のツールで編集されたリソース\r\n"
+    "#include ""l.jpn\\afxres.rc""          // 標準のコンポーネント\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,3,0,0
+ PRODUCTVERSION 0,3,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "FileDescription", "LinkExtractBar DLL"
+            VALUE "FileVersion", "0, 3, 0, 0"
+            VALUE "InternalName", "LinkExtractBar"
+            VALUE "LegalCopyright", "Copyright (C) 2003 ミニット modified by +mod"
+            VALUE "OriginalFilename", "LinkExtractBar.DLL"
+            VALUE "ProductName", "LinkExtractBar ﾀﾞｲﾅﾐｯｸ ﾘﾝｸ ﾗｲﾌﾞﾗﾘ"
+            VALUE "ProductVersion", "0, 3, 0, 2"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 278, 243
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "リンク抽出ダイアログ"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO1,64,22,203,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,64,38,202,60,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,64,54,202,60,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,2,118,262,104,WS_EX_CLIENTEDGE
+    LTEXT           "除外する拡張子",IDC_STATIC,4,54,60,12,SS_CENTERIMAGE
+    LTEXT           "抽出対象フレーム",IDC_STATIC,4,22,58,12,SS_CENTERIMAGE
+    LTEXT           "抽出する拡張子",IDC_STATIC,4,38,60,12,SS_CENTERIMAGE
+    LTEXT           "検索文字列",IDC_STATIC,4,70,58,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT1,64,70,202,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "閉じる(&x)",IDC_BUTTON1,215,224,50,14
+    PUSHBUTTON      "リンクを開く",IDC_OPEN,52,4,44,14
+    PUSHBUTTON      "コピー",IDC_COPY,4,4,44,14
+    PUSHBUTTON      "保存",IDC_SAVE,100,4,44,14
+    CONTROL         "Sボタン",IDC_CHK_SBTN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,6,32,10
+    COMBOBOX        IDC_CMB_SBTN_SEL,187,4,48,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "上記条件で絞り込み",IDC_FILTER,4,86,62,14
+    PUSHBUTTON      "Irvine",IDC_IRVINE,76,86,30,14
+    PUSHBUTTON      "Iria",IDC_IRIA,108,86,30,14
+    PUSHBUTTON      "FlashGet",IDC_FLASHGET,140,86,30,14
+    PUSHBUTTON      "ＤＣさくら",IDC_DCSAKURA,172,86,30,14
+    PUSHBUTTON      "NetTrans",IDC_NETTRANS,204,86,30,14
+    PUSHBUTTON      "Reget",IDC_REGET,236,86,30,14
+    CONTROL         "",IDC_STATIC2,"Static",SS_SIMPLE | SS_CENTERIMAGE,2,226,124,12
+    CONTROL         "正規表現を用いる",IDC_REGEX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,104,63,10
+    CONTROL         "選択項目に適用",IDC_SELECTED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,72,104,59,10
+    CONTROL         "<IMG>タグを抽出",IDC_IMGEXTRACT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,140,104,60,10
+    CONTROL         "検索条件を保存",IDC_CHK_SAVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,208,104,58,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 271
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 236
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP              BITMAP                  "ToolBar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_POPMENU MENU 
+BEGIN
+    POPUP "dummy"
+    BEGIN
+        MENUITEM "全て選択(&A)",                    ID_ALLSELECT
+        MENUITEM "選択反転(&I)",                    ID_SELECTREVERSE
+        MENUITEM "選択解除(&R)",                    ID_SELECTRELEASE
+        MENUITEM SEPARATOR
+        MENUITEM "選択項目をリストから除く(&E)",            ID_EXCLUDESELECT
+        MENUITEM "選択項目のみ残す(&S)",                ID_EXCLUDENOTSELECT
+        MENUITEM SEPARATOR
+        MENUITEM "選択項目を開く(&O)",                 ID_SELECTEDITEM_OPEN
+        MENUITEM "全ての項目を開く(&F)",                ID_ALLITEM_OPEN
+//      MENUITEM ";;;",                         ID_EXTRACT_LINK
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_EXTRACT_LINK        "リンク抽出"
+    IDS_SEND_TO_DOWNLOADER  "ダウンローダーへ送る"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE 17, 1
+#pragma code_page(932)
+#endif //_WIN32
+#include "res\LinkExtractBar.rc2"  // Microsoft Visual C++ 以外のツールで編集されたリソース
+#include "l.jpn\afxres.rc"          // 標準のコンポーネント
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

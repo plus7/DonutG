@@ -1,0 +1,20 @@
+// NemuBarForDonutP.idl : NemuBarForDonutP.dll 用の IDL ソース ファイル
+//
+
+// このファイルはタイプ ライブラリ (NemuBarForDonutP.tlb) を作成するために
+// タイプ ライブラリ作成ツール MIDL によって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(EAC71901-5AAB-46DA-A14A-484795BA5E14),
+	version(1.0),
+	helpstring("NemuBarForDonutP 1.0 ﾀｲﾌﾟ ﾗｲﾌﾞﾗﾘ")
+]
+library NEMUBARFORDONUTPLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+};

@@ -1,0 +1,11 @@
+; TmpFavGroup.def : DLL 用のモジュール パラメータ宣言
+
+LIBRARY      "TmpFavGroup"
+; DESCRIPTION  'TmpFavGroup Windows Dynamic Link Library'
+
+EXPORTS
+
+    CreateExplorerPane	@1
+	GetPluginInfo		@2
+	PreTranslateMessage	@3
+	ShowExplorerMenu	@4

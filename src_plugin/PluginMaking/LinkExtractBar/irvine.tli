@@ -1,0 +1,1670 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.21022.08 (fa5e0ebe).
+//
+// e:\proj\und\src_plugin\pluginmaking\linkextractbar\debug\irvine.tli
+//
+// Wrapper implementations for Win32 type library C:\\ut\\irvine\\irvine.exe
+// compiler-generated file created 07/07/08 at 02:28:34 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IItem wrapper method implementations
+//
+
+inline _bstr_t IItem::GetData ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Data(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IItem::PutData ( _bstr_t Value ) {
+    HRESULT _hr = put_Data(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IItem::GetUrl ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Url(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IItem::PutUrl ( _bstr_t Value ) {
+    HRESULT _hr = put_Url(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IItem::GetFolder ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Folder(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IItem::PutFolder ( _bstr_t Value ) {
+    HRESULT _hr = put_Folder(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IItem::GetFilename ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Filename(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IItem::PutFilename ( _bstr_t Value ) {
+    HRESULT _hr = put_Filename(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IItem::GetReferer ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Referer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IItem::PutReferer ( _bstr_t Value ) {
+    HRESULT _hr = put_Referer(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IItem::GetCookie ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Cookie(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IItem::PutCookie ( _bstr_t Value ) {
+    HRESULT _hr = put_Cookie(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IItem::GetCheck ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Check(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IItem::PutCheck ( _bstr_t Value ) {
+    HRESULT _hr = put_Check(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IItem::GetSplitCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SplitCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IItem::PutSplitCount ( long Value ) {
+    HRESULT _hr = put_SplitCount(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IItem::GetAuthorization ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Authorization(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IItem::PutAuthorization ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_Authorization(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IItem::GetUserId ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_UserId(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IItem::PutUserId ( _bstr_t Value ) {
+    HRESULT _hr = put_UserId(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IItem::GetPassword ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Password(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IItem::PutPassword ( _bstr_t Value ) {
+    HRESULT _hr = put_Password(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IItem::GetRegistDate ( ) {
+    double _result = 0;
+    HRESULT _hr = get_RegistDate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IItem::PutRegistDate ( double Value ) {
+    HRESULT _hr = put_RegistDate(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IItem::GetSuccess ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Success(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IItem::PutSuccess ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_Success(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IItem::GetComment ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Comment(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IItem::PutComment ( _bstr_t Value ) {
+    HRESULT _hr = put_Comment(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IItem::GetFileSize ( ) {
+    long _result = 0;
+    HRESULT _hr = get_FileSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IItem::PutFileSize ( long Value ) {
+    HRESULT _hr = put_FileSize(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IItem::GetDLSize ( ) {
+    long _result = 0;
+    HRESULT _hr = get_DLSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IItem::PutDLSize ( long Value ) {
+    HRESULT _hr = put_DLSize(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IItem::GetError ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Error(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IItem::PutError ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_Error(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IItem::GetDownloadedFilename ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_DownloadedFilename(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IItem::PutDownloadedFilename ( _bstr_t Value ) {
+    HRESULT _hr = put_DownloadedFilename(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IItem::GetSuccessDate ( ) {
+    double _result = 0;
+    HRESULT _hr = get_SuccessDate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IItem::PutSuccessDate ( double Value ) {
+    HRESULT _hr = put_SuccessDate(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IItem::GetQueue ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Queue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IItem::PutQueue ( _bstr_t Value ) {
+    HRESULT _hr = put_Queue(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IFolder wrapper method implementations
+//
+
+inline long IFolder::GetItemCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ItemCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IItemPtr IFolder::GetItems ( long Index ) {
+    struct IItem * _result = 0;
+    HRESULT _hr = get_Items(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IItemPtr(_result, false);
+}
+
+inline void IFolder::PutItems ( long Index, struct IItem * Item ) {
+    HRESULT _hr = put_Items(Index, Item);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IFolder::GetFolderCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_FolderCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IFolderPtr IFolder::GetFolders ( long Index ) {
+    struct IFolder * _result = 0;
+    HRESULT _hr = get_Folders(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IFolderPtr(_result, false);
+}
+
+inline VARIANT_BOOL IFolder::IsCurrent ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsCurrent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IFolder::IsDefault ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsDefault(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IFolder::IsTrash ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsTrash(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IFolder::IsRoot ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsRoot(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IFolderPtr IFolder::GetParent ( ) {
+    struct IFolder * _result = 0;
+    HRESULT _hr = get_Parent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IFolderPtr(_result, false);
+}
+
+inline _bstr_t IFolder::GetData ( _bstr_t Section, _bstr_t Ident ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Data(Section, Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IFolder::PutData ( _bstr_t Section, _bstr_t Ident, _bstr_t Value ) {
+    HRESULT _hr = put_Data(Section, Ident, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IFolder::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IFolder::GetAbsolutePath ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_AbsolutePath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IFolder::PutAbsolutePath ( _bstr_t Value ) {
+    HRESULT _hr = put_AbsolutePath(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IFolder::DataExists ( _bstr_t Section, _bstr_t Ident ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_DataExists(Section, Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IFolder::GetPath ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Path(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IFolder::PutPath ( _bstr_t Value ) {
+    HRESULT _hr = put_Path(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IFolder::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IFolder::AddItemData ( _bstr_t DataText ) {
+    long _result = 0;
+    HRESULT _hr = raw_AddItemData(DataText, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IFolder::DeleteItem ( long Index ) {
+    HRESULT _hr = raw_DeleteItem(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFolder::Start ( ) {
+    HRESULT _hr = raw_Start();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFolder::Stop ( ) {
+    HRESULT _hr = raw_Stop();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFolder::StartItem ( long Index ) {
+    HRESULT _hr = raw_StartItem(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFolder::StopItem ( long Index ) {
+    HRESULT _hr = raw_StopItem(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IFolder::GetItemFilename ( long Index ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetItemFilename(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IFolder::GetItemIndexFilename ( long Index ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetItemIndexFilename(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IFolder::GetItemFileSize ( long Index ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetItemFileSize(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IFolder::DownloadItem ( long Index ) {
+    HRESULT _hr = raw_DownloadItem(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IFolder::GetItemData ( long Index ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ItemData(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IFolder::PutItemData ( long Index, _bstr_t Value ) {
+    HRESULT _hr = put_ItemData(Index, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IFolder::AddItem ( struct IItem * Item ) {
+    long _result = 0;
+    HRESULT _hr = raw_AddItem(Item, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IFolder::IsBusy ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsBusy(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IFolder::GetActiveDownloadCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ActiveDownloadCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IFolder::GetActiveQueueCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ActiveQueueCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IFolder::Exists ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Exists(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IFolder::Make ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Make(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IFolder::ExtractItem ( long Index ) {
+    HRESULT _hr = raw_ExtractItem(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IFolder::GetValues ( _bstr_t Ident ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Values(Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IFolder::PutValues ( _bstr_t Ident, _bstr_t Value ) {
+    HRESULT _hr = put_Values(Ident, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IFolder::ValueExists ( _bstr_t Ident ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ValueExists(Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IFolder::AssignData ( struct IFolder * Source ) {
+    HRESULT _hr = raw_AssignData(Source);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IApi wrapper method implementations
+//
+
+inline _bstr_t IApi::GetVersion ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Version(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IApi::GetHInstance ( ) {
+    long _result = 0;
+    HRESULT _hr = get_HInstance(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IApi::GetWindowHandle ( ) {
+    long _result = 0;
+    HRESULT _hr = get_WindowHandle(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IApi::GetApplicationPath ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ApplicationPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IApi::GetPluginsPath ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_PluginsPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IApi::GetImportPath ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ImportPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline double IApi::GetTotalBytes ( ) {
+    double _result = 0;
+    HRESULT _hr = get_TotalBytes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IApi::GetTotalFiles ( ) {
+    double _result = 0;
+    HRESULT _hr = get_TotalFiles(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IApi::GetIniFilename ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_IniFilename(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IApi::AddUrl ( _bstr_t Urls, long Flag ) {
+    HRESULT _hr = raw_AddUrl(Urls, Flag);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::Import ( _bstr_t Filename ) {
+    HRESULT _hr = raw_Import(Filename);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::Save ( ) {
+    HRESULT _hr = raw_Save();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::Quit ( ) {
+    HRESULT _hr = raw_Quit();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::Download ( _bstr_t Url, long Flag ) {
+    HRESULT _hr = raw_Download(Url, Flag);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IApi::GetScriptsPath ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ScriptsPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IApi::Clear ( ) {
+    HRESULT _hr = raw_Clear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::ForegroundWindow ( ) {
+    HRESULT _hr = raw_ForegroundWindow();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::Start ( long Flag ) {
+    HRESULT _hr = raw_Start(Flag);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::Stop ( long Flag ) {
+    HRESULT _hr = raw_Stop(Flag);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::Dialup ( ) {
+    HRESULT _hr = raw_Dialup();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::Hangup ( ) {
+    HRESULT _hr = raw_Hangup();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IApi::GetItemCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ItemCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IApi::Paste ( long Flag ) {
+    HRESULT _hr = raw_Paste(Flag);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IApi::EnumQueueFolders ( _bstr_t AbsolutePath ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_EnumQueueFolders(AbsolutePath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IApi::GetCurrentQueueFolder ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_CurrentQueueFolder(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IApi::PutCurrentQueueFolder ( _bstr_t Value ) {
+    HRESULT _hr = put_CurrentQueueFolder(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IApi::GetOptionData ( _bstr_t Section, _bstr_t Ident ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetOptionData(Section, Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IApi::SetOptionData ( _bstr_t Section, _bstr_t Ident, _bstr_t Value ) {
+    HRESULT _hr = raw_SetOptionData(Section, Ident, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IApi::GetFolderData ( _bstr_t Section, _bstr_t Ident ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetFolderData(Section, Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IApi::SetFolderData ( _bstr_t Section, _bstr_t Ident, _bstr_t Value ) {
+    HRESULT _hr = raw_SetFolderData(Section, Ident, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IApi::CreateQueueFolder ( _bstr_t Name, VARIANT_BOOL OpenFolder ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CreateQueueFolder(Name, OpenFolder, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IApi::AddIRI ( _bstr_t IriaListText ) {
+    HRESULT _hr = raw_AddIRI(IriaListText);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::ImportLinks ( _bstr_t Urls, long Flag ) {
+    HRESULT _hr = raw_ImportLinks(Urls, Flag);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::AddUrlAndReferer ( _bstr_t Urls, _bstr_t Referer, long Flag ) {
+    HRESULT _hr = raw_AddUrlAndReferer(Urls, Referer, Flag);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IApi::DeleteQueueFolder ( _bstr_t AbsolutePath, VARIANT_BOOL Confirm ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_DeleteQueueFolder(AbsolutePath, Confirm, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IApi::CreateQueueItem ( _bstr_t DataText, VARIANT_BOOL Confirm ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CreateQueueItem(DataText, Confirm, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IApi::ExecuteAction ( _bstr_t ActionName ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ExecuteAction(ActionName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IApi::GetSelectedItemCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SelectedItemCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IApi::GetItemData ( long Index ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetItemData(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IApi::SetItemData ( long Index, _bstr_t Value ) {
+    HRESULT _hr = raw_SetItemData(Index, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IApi::GetItemSelected ( long Index ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetItemSelected(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IApi::SetItemSelected ( long Index, VARIANT_BOOL Value ) {
+    HRESULT _hr = raw_SetItemSelected(Index, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IApi::UrlEncode ( _bstr_t Str, _bstr_t IgnoreChars, VARIANT_BOOL SpaceToPlus ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_UrlEncode(Str, IgnoreChars, SpaceToPlus, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IApi::UrlDecode ( _bstr_t Str, VARIANT_BOOL PlusToSpace ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_UrlDecode(Str, PlusToSpace, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IApi::Invalidate ( ) {
+    HRESULT _hr = raw_Invalidate();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::BeginProgressBar ( long MaxCount ) {
+    HRESULT _hr = raw_BeginProgressBar(MaxCount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::EndProgressBar ( ) {
+    HRESULT _hr = raw_EndProgressBar();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::ProgressBarStepBy ( long Delta ) {
+    HRESULT _hr = raw_ProgressBarStepBy(Delta);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::DeleteItem ( long Index ) {
+    HRESULT _hr = raw_DeleteItem(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IApi::GetItemFilename ( long Index ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetItemFilename(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IApi::ForceQueueFolders ( _bstr_t AbsolutePath, VARIANT_BOOL OpenFolder, long Flag ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ForceQueueFolders(AbsolutePath, OpenFolder, Flag, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IApi::UpQueueFolder ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_UpQueueFolder(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IApi::ChangeTab ( long Mode ) {
+    HRESULT _hr = raw_ChangeTab(Mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IApi::GetItemIndexFilename ( long Index ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetItemIndexFilename(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IApi::GetItemFileSize ( long Index ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetItemFileSize(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IApi::GetFileSize ( _bstr_t Filename ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetFileSize(Filename, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IApi::EnumQueueFolders2 ( _bstr_t AbsolutePath ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_EnumQueueFolders2(AbsolutePath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IApi::GetStatusBarText ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_StatusBarText(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IApi::PutStatusBarText ( _bstr_t Value ) {
+    HRESULT _hr = put_StatusBarText(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IApi::GetActiveDownloadCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ActiveDownloadCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IApi::GetActiveQueueCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ActiveQueueCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IApi::GetItems ( long Index ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Items(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IApi::PutItems ( long Index, _bstr_t ItemData ) {
+    HRESULT _hr = put_Items(Index, ItemData);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#if 0
+inline VARIANT_BOOL IApi::GetItemSelected ( long Index ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ItemSelected(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+#endif
+
+inline void IApi::PutItemSelected ( long Index, VARIANT_BOOL Value ) {
+    HRESULT _hr = put_ItemSelected(Index, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#if 0
+inline _bstr_t IApi::GetOptionData ( _bstr_t Section, _bstr_t Ident ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_OptionData(Section, Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+#endif
+
+inline void IApi::PutOptionData ( _bstr_t Section, _bstr_t Ident, _bstr_t Value ) {
+    HRESULT _hr = put_OptionData(Section, Ident, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+#if 0
+inline _bstr_t IApi::GetFolderData ( _bstr_t Section, _bstr_t Ident ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_FolderData(Section, Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+#endif
+
+inline void IApi::PutFolderData ( _bstr_t Section, _bstr_t Ident, _bstr_t Value ) {
+    HRESULT _hr = put_FolderData(Section, Ident, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IApi::OptionDataExists ( _bstr_t Section, _bstr_t Ident ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_OptionDataExists(Section, Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IApi::FolderDataExists ( _bstr_t Section, _bstr_t Ident ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_FolderDataExists(Section, Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IApi::StartImportLinks ( ) {
+    HRESULT _hr = raw_StartImportLinks();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::StopImportLinks ( ) {
+    HRESULT _hr = raw_StopImportLinks();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IApi::AddQueueItem ( _bstr_t ParentFolder, _bstr_t DataText ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_AddQueueItem(ParentFolder, DataText, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IApi::GetFiltering ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Filtering(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IApi::PutFiltering ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_Filtering(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IApi::DeleteQueueItem ( long Index ) {
+    HRESULT _hr = raw_DeleteQueueItem(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::ClearImportLinks ( ) {
+    HRESULT _hr = raw_ClearImportLinks();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::SaveImportLinks ( _bstr_t Filename ) {
+    HRESULT _hr = raw_SaveImportLinks(Filename);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::LoadImportLinks ( _bstr_t Filename ) {
+    HRESULT _hr = raw_LoadImportLinks(Filename);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IFolderPtr IApi::GetDefault ( ) {
+    struct IFolder * _result = 0;
+    HRESULT _hr = get_Default(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IFolderPtr(_result, false);
+}
+
+inline IFolderPtr IApi::GetTrash ( ) {
+    struct IFolder * _result = 0;
+    HRESULT _hr = get_Trash(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IFolderPtr(_result, false);
+}
+
+inline IFolderPtr IApi::GetRoot ( ) {
+    struct IFolder * _result = 0;
+    HRESULT _hr = get_Root(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IFolderPtr(_result, false);
+}
+
+inline IFolderPtr IApi::GetCurrent ( ) {
+    struct IFolder * _result = 0;
+    HRESULT _hr = get_Current(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IFolderPtr(_result, false);
+}
+
+inline void IApi::PutCurrent ( struct IFolder * Value ) {
+    HRESULT _hr = put_Current(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IApi::GetImportLinksDepth ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ImportLinksDepth(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IApi::PutImportLinksDepth ( long Value ) {
+    HRESULT _hr = put_ImportLinksDepth(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IApi::GetImportLinksThreadCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ImportLinksThreadCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IApi::PutImportLinksThreadCount ( long Value ) {
+    HRESULT _hr = put_ImportLinksThreadCount(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IApi::CloseImportLinks ( ) {
+    HRESULT _hr = raw_CloseImportLinks();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::RegistImportLinks ( _bstr_t FolderPath ) {
+    HRESULT _hr = raw_RegistImportLinks(FolderPath);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IApi::IsBusyImportLinks ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsBusyImportLinks(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IApi::IsBusy ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsBusy(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IApi::GetActiveFolderCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ActiveFolderCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IApi::FolderExists ( _bstr_t AbsolutePath ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_FolderExists(AbsolutePath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IApi::ExtractQueueItem ( long Index ) {
+    HRESULT _hr = raw_ExtractQueueItem(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IApi::ExpandUrls ( _bstr_t Urls ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ExpandUrls(Urls, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IApi::GetOptionValue ( _bstr_t Ident ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetOptionValue(Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IApi::SetOptionValue ( _bstr_t Ident, _bstr_t Value ) {
+    HRESULT _hr = raw_SetOptionValue(Ident, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IApi::OptionValueExists ( _bstr_t Ident ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_OptionValueExists(Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IApi::GetFolderValue ( _bstr_t Ident ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetFolderValue(Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IApi::SetFolderValue ( _bstr_t Ident, _bstr_t Value ) {
+    HRESULT _hr = raw_SetFolderValue(Ident, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IApi::FolderValueExists ( _bstr_t Ident ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_FolderValueExists(Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IApi::GetOptionValues ( _bstr_t Ident ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_OptionValues(Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IApi::PutOptionValues ( _bstr_t Ident, _bstr_t Value ) {
+    HRESULT _hr = put_OptionValues(Ident, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IApi::GetFolderValues ( _bstr_t Ident ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_FolderValues(Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IApi::PutFolderValues ( _bstr_t Ident, _bstr_t Value ) {
+    HRESULT _hr = put_FolderValues(Ident, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IApi::Update ( ) {
+    HRESULT _hr = raw_Update();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::ShowMessage ( _bstr_t Title, _bstr_t Msg, long Interval ) {
+    HRESULT _hr = raw_ShowMessage(Title, Msg, Interval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IApi::ExecuteScript ( _bstr_t Event, _bstr_t GUIDSt ) {
+    long _result = 0;
+    HRESULT _hr = raw_ExecuteScript(Event, GUIDSt, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IApi::FlashTrayIcon ( ) {
+    HRESULT _hr = raw_FlashTrayIcon();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IApi::GetBuild ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Build(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IApi::BeginUpdate ( ) {
+    HRESULT _hr = raw_BeginUpdate();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IApi::EndUpdate ( ) {
+    HRESULT _hr = raw_EndUpdate();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IUrlManager wrapper method implementations
+//
+
+inline HRESULT IUrlManager::Close ( ) {
+    HRESULT _hr = raw_Close();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IUrlManager::Start ( ) {
+    HRESULT _hr = raw_Start();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IUrlManager::Stop ( ) {
+    HRESULT _hr = raw_Stop();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IUrlManager::Clear ( ) {
+    HRESULT _hr = raw_Clear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IUrlManager::Show ( ) {
+    HRESULT _hr = raw_Show();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IUrlManager::GetOptionValues ( _bstr_t Ident ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_OptionValues(Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IUrlManager::PutOptionValues ( _bstr_t Ident, _bstr_t Value ) {
+    HRESULT _hr = put_OptionValues(Ident, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::OptionValueExists ( _bstr_t Ident ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_OptionValueExists(Ident, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IUrlManager::GetItems ( long Index ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Items(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IUrlManager::PutItems ( long Index, _bstr_t Value ) {
+    HRESULT _hr = put_Items(Index, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IUrlManager::GetItemCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ItemCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IUrlManager::GetItemSelected ( long Index ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ItemSelected(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutItemSelected ( long Index, VARIANT_BOOL Value ) {
+    HRESULT _hr = put_ItemSelected(Index, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IUrlManager::IsBusy ( ) {
+    HRESULT _hr = raw_IsBusy();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IUrlManager::Regist ( ) {
+    HRESULT _hr = raw_Regist();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IUrlManager::GetDepth ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Depth(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutDepth ( long Value ) {
+    HRESULT _hr = put_Depth(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IUrlManager::GetThreadCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ThreadCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutThreadCount ( long Value ) {
+    HRESULT _hr = put_ThreadCount(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IUrlManager::AddQueue ( _bstr_t Urls ) {
+    HRESULT _hr = raw_AddQueue(Urls);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IUrlManager::ClearQueue ( ) {
+    HRESULT _hr = raw_ClearQueue();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IUrlManager::GetSelectedItemCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SelectedItemCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IUrlManager::SelectExt ( ) {
+    HRESULT _hr = raw_SelectExt();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IUrlManager::GetTagAHREF ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_TagAHREF(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutTagAHREF ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_TagAHREF(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetTagIMGSRC ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_TagIMGSRC(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutTagIMGSRC ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_TagIMGSRC(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetTagFRAMESRC ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_TagFRAMESRC(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutTagFRAMESRC ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_TagFRAMESRC(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetTagIFRAMESRC ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_TagIFRAMESRC(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutTagIFRAMESRC ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_TagIFRAMESRC(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetTagMETAREFRESH ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_TagMETAREFRESH(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutTagMETAREFRESH ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_TagMETAREFRESH(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetTagBGSOUND ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_TagBGSOUND(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutTagBGSOUND ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_TagBGSOUND(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetTagOther ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_TagOther(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutTagOther ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_TagOther(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetExtHTML ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ExtHTML(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutExtHTML ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_ExtHTML(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetExtTEXT ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ExtTEXT(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutExtTEXT ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_ExtTEXT(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetExtIMAGE ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ExtIMAGE(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutExtIMAGE ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_ExtIMAGE(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetExtARCHIVE ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ExtARCHIVE(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutExtARCHIVE ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_ExtARCHIVE(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetExtAUDIO ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ExtAUDIO(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutExtAUDIO ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_ExtAUDIO(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetExtMOVIE ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ExtMOVIE(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutExtMOVIE ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_ExtMOVIE(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetExtEtc ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ExtEtc(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutExtEtc ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_ExtEtc(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetExtRegExp ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ExtRegExp(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutExtRegExp ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_ExtRegExp(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IUrlManager::GetReferer ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Referer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IUrlManager::PutReferer ( _bstr_t Value ) {
+    HRESULT _hr = put_Referer(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IUrlManager::GetUserAgent ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_UserAgent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IUrlManager::PutUserAgent ( _bstr_t Value ) {
+    HRESULT _hr = put_UserAgent(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IUrlManager::GetProxy ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Proxy(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IUrlManager::PutProxy ( _bstr_t Value ) {
+    HRESULT _hr = put_Proxy(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUrlManager::GetUseProxy ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_UseProxy(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUrlManager::PutUseProxy ( VARIANT_BOOL Value ) {
+    HRESULT _hr = put_UseProxy(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IUrlManager::GetProxyUserId ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ProxyUserId(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IUrlManager::PutProxyUserId ( _bstr_t Value ) {
+    HRESULT _hr = put_ProxyUserId(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IUrlManager::GetProxyPassword ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ProxyPassword(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IUrlManager::PutProxyPassword ( _bstr_t Value ) {
+    HRESULT _hr = put_ProxyPassword(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}

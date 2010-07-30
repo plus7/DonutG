@@ -1,0 +1,7 @@
+LIBRARY      "Memo.dll"
+
+EXPORTS
+	CreateExplorerPane	@1
+	GetPluginInfo		@2
+	PreTranslateMessage	@3
+	ShowExplorerMenu	@4

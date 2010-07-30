@@ -1,0 +1,30 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.21022.08 (a3b5aaa5).
+//
+// e:\proj\und\src_plugin\pluginmaking\linkextractbar\debug\api.tli
+//
+// Wrapper implementations for Win32 type library C:\\Program Files (x86)\\DC-Sakura\\api.dll
+// compiler-generated file created 07/08/08 at 00:47:38 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IDCSakuraAPI wrapper method implementations
+//
+
+inline HRESULT IDCSakuraAPI::GetUrlsToImport ( _bstr_t pszListPath ) {
+    HRESULT _hr = raw_GetUrlsToImport(pszListPath);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDCSakuraAPI::DownloadGoGo ( _bstr_t pszUrl ) {
+    HRESULT _hr = raw_DownloadGoGo(pszUrl);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDCSakuraAPI::SendCommand ( _bstr_t pszText ) {
+    HRESULT _hr = raw_SendCommand(pszText);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

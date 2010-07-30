@@ -1,0 +1,1196 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.21022.08 (d1076a20).
+//
+// e:\proj\und\src_plugin\pluginmaking\linkextractbar\debug\iria.tlh
+//
+// C++ source equivalent of Win32 type library C:\ut\iria\iria.exe
+// compiler-generated file created 07/07/08 at 02:28:34 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("857ebc51-5944-11d3-b594-00a0b00593e6"))
+/* LIBID */ __Iria;
+struct __declspec(uuid("857ebc52-5944-11d3-b594-00a0b00593e6"))
+/* dual interface */ IIriaOle;
+struct /* coclass */ IriaOLE;
+struct __declspec(uuid("2dd55ea1-4881-4bcb-8683-93265984961b"))
+/* dispinterface */ IIriaOleEvents;
+struct __declspec(uuid("41e41018-81ef-44cd-ad79-20f9e88cb7a1"))
+/* dual interface */ IIriaApi;
+struct __declspec(uuid("457171a4-d580-4bf4-a464-11d24895a443"))
+/* dispinterface */ IIriaApiEvents;
+struct /* coclass */ IriaApi;
+struct IriaItemRecord;
+struct __declspec(uuid("2e801c97-2c27-4072-8189-322e5d00f39d"))
+/* dual interface */ IIrItem;
+struct /* coclass */ IrItem;
+struct __declspec(uuid("aaaf1d16-39cd-4da8-b961-1a408dd1f7dc"))
+/* dual interface */ INetscapeMonitor;
+struct /* coclass */ NetscapeMonitor;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IIriaOle, __uuidof(IIriaOle));
+_COM_SMARTPTR_TYPEDEF(IIriaOleEvents, __uuidof(IIriaOleEvents));
+_COM_SMARTPTR_TYPEDEF(IIriaApiEvents, __uuidof(IIriaApiEvents));
+_COM_SMARTPTR_TYPEDEF(IIrItem, __uuidof(IIrItem));
+_COM_SMARTPTR_TYPEDEF(IIriaApi, __uuidof(IIriaApi));
+_COM_SMARTPTR_TYPEDEF(INetscapeMonitor, __uuidof(INetscapeMonitor));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("857ebc52-5944-11d3-b594-00a0b00593e6"))
+IIriaOle : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetVersion))
+    _bstr_t Version;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetURL (
+        _bstr_t URL );
+    HRESULT OpenListIRI (
+        _bstr_t FileName );
+    HRESULT OpenListIRIMerge (
+        _bstr_t FileName );
+    HRESULT OpenListURL (
+        _bstr_t FileName );
+    HRESULT OpenListCRC (
+        _bstr_t FileName );
+    HRESULT OpenListWRG (
+        _bstr_t FileName );
+    HRESULT OpenListGRX (
+        _bstr_t FileName );
+    HRESULT PasteURL ( );
+    HRESULT AllStart ( );
+    HRESULT AllStop ( );
+    HRESULT Add (
+        _bstr_t URLReGet );
+    HRESULT AddIRI (
+        _bstr_t URLIria );
+    HRESULT Save ( );
+    HRESULT SaveAs (
+        _bstr_t FileName );
+    HRESULT SetURLAutomatic (
+        _bstr_t URL );
+    HRESULT Close ( );
+    HRESULT ImportLinks (
+        _bstr_t Urls );
+    HRESULT AddURLEx (
+        _bstr_t Urls );
+    _bstr_t GetVersion ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetURL (
+        /*[in]*/ BSTR URL ) = 0;
+      virtual HRESULT __stdcall raw_OpenListIRI (
+        /*[in]*/ BSTR FileName ) = 0;
+      virtual HRESULT __stdcall raw_OpenListIRIMerge (
+        /*[in]*/ BSTR FileName ) = 0;
+      virtual HRESULT __stdcall raw_OpenListURL (
+        /*[in]*/ BSTR FileName ) = 0;
+      virtual HRESULT __stdcall raw_OpenListCRC (
+        /*[in]*/ BSTR FileName ) = 0;
+      virtual HRESULT __stdcall raw_OpenListWRG (
+        /*[in]*/ BSTR FileName ) = 0;
+      virtual HRESULT __stdcall raw_OpenListGRX (
+        /*[in]*/ BSTR FileName ) = 0;
+      virtual HRESULT __stdcall raw_PasteURL ( ) = 0;
+      virtual HRESULT __stdcall raw_AllStart ( ) = 0;
+      virtual HRESULT __stdcall raw_AllStop ( ) = 0;
+      virtual HRESULT __stdcall raw_Add (
+        /*[in]*/ BSTR URLReGet ) = 0;
+      virtual HRESULT __stdcall raw_AddIRI (
+        /*[in]*/ BSTR URLIria ) = 0;
+      virtual HRESULT __stdcall raw_Save ( ) = 0;
+      virtual HRESULT __stdcall raw_SaveAs (
+        /*[in]*/ BSTR FileName ) = 0;
+      virtual HRESULT __stdcall raw_SetURLAutomatic (
+        /*[in]*/ BSTR URL ) = 0;
+      virtual HRESULT __stdcall raw_Close ( ) = 0;
+      virtual HRESULT __stdcall raw_ImportLinks (
+        /*[in]*/ BSTR Urls ) = 0;
+      virtual HRESULT __stdcall raw_AddURLEx (
+        /*[in]*/ BSTR Urls ) = 0;
+      virtual HRESULT __stdcall get_Version (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+};
+
+struct __declspec(uuid("857ebc56-5944-11d3-b594-00a0b00593e6"))
+IriaOLE;
+    // [ default ] interface IIriaOle
+
+struct __declspec(uuid("2dd55ea1-4881-4bcb-8683-93265984961b"))
+IIriaOleEvents : IDispatch
+{};
+
+struct __declspec(uuid("457171a4-d580-4bf4-a464-11d24895a443"))
+IIriaApiEvents : IDispatch
+{};
+
+struct __declspec(uuid("b8bd7046-e28a-4cf3-b6eb-4254ee5ae0d3"))
+IriaApi;
+    // [ default ] interface IIriaApi
+    // [ default, source ] dispinterface IIriaApiEvents
+
+#pragma pack(push, 4)
+
+struct __declspec(uuid("11bb952d-c9d3-4ffe-b5b6-8a9435671d62"))
+IriaItemRecord
+{
+    BSTR URL;
+    BSTR Folder;
+    BSTR CRC16;
+    BSTR CRC32;
+    VARIANT_BOOL ID;
+    long Priority;
+    BSTR SaveAs;
+    long FileSize;
+    VARIANT_BOOL Authorization;
+    BSTR User;
+    BSTR Password;
+    BSTR Comment;
+    BSTR DateTime;
+    VARIANT_BOOL AutoStartDownload;
+    VARIANT_BOOL AutoResume;
+    long ResumeAttempt;
+    long ResumeWait;
+    VARIANT_BOOL NoResume;
+    VARIANT_BOOL DeleteQueue;
+    VARIANT_BOOL ResumeRetry;
+    VARIANT_BOOL GetDateTime;
+    VARIANT_BOOL AutoRename;
+    VARIANT_BOOL Ignore404;
+    VARIANT_BOOL HiddenAttr;
+    VARIANT_BOOL RetryAgain;
+    long RetrySpeed;
+    VARIANT_BOOL URLEncode;
+    VARIANT_BOOL PostPone;
+    long PostPoneCount;
+    long PostPoneAttempt;
+    VARIANT_BOOL Ignore3xx;
+    VARIANT_BOOL UseHTTPProxy;
+    BSTR HTTPProxy;
+    BSTR HTTPProxyUser;
+    BSTR HTTPProxyPassword;
+    VARIANT_BOOL NoCache;
+    VARIANT_BOOL UseFTPProxy;
+    BSTR FTPProxy;
+    BSTR FTPProxyUser;
+    BSTR FTPProxyPassword;
+    long FTPProxyType;
+    long RollBack;
+    VARIANT_BOOL ForceRollBack;
+    VARIANT_BOOL RandomHTTPProxy;
+    VARIANT_BOOL RandomFTPProxy;
+    long FTPTimeout;
+    VARIANT_BOOL FTPPasv;
+    VARIANT_BOOL FTPNLST;
+    VARIANT_BOOL FTPSearchSubDir;
+    VARIANT_BOOL FTPLogout;
+    long HTTPTimeout;
+    BSTR HTTPAgentStr;
+    VARIANT_BOOL HTTPRandomUserAgent;
+    long HTTPRefererType;
+    BSTR HTTPRefererStr;
+    VARIANT_BOOL HTTPRefererGet;
+    VARIANT_BOOL HTTPRefererGetReferer;
+    VARIANT_BOOL HTTPIfRange;
+    VARIANT_BOOL HTTPIfMatch;
+    BSTR HTTPVersion;
+    BSTR HTTPAccept;
+    VARIANT_BOOL HTTPTemplate;
+    BSTR HTTPPost;
+    VARIANT_BOOL UseTimerStart;
+    BSTR TimerStartTime;
+    VARIANT_BOOL UseTimerEnd;
+    BSTR TimerEndTime;
+    BSTR CookieStr;
+    long CookieType;
+    VARIANT_BOOL Theglobe;
+    long TheglobeType;
+    VARIANT_BOOL UseLessSize;
+    long LessSize;
+    VARIANT_BOOL UseMoreSize;
+    long MoreSize;
+    long Self_ID;
+};
+
+#pragma pack(pop)
+
+struct __declspec(uuid("2e801c97-2c27-4072-8189-322e5d00f39d"))
+IIrItem : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetURL,put=PutURL))
+    _bstr_t URL;
+    __declspec(property(get=GetFolder,put=PutFolder))
+    _bstr_t Folder;
+    __declspec(property(get=GetCRC16,put=PutCRC16))
+    _bstr_t CRC16;
+    __declspec(property(get=GetCRC32,put=PutCRC32))
+    _bstr_t CRC32;
+    __declspec(property(get=GetID,put=PutID))
+    VARIANT_BOOL ID;
+    __declspec(property(get=GetPriority,put=PutPriority))
+    long Priority;
+    __declspec(property(get=GetSaveAs,put=PutSaveAs))
+    _bstr_t SaveAs;
+    __declspec(property(get=GetFileSize,put=PutFileSize))
+    long FileSize;
+    __declspec(property(get=GetAuthorization,put=PutAuthorization))
+    VARIANT_BOOL Authorization;
+    __declspec(property(get=GetUser,put=PutUser))
+    _bstr_t User;
+    __declspec(property(get=GetPassword,put=PutPassword))
+    _bstr_t Password;
+    __declspec(property(get=GetComment,put=PutComment))
+    _bstr_t Comment;
+    __declspec(property(get=GetDateTime,put=PutDateTime))
+    _bstr_t DateTime;
+    __declspec(property(get=GetAutoStartDownload,put=PutAutoStartDownload))
+    VARIANT_BOOL AutoStartDownload;
+    __declspec(property(get=GetAutoResume,put=PutAutoResume))
+    VARIANT_BOOL AutoResume;
+    __declspec(property(get=GetResumeAttempt,put=PutResumeAttempt))
+    long ResumeAttempt;
+    __declspec(property(get=GetResumeWait,put=PutResumeWait))
+    long ResumeWait;
+    __declspec(property(get=GetNoResume,put=PutNoResume))
+    VARIANT_BOOL NoResume;
+    __declspec(property(get=GetDeleteQueue,put=PutDeleteQueue))
+    VARIANT_BOOL DeleteQueue;
+    __declspec(property(get=GetResumeRetry,put=PutResumeRetry))
+    VARIANT_BOOL ResumeRetry;
+    __declspec(property(get=GetGetDateTime,put=PutGetDateTime))
+    VARIANT_BOOL GetDateTime;
+    __declspec(property(get=GetAutoRename,put=PutAutoRename))
+    VARIANT_BOOL AutoRename;
+    __declspec(property(get=GetIgnore404,put=PutIgnore404))
+    VARIANT_BOOL Ignore404;
+    __declspec(property(get=GetHiddenAttr,put=PutHiddenAttr))
+    VARIANT_BOOL HiddenAttr;
+    __declspec(property(get=GetRetryAgain,put=PutRetryAgain))
+    VARIANT_BOOL RetryAgain;
+    __declspec(property(get=GetRetrySpeed,put=PutRetrySpeed))
+    long RetrySpeed;
+    __declspec(property(get=GetURLEncode,put=PutURLEncode))
+    VARIANT_BOOL URLEncode;
+    __declspec(property(get=GetPostPone,put=PutPostPone))
+    VARIANT_BOOL PostPone;
+    __declspec(property(get=GetPostPoneCount,put=PutPostPoneCount))
+    long PostPoneCount;
+    __declspec(property(get=GetPostPoneAttempt,put=PutPostPoneAttempt))
+    long PostPoneAttempt;
+    __declspec(property(get=GetIgnore3xx,put=PutIgnore3xx))
+    VARIANT_BOOL Ignore3xx;
+    __declspec(property(get=GetUseHTTPProxy,put=PutUseHTTPProxy))
+    VARIANT_BOOL UseHTTPProxy;
+    __declspec(property(get=GetHTTPProxy,put=PutHTTPProxy))
+    _bstr_t HTTPProxy;
+    __declspec(property(get=GetHTTPProxyUser,put=PutHTTPProxyUser))
+    _bstr_t HTTPProxyUser;
+    __declspec(property(get=GetHTTPProxyPassword,put=PutHTTPProxyPassword))
+    _bstr_t HTTPProxyPassword;
+    __declspec(property(get=GetNoCache,put=PutNoCache))
+    VARIANT_BOOL NoCache;
+    __declspec(property(get=GetUseFTPProxy,put=PutUseFTPProxy))
+    VARIANT_BOOL UseFTPProxy;
+    __declspec(property(get=GetFTPProxy,put=PutFTPProxy))
+    _bstr_t FTPProxy;
+    __declspec(property(get=GetFTPProxyUser,put=PutFTPProxyUser))
+    _bstr_t FTPProxyUser;
+    __declspec(property(get=GetFTPProxyPassword,put=PutFTPProxyPassword))
+    _bstr_t FTPProxyPassword;
+    __declspec(property(get=GetFTPProxyType,put=PutFTPProxyType))
+    long FTPProxyType;
+    __declspec(property(get=GetRollBack,put=PutRollBack))
+    long RollBack;
+    __declspec(property(get=GetForceRollBack,put=PutForceRollBack))
+    VARIANT_BOOL ForceRollBack;
+    __declspec(property(get=GetRandomHTTPProxy,put=PutRandomHTTPProxy))
+    VARIANT_BOOL RandomHTTPProxy;
+    __declspec(property(get=GetRandomFTPProxy,put=PutRandomFTPProxy))
+    VARIANT_BOOL RandomFTPProxy;
+    __declspec(property(get=GetFTPTimeout,put=PutFTPTimeout))
+    long FTPTimeout;
+    __declspec(property(get=GetFTPPasv,put=PutFTPPasv))
+    VARIANT_BOOL FTPPasv;
+    __declspec(property(get=GetFTPNLST,put=PutFTPNLST))
+    VARIANT_BOOL FTPNLST;
+    __declspec(property(get=GetFTPSearchSubDir,put=PutFTPSearchSubDir))
+    VARIANT_BOOL FTPSearchSubDir;
+    __declspec(property(get=GetFTPLogout,put=PutFTPLogout))
+    VARIANT_BOOL FTPLogout;
+    __declspec(property(get=GetHTTPTimeout,put=PutHTTPTimeout))
+    long HTTPTimeout;
+    __declspec(property(get=GetHTTPAgentStr,put=PutHTTPAgentStr))
+    _bstr_t HTTPAgentStr;
+    __declspec(property(get=GetHTTPRandomUserAgent,put=PutHTTPRandomUserAgent))
+    VARIANT_BOOL HTTPRandomUserAgent;
+    __declspec(property(get=GetHTTPRefererType,put=PutHTTPRefererType))
+    long HTTPRefererType;
+    __declspec(property(get=GetHTTPRefererStr,put=PutHTTPRefererStr))
+    _bstr_t HTTPRefererStr;
+    __declspec(property(get=GetHTTPRefererGet,put=PutHTTPRefererGet))
+    VARIANT_BOOL HTTPRefererGet;
+    __declspec(property(get=GetHTTPRefererGetReferer,put=PutHTTPRefererGetReferer))
+    VARIANT_BOOL HTTPRefererGetReferer;
+    __declspec(property(get=GetHTTPIfRange,put=PutHTTPIfRange))
+    VARIANT_BOOL HTTPIfRange;
+    __declspec(property(get=GetHTTPIfMatch,put=PutHTTPIfMatch))
+    VARIANT_BOOL HTTPIfMatch;
+    __declspec(property(get=GetHTTPVersion,put=PutHTTPVersion))
+    _bstr_t HTTPVersion;
+    __declspec(property(get=GetHTTPAccept,put=PutHTTPAccept))
+    _bstr_t HTTPAccept;
+    __declspec(property(get=GetHTTPTemplate,put=PutHTTPTemplate))
+    VARIANT_BOOL HTTPTemplate;
+    __declspec(property(get=GetHTTPPost,put=PutHTTPPost))
+    _bstr_t HTTPPost;
+    __declspec(property(get=GetUseTimerStart,put=PutUseTimerStart))
+    VARIANT_BOOL UseTimerStart;
+    __declspec(property(get=GetTimerStartTime,put=PutTimerStartTime))
+    _bstr_t TimerStartTime;
+    __declspec(property(get=GetUseTimerEnd,put=PutUseTimerEnd))
+    VARIANT_BOOL UseTimerEnd;
+    __declspec(property(get=GetTimerEndTime,put=PutTimerEndTime))
+    _bstr_t TimerEndTime;
+    __declspec(property(get=GetCookieStr,put=PutCookieStr))
+    _bstr_t CookieStr;
+    __declspec(property(get=GetCookieType,put=PutCookieType))
+    long CookieType;
+    __declspec(property(get=GetTheglobe,put=PutTheglobe))
+    VARIANT_BOOL Theglobe;
+    __declspec(property(get=GetTheglobeType,put=PutTheglobeType))
+    long TheglobeType;
+    __declspec(property(get=GetUseLessSize,put=PutUseLessSize))
+    VARIANT_BOOL UseLessSize;
+    __declspec(property(get=GetLessSize,put=PutLessSize))
+    long LessSize;
+    __declspec(property(get=GetUseMoreSize,put=PutUseMoreSize))
+    VARIANT_BOOL UseMoreSize;
+    __declspec(property(get=GetMoreSize,put=PutMoreSize))
+    long MoreSize;
+    __declspec(property(get=GetSelf_ID,put=PutSelf_ID))
+    long Self_ID;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetURL ( );
+    void PutURL (
+        _bstr_t Value );
+    _bstr_t GetFolder ( );
+    void PutFolder (
+        _bstr_t Value );
+    _bstr_t GetCRC16 ( );
+    void PutCRC16 (
+        _bstr_t Value );
+    _bstr_t GetCRC32 ( );
+    void PutCRC32 (
+        _bstr_t Value );
+    VARIANT_BOOL GetID ( );
+    void PutID (
+        VARIANT_BOOL Value );
+    long GetPriority ( );
+    void PutPriority (
+        long Value );
+    _bstr_t GetSaveAs ( );
+    void PutSaveAs (
+        _bstr_t Value );
+    long GetFileSize ( );
+    void PutFileSize (
+        long Value );
+    VARIANT_BOOL GetAuthorization ( );
+    void PutAuthorization (
+        VARIANT_BOOL Value );
+    _bstr_t GetUser ( );
+    void PutUser (
+        _bstr_t Value );
+    _bstr_t GetPassword ( );
+    void PutPassword (
+        _bstr_t Value );
+    _bstr_t GetComment ( );
+    void PutComment (
+        _bstr_t Value );
+//    _bstr_t GetDateTime ( );
+    void PutDateTime (
+        _bstr_t Value );
+    VARIANT_BOOL GetAutoStartDownload ( );
+    void PutAutoStartDownload (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetAutoResume ( );
+    void PutAutoResume (
+        VARIANT_BOOL Value );
+    long GetResumeAttempt ( );
+    void PutResumeAttempt (
+        long Value );
+    long GetResumeWait ( );
+    void PutResumeWait (
+        long Value );
+    VARIANT_BOOL GetNoResume ( );
+    void PutNoResume (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetDeleteQueue ( );
+    void PutDeleteQueue (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetResumeRetry ( );
+    void PutResumeRetry (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetGetDateTime ( );
+    void PutGetDateTime (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetAutoRename ( );
+    void PutAutoRename (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetIgnore404 ( );
+    void PutIgnore404 (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetHiddenAttr ( );
+    void PutHiddenAttr (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetRetryAgain ( );
+    void PutRetryAgain (
+        VARIANT_BOOL Value );
+    long GetRetrySpeed ( );
+    void PutRetrySpeed (
+        long Value );
+    VARIANT_BOOL GetURLEncode ( );
+    void PutURLEncode (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetPostPone ( );
+    void PutPostPone (
+        VARIANT_BOOL Value );
+    long GetPostPoneCount ( );
+    void PutPostPoneCount (
+        long Value );
+    long GetPostPoneAttempt ( );
+    void PutPostPoneAttempt (
+        long Value );
+    VARIANT_BOOL GetIgnore3xx ( );
+    void PutIgnore3xx (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetUseHTTPProxy ( );
+    void PutUseHTTPProxy (
+        VARIANT_BOOL Value );
+    _bstr_t GetHTTPProxy ( );
+    void PutHTTPProxy (
+        _bstr_t Value );
+    _bstr_t GetHTTPProxyUser ( );
+    void PutHTTPProxyUser (
+        _bstr_t Value );
+    _bstr_t GetHTTPProxyPassword ( );
+    void PutHTTPProxyPassword (
+        _bstr_t Value );
+    VARIANT_BOOL GetNoCache ( );
+    void PutNoCache (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetUseFTPProxy ( );
+    void PutUseFTPProxy (
+        VARIANT_BOOL Value );
+    _bstr_t GetFTPProxy ( );
+    void PutFTPProxy (
+        _bstr_t Value );
+    _bstr_t GetFTPProxyUser ( );
+    void PutFTPProxyUser (
+        _bstr_t Value );
+    _bstr_t GetFTPProxyPassword ( );
+    void PutFTPProxyPassword (
+        _bstr_t Value );
+    long GetFTPProxyType ( );
+    void PutFTPProxyType (
+        long Value );
+    long GetRollBack ( );
+    void PutRollBack (
+        long Value );
+    VARIANT_BOOL GetForceRollBack ( );
+    void PutForceRollBack (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetRandomHTTPProxy ( );
+    void PutRandomHTTPProxy (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetRandomFTPProxy ( );
+    void PutRandomFTPProxy (
+        VARIANT_BOOL Value );
+    long GetFTPTimeout ( );
+    void PutFTPTimeout (
+        long Value );
+    VARIANT_BOOL GetFTPPasv ( );
+    void PutFTPPasv (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetFTPNLST ( );
+    void PutFTPNLST (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetFTPSearchSubDir ( );
+    void PutFTPSearchSubDir (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetFTPLogout ( );
+    void PutFTPLogout (
+        VARIANT_BOOL Value );
+    long GetHTTPTimeout ( );
+    void PutHTTPTimeout (
+        long Value );
+    _bstr_t GetHTTPAgentStr ( );
+    void PutHTTPAgentStr (
+        _bstr_t Value );
+    VARIANT_BOOL GetHTTPRandomUserAgent ( );
+    void PutHTTPRandomUserAgent (
+        VARIANT_BOOL Value );
+    long GetHTTPRefererType ( );
+    void PutHTTPRefererType (
+        long Value );
+    _bstr_t GetHTTPRefererStr ( );
+    void PutHTTPRefererStr (
+        _bstr_t Value );
+    VARIANT_BOOL GetHTTPRefererGet ( );
+    void PutHTTPRefererGet (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetHTTPRefererGetReferer ( );
+    void PutHTTPRefererGetReferer (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetHTTPIfRange ( );
+    void PutHTTPIfRange (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetHTTPIfMatch ( );
+    void PutHTTPIfMatch (
+        VARIANT_BOOL Value );
+    _bstr_t GetHTTPVersion ( );
+    void PutHTTPVersion (
+        _bstr_t Value );
+    _bstr_t GetHTTPAccept ( );
+    void PutHTTPAccept (
+        _bstr_t Value );
+    VARIANT_BOOL GetHTTPTemplate ( );
+    void PutHTTPTemplate (
+        VARIANT_BOOL Value );
+    _bstr_t GetHTTPPost ( );
+    void PutHTTPPost (
+        _bstr_t Value );
+    VARIANT_BOOL GetUseTimerStart ( );
+    void PutUseTimerStart (
+        VARIANT_BOOL Value );
+    _bstr_t GetTimerStartTime ( );
+    void PutTimerStartTime (
+        _bstr_t Value );
+    VARIANT_BOOL GetUseTimerEnd ( );
+    void PutUseTimerEnd (
+        VARIANT_BOOL Value );
+    _bstr_t GetTimerEndTime ( );
+    void PutTimerEndTime (
+        _bstr_t Value );
+    _bstr_t GetCookieStr ( );
+    void PutCookieStr (
+        _bstr_t Value );
+    long GetCookieType ( );
+    void PutCookieType (
+        long Value );
+    VARIANT_BOOL GetTheglobe ( );
+    void PutTheglobe (
+        VARIANT_BOOL Value );
+    long GetTheglobeType ( );
+    void PutTheglobeType (
+        long Value );
+    VARIANT_BOOL GetUseLessSize ( );
+    void PutUseLessSize (
+        VARIANT_BOOL Value );
+    long GetLessSize ( );
+    void PutLessSize (
+        long Value );
+    VARIANT_BOOL GetUseMoreSize ( );
+    void PutUseMoreSize (
+        VARIANT_BOOL Value );
+    long GetMoreSize ( );
+    void PutMoreSize (
+        long Value );
+    long GetSelf_ID ( );
+    void PutSelf_ID (
+        long Value );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_URL (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_URL (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Folder (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Folder (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_CRC16 (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_CRC16 (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_CRC32 (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_CRC32 (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_ID (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_ID (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_Priority (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_Priority (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_SaveAs (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_SaveAs (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_FileSize (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_FileSize (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_Authorization (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_Authorization (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_User (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_User (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Password (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Password (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Comment (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Comment (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_DateTime (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_DateTime (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_AutoStartDownload (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_AutoStartDownload (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_AutoResume (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_AutoResume (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_ResumeAttempt (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_ResumeAttempt (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_ResumeWait (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_ResumeWait (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_NoResume (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_NoResume (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_DeleteQueue (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_DeleteQueue (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_ResumeRetry (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_ResumeRetry (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_GetDateTime (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_GetDateTime (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_AutoRename (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_AutoRename (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_Ignore404 (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_Ignore404 (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_HiddenAttr (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_HiddenAttr (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_RetryAgain (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_RetryAgain (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_RetrySpeed (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_RetrySpeed (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_URLEncode (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_URLEncode (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_PostPone (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_PostPone (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_PostPoneCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_PostPoneCount (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_PostPoneAttempt (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_PostPoneAttempt (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_Ignore3xx (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_Ignore3xx (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_UseHTTPProxy (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_UseHTTPProxy (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPProxy (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPProxy (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPProxyUser (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPProxyUser (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPProxyPassword (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPProxyPassword (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_NoCache (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_NoCache (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_UseFTPProxy (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_UseFTPProxy (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_FTPProxy (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_FTPProxy (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_FTPProxyUser (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_FTPProxyUser (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_FTPProxyPassword (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_FTPProxyPassword (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_FTPProxyType (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_FTPProxyType (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_RollBack (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_RollBack (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_ForceRollBack (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_ForceRollBack (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_RandomHTTPProxy (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_RandomHTTPProxy (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_RandomFTPProxy (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_RandomFTPProxy (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_FTPTimeout (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_FTPTimeout (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_FTPPasv (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_FTPPasv (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_FTPNLST (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_FTPNLST (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_FTPSearchSubDir (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_FTPSearchSubDir (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_FTPLogout (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_FTPLogout (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPTimeout (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPTimeout (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPAgentStr (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPAgentStr (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPRandomUserAgent (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPRandomUserAgent (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPRefererType (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPRefererType (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPRefererStr (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPRefererStr (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPRefererGet (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPRefererGet (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPRefererGetReferer (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPRefererGetReferer (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPIfRange (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPIfRange (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPIfMatch (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPIfMatch (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPVersion (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPVersion (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPAccept (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPAccept (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPTemplate (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPTemplate (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_HTTPPost (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_HTTPPost (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_UseTimerStart (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_UseTimerStart (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_TimerStartTime (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_TimerStartTime (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_UseTimerEnd (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_UseTimerEnd (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_TimerEndTime (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_TimerEndTime (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_CookieStr (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_CookieStr (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_CookieType (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_CookieType (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_Theglobe (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_Theglobe (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_TheglobeType (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_TheglobeType (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_UseLessSize (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_UseLessSize (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_LessSize (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_LessSize (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_UseMoreSize (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_UseMoreSize (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_MoreSize (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_MoreSize (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_Self_ID (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_Self_ID (
+        /*[in]*/ long Value ) = 0;
+};
+
+struct __declspec(uuid("41e41018-81ef-44cd-ad79-20f9e88cb7a1"))
+IIriaApi : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDownloadedBytes))
+    __int64 DownloadedBytes;
+    __declspec(property(get=GetActives))
+    IIrItemPtr Actives[];
+    __declspec(property(get=GetWindowHandle))
+    long WindowHandle;
+    __declspec(property(get=GetHInstance))
+    long HInstance;
+    __declspec(property(get=GetItems))
+    IIrItemPtr Items[];
+    __declspec(property(get=GetUrlList))
+    _bstr_t UrlList;
+    __declspec(property(get=GetActiveCount))
+    long ActiveCount;
+    __declspec(property(get=GetVersion))
+    _bstr_t Version;
+    __declspec(property(get=GetItemStatus))
+    _bstr_t ItemStatus[];
+    __declspec(property(get=GetQueueFileName))
+    _bstr_t QueueFileName;
+    __declspec(property(get=GetActiveStatus))
+    _bstr_t ActiveStatus[];
+    __declspec(property(get=GetUrlExists))
+    VARIANT_BOOL UrlExists[];
+    __declspec(property(get=GetItemCount))
+    long ItemCount;
+    __declspec(property(get=GetNewItem))
+    IIrItemPtr NewItem;
+    __declspec(property(get=GetQueue))
+    _bstr_t Queue;
+    __declspec(property(get=GetTotalBytes))
+    double TotalBytes;
+    __declspec(property(get=GetTotalFiles))
+    double TotalFiles;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT ForegroundWindow ( );
+    long GetWindowHandle ( );
+    long GetHInstance ( );
+    HRESULT Quit ( );
+    _bstr_t GetVersion ( );
+    HRESULT Add (
+        _bstr_t IRI );
+    HRESULT Download (
+        _bstr_t URL,
+        long Flag );
+    _bstr_t GetQueueFileName ( );
+    HRESULT Clear ( );
+    HRESULT Open (
+        _bstr_t FileName,
+        long Flag );
+    HRESULT Save (
+        _bstr_t FileName,
+        long Flag );
+    VARIANT_BOOL GetUrlExists (
+        _bstr_t URL );
+    HRESULT ImportLinks (
+        _bstr_t Urls,
+        long Flag );
+    HRESULT AddUrl (
+        _bstr_t Urls,
+        long Flag );
+    long GetItemCount ( );
+    HRESULT StartAll ( );
+    HRESULT StopAll ( );
+    HRESULT Start (
+        long ID );
+    HRESULT Stop (
+        long ID );
+    HRESULT Dialup ( );
+    HRESULT Hangup ( );
+    HRESULT Paste (
+        long Flag );
+    HRESULT Remove (
+        long ID );
+    _bstr_t GetQueue ( );
+    IIrItemPtr GetItems (
+        long Index );
+    _bstr_t GetUrlList ( );
+    HRESULT SetItem (
+        struct IIrItem * Value );
+    IIrItemPtr GetNewItem ( );
+    double GetTotalBytes ( );
+    double GetTotalFiles ( );
+    __int64 GetDownloadedBytes ( );
+    IIrItemPtr GetActives (
+        long Index );
+    long GetActiveCount ( );
+    _bstr_t GetActiveStatus (
+        long ID );
+    _bstr_t GetItemStatus (
+        long ID );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_ForegroundWindow ( ) = 0;
+      virtual HRESULT __stdcall get_WindowHandle (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall get_HInstance (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall raw_Quit ( ) = 0;
+      virtual HRESULT __stdcall get_Version (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall raw_Add (
+        /*[in]*/ BSTR IRI ) = 0;
+      virtual HRESULT __stdcall raw_Download (
+        /*[in]*/ BSTR URL,
+        /*[in]*/ long Flag ) = 0;
+      virtual HRESULT __stdcall get_QueueFileName (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall raw_Clear ( ) = 0;
+      virtual HRESULT __stdcall raw_Open (
+        /*[in]*/ BSTR FileName,
+        /*[in]*/ long Flag ) = 0;
+      virtual HRESULT __stdcall raw_Save (
+        /*[in]*/ BSTR FileName,
+        /*[in]*/ long Flag ) = 0;
+      virtual HRESULT __stdcall get_UrlExists (
+        /*[in]*/ BSTR URL,
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall raw_ImportLinks (
+        /*[in]*/ BSTR Urls,
+        /*[in]*/ long Flag ) = 0;
+      virtual HRESULT __stdcall raw_AddUrl (
+        /*[in]*/ BSTR Urls,
+        /*[in]*/ long Flag ) = 0;
+      virtual HRESULT __stdcall get_ItemCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall raw_StartAll ( ) = 0;
+      virtual HRESULT __stdcall raw_StopAll ( ) = 0;
+      virtual HRESULT __stdcall raw_Start (
+        /*[in]*/ long ID ) = 0;
+      virtual HRESULT __stdcall raw_Stop (
+        /*[in]*/ long ID ) = 0;
+      virtual HRESULT __stdcall raw_Dialup ( ) = 0;
+      virtual HRESULT __stdcall raw_Hangup ( ) = 0;
+      virtual HRESULT __stdcall raw_Paste (
+        /*[in]*/ long Flag ) = 0;
+      virtual HRESULT __stdcall raw_Remove (
+        /*[in]*/ long ID ) = 0;
+      virtual HRESULT __stdcall get_Queue (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall get_Items (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ struct IIrItem * * ID ) = 0;
+      virtual HRESULT __stdcall get_UrlList (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall raw_SetItem (
+        /*[in]*/ struct IIrItem * Value ) = 0;
+      virtual HRESULT __stdcall get_NewItem (
+        /*[out,retval]*/ struct IIrItem * * Value ) = 0;
+      virtual HRESULT __stdcall get_TotalBytes (
+        /*[out,retval]*/ double * Value ) = 0;
+      virtual HRESULT __stdcall get_TotalFiles (
+        /*[out,retval]*/ double * Value ) = 0;
+      virtual HRESULT __stdcall get_DownloadedBytes (
+        /*[out,retval]*/ __int64 * Value ) = 0;
+      virtual HRESULT __stdcall get_Actives (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ struct IIrItem * * Value ) = 0;
+      virtual HRESULT __stdcall get_ActiveCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall get_ActiveStatus (
+        /*[in]*/ long ID,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall get_ItemStatus (
+        /*[in]*/ long ID,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+};
+
+struct __declspec(uuid("0baa4c49-e4e8-4a48-a740-c9e7ebcd9dad"))
+IrItem;
+    // [ default ] interface IIrItem
+
+struct __declspec(uuid("aaaf1d16-39cd-4da8-b961-1a408dd1f7dc"))
+INetscapeMonitor : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL InitializeUrl (
+        _bstr_t pProtocol,
+        _bstr_t pUrl );
+    HRESULT Open (
+        _bstr_t pUrl );
+    VARIANT_BOOL OpenUrl (
+        _bstr_t pUrl );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_InitializeUrl (
+        BSTR pProtocol,
+        BSTR pUrl,
+        /*[out,retval]*/ VARIANT_BOOL * Cancel ) = 0;
+      virtual HRESULT __stdcall raw_Open (
+        BSTR pUrl ) = 0;
+      virtual HRESULT __stdcall raw_OpenUrl (
+        BSTR pUrl,
+        /*[out,retval]*/ VARIANT_BOOL * Cancel ) = 0;
+};
+
+struct __declspec(uuid("21398cea-67ff-4fb2-b2d9-52847c983780"))
+NetscapeMonitor;
+    // [ default ] interface INetscapeMonitor
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_Iria =
+    {0x857ebc51,0x5944,0x11d3,{0xb5,0x94,0x00,0xa0,0xb0,0x05,0x93,0xe6}};
+extern "C" const GUID __declspec(selectany) IID_IIriaOle =
+    {0x857ebc52,0x5944,0x11d3,{0xb5,0x94,0x00,0xa0,0xb0,0x05,0x93,0xe6}};
+extern "C" const GUID __declspec(selectany) CLSID_IriaOLE =
+    {0x857ebc56,0x5944,0x11d3,{0xb5,0x94,0x00,0xa0,0xb0,0x05,0x93,0xe6}};
+extern "C" const GUID __declspec(selectany) DIID_IIriaOleEvents =
+    {0x2dd55ea1,0x4881,0x4bcb,{0x86,0x83,0x93,0x26,0x59,0x84,0x96,0x1b}};
+extern "C" const GUID __declspec(selectany) DIID_IIriaApiEvents =
+    {0x457171a4,0xd580,0x4bf4,{0xa4,0x64,0x11,0xd2,0x48,0x95,0xa4,0x43}};
+extern "C" const GUID __declspec(selectany) CLSID_IriaApi =
+    {0xb8bd7046,0xe28a,0x4cf3,{0xb6,0xeb,0x42,0x54,0xee,0x5a,0xe0,0xd3}};
+extern "C" const GUID __declspec(selectany) IID_IIrItem =
+    {0x2e801c97,0x2c27,0x4072,{0x81,0x89,0x32,0x2e,0x5d,0x00,0xf3,0x9d}};
+extern "C" const GUID __declspec(selectany) IID_IIriaApi =
+    {0x41e41018,0x81ef,0x44cd,{0xad,0x79,0x20,0xf9,0xe8,0x8c,0xb7,0xa1}};
+extern "C" const GUID __declspec(selectany) CLSID_IrItem =
+    {0x0baa4c49,0xe4e8,0x4a48,{0xa7,0x40,0xc9,0xe7,0xeb,0xcd,0x9d,0xad}};
+extern "C" const GUID __declspec(selectany) IID_INetscapeMonitor =
+    {0xaaaf1d16,0x39cd,0x4da8,{0xb9,0x61,0x1a,0x40,0x8d,0xd1,0xf7,0xdc}};
+extern "C" const GUID __declspec(selectany) CLSID_NetscapeMonitor =
+    {0x21398cea,0x67ff,0x4fb2,{0xb2,0xd9,0x52,0x84,0x7c,0x98,0x37,0x80}};
+
+//
+// Wrapper method implementations
+//
+
+#include "iria.tli"
+
+#pragma pack(pop)

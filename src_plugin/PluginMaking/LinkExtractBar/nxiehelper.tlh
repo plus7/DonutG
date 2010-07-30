@@ -1,0 +1,122 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.21022.08 (58fd9e98).
+//
+// e:\proj\und\src_plugin\pluginmaking\linkextractbar\debug\nxiehelper.tlh
+//
+// C++ source equivalent of Win32 type library C:\Program Files (x86)\Xi\NetXfer\NXIEHelper.dll
+// compiler-generated file created 07/08/08 at 01:18:14 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("98691879-c556-4556-9c3f-9103bea673ec"))
+/* LIBID */ __NXIEHELPERLib;
+struct /* coclass */ NXIECatcher;
+struct __declspec(uuid("45dd412d-d52c-4257-948f-6345b3a2eabe"))
+/* dual interface */ INXIECatcher;
+struct /* coclass */ NXIEAddURL;
+struct __declspec(uuid("4b20e215-b71e-48de-b991-72571050f4f0"))
+/* dual interface */ INXIEAddURL;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(INXIECatcher, __uuidof(INXIECatcher));
+_COM_SMARTPTR_TYPEDEF(INXIEAddURL, __uuidof(INXIEAddURL));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("83b80a9c-d91a-4f22-8dcf-ea7204039f79"))
+NXIECatcher;
+    // [ default ] interface INXIECatcher
+
+struct __declspec(uuid("45dd412d-d52c-4257-948f-6345b3a2eabe"))
+INXIECatcher : IDispatch
+{};
+
+struct __declspec(uuid("ed8ad3c6-f079-45db-b7fa-11a13ec07ed1"))
+NXIEAddURL;
+    // [ default ] interface INXIEAddURL
+
+struct __declspec(uuid("4b20e215-b71e-48de-b991-72571050f4f0"))
+INXIEAddURL : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT AddLink (
+        _bstr_t bstrReferer,
+        _bstr_t bstrURL,
+        _bstr_t bstrComment );
+    HRESULT AddList (
+        _bstr_t bstrReferer,
+        VARIANT * bstrURLs,
+        VARIANT * bstrComments );
+    HRESULT AddTask (
+        _bstr_t bstrReferrer,
+        _bstr_t bstrURL,
+        _bstr_t bstrComment,
+        _bstr_t bstrDestinationDirectory,
+        _bstr_t bstrFilename,
+        _bstr_t bstrUsername,
+        _bstr_t bstrPassword,
+        unsigned long nStartMode,
+        _bstr_t bstrScheme,
+        unsigned long nThreads );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_AddLink (
+        BSTR bstrReferer,
+        BSTR bstrURL,
+        BSTR bstrComment ) = 0;
+      virtual HRESULT __stdcall raw_AddList (
+        BSTR bstrReferer,
+        VARIANT * bstrURLs,
+        VARIANT * bstrComments ) = 0;
+      virtual HRESULT __stdcall raw_AddTask (
+        BSTR bstrReferrer,
+        BSTR bstrURL,
+        BSTR bstrComment,
+        BSTR bstrDestinationDirectory,
+        BSTR bstrFilename,
+        BSTR bstrUsername,
+        BSTR bstrPassword,
+        unsigned long nStartMode,
+        BSTR bstrScheme,
+        unsigned long nThreads ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_NXIEHELPERLib =
+    {0x98691879,0xc556,0x4556,{0x9c,0x3f,0x91,0x03,0xbe,0xa6,0x73,0xec}};
+extern "C" const GUID __declspec(selectany) CLSID_NXIECatcher =
+    {0x83b80a9c,0xd91a,0x4f22,{0x8d,0xcf,0xea,0x72,0x04,0x03,0x9f,0x79}};
+extern "C" const GUID __declspec(selectany) IID_INXIECatcher =
+    {0x45dd412d,0xd52c,0x4257,{0x94,0x8f,0x63,0x45,0xb3,0xa2,0xea,0xbe}};
+extern "C" const GUID __declspec(selectany) CLSID_NXIEAddURL =
+    {0xed8ad3c6,0xf079,0x45db,{0xb7,0xfa,0x11,0xa1,0x3e,0xc0,0x7e,0xd1}};
+extern "C" const GUID __declspec(selectany) IID_INXIEAddURL =
+    {0x4b20e215,0xb71e,0x48de,{0xb9,0x91,0x72,0x57,0x10,0x50,0xf4,0xf0}};
+
+//
+// Wrapper method implementations
+//
+
+#include "nxiehelper.tli"
+
+#pragma pack(pop)

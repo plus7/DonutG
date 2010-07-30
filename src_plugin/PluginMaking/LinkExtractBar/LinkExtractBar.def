@@ -1,0 +1,10 @@
+; LinkExtractBar.def : DLL 用のモジュール パラメータ宣言
+
+LIBRARY      "LinkExtractBar"
+; DESCRIPTION  'LinkExtractBar Windows Dynamic Link Library'
+
+EXPORTS
+    CreateToolBar	@1
+	GetPluginInfo	@2
+	PreTranslateMessage	@3
+

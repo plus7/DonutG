@@ -1,0 +1,30 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.21022.08 (58fd9e98).
+//
+// e:\proj\und\src_plugin\pluginmaking\linkextractbar\debug\nxiehelper.tli
+//
+// Wrapper implementations for Win32 type library C:\Program Files (x86)\Xi\NetXfer\NXIEHelper.dll
+// compiler-generated file created 07/08/08 at 01:18:14 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface INXIEAddURL wrapper method implementations
+//
+
+inline HRESULT INXIEAddURL::AddLink ( _bstr_t bstrReferer, _bstr_t bstrURL, _bstr_t bstrComment ) {
+    HRESULT _hr = raw_AddLink(bstrReferer, bstrURL, bstrComment);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INXIEAddURL::AddList ( _bstr_t bstrReferer, VARIANT * bstrURLs, VARIANT * bstrComments ) {
+    HRESULT _hr = raw_AddList(bstrReferer, bstrURLs, bstrComments);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INXIEAddURL::AddTask ( _bstr_t bstrReferrer, _bstr_t bstrURL, _bstr_t bstrComment, _bstr_t bstrDestinationDirectory, _bstr_t bstrFilename, _bstr_t bstrUsername, _bstr_t bstrPassword, unsigned long nStartMode, _bstr_t bstrScheme, unsigned long nThreads ) {
+    HRESULT _hr = raw_AddTask(bstrReferrer, bstrURL, bstrComment, bstrDestinationDirectory, bstrFilename, bstrUsername, bstrPassword, nStartMode, bstrScheme, nThreads);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

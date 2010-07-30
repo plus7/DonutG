@@ -1,0 +1,34 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TabMoveBar", "TabMoveBar_7.10.vcproj", "{4AD1E60B-A3D5-49AF-A1DB-B8275FC9DB7C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4AD1E60B-A3D5-49AF-A1DB-B8275FC9DB7C}.Debug.ActiveCfg = Debug|Win32
+		{4AD1E60B-A3D5-49AF-A1DB-B8275FC9DB7C}.Debug.Build.0 = Debug|Win32
+		{4AD1E60B-A3D5-49AF-A1DB-B8275FC9DB7C}.Release.ActiveCfg = Release|Win32
+		{4AD1E60B-A3D5-49AF-A1DB-B8275FC9DB7C}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AD1E60B-A3D5-49AF-A1DB-B8275FC9DB7C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4AD1E60B-A3D5-49AF-A1DB-B8275FC9DB7C}.Debug|Win32.Build.0 = Debug|Win32
+		{4AD1E60B-A3D5-49AF-A1DB-B8275FC9DB7C}.Release|Win32.ActiveCfg = Release|Win32
+		{4AD1E60B-A3D5-49AF-A1DB-B8275FC9DB7C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

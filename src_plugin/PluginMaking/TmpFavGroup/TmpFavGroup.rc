@@ -1,0 +1,240 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\TmpFavGroup.rc2""  // Microsoft Visual C++ 以外のツールで編集されたリソース\r\n"
+    "#include ""l.jpn\\afxres.rc""          // 標準のコンポーネント\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104B0"
+        BEGIN
+            VALUE "FileDescription", "TmpFavGroup DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "TmpFavGroup"
+            VALUE "LegalCopyright", "Copyright (C) 2004"
+            VALUE "OriginalFilename", "TmpFavGroup.DLL"
+            VALUE "ProductName", "TmpFavGroup ﾀﾞｲﾅﾐｯｸ ﾘﾝｸ ﾗｲﾌﾞﾗﾘ"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TREEICON            BITMAP                  "ico2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    POPUP "p"
+    BEGIN
+        MENUITEM "スナップショットを作成(&S)",             	ID_ADD_TMPGROUP
+        MENUITEM SEPARATOR
+        MENUITEM "アクティブなタブをグループに追加(&A)",        ID_ADDITEMTOGROUP
+        MENUITEM "全タブをグループに追加",			ID_ADDITEMTOGROUP_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "グループを開くとき既存のタブを閉じる(&C)",    ID_OPENANDCLOSE
+        MENUITEM "タブをアクティブにする(&F)",             	ID_OPEN_ACTIVE
+        MENUITEM "ダブルクリックでグループを開く(&D)",         	ID_OPEN_DBLCLICK
+        MENUITEM "スナップショット保存時に名前をつける(&N)",    ID_SAVE_NAME_SW
+        MENUITEM SEPARATOR
+        MENUITEM "データフォルダを指定(&P)...",           	ID_SET_DATA_DIR
+        MENUITEM "再読み込み(&R)",                   		ID_RELOAD_FOLDER
+    END
+END
+
+IDR_GROUP MENU 
+BEGIN
+    POPUP "p"
+    BEGIN
+        MENUITEM "グループを開く(&O)",                 ID_GROUP_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "アクティブなタブをグループに追加(&A)",        ID_ADDITEMTOGROUP
+        MENUITEM "全タブをグループに追加",			ID_ADDITEMTOGROUP_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "削除(&D)",                      ID_GROUP_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "名前の変更(&R)",                   ID_RENAME_GROUP
+    END
+END
+
+IDR_ITEM MENU 
+BEGIN
+    POPUP "p"
+    BEGIN
+        MENUITEM "プロパティ(&P)",                   ID_ITEM_PROPERTY
+        MENUITEM SEPARATOR
+        MENUITEM "削除(&D)",                      ID_ITEM_DELETE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_STYLE DIALOG  0, 0, 283, 218
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ﾀﾞｲｱﾛｸﾞ"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "ビデオの再生(&A)",IDC_CHECK_VIDEO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,30,64,9
+    CONTROL         "サウンドの再生(&B)",IDC_CHECK_SOUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,42,68,9
+    CONTROL         "画像のダウンロード(&C)",IDC_CHECK_IMAGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,54,80,9
+    CONTROL         "ActiveXコントロールの実行(&D)",IDC_CHECK_RUNACTIVEXCTLS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,65,104,10
+    CONTROL         "ActiveXコントロールのダウンロード(&E)",IDC_CHECK_DLACTIVEXCTLS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,77,125,10
+    CONTROL         "スクリプトの実行(&F)",IDC_CHECK_SCRIPTS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,89,73,10
+    CONTROL         "Javaの実行(&G)",IDC_CHECK_JAVA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,101,60,10
+    CONTROL         "ナビゲートロック(&H)",IDC_CHECK_NAVILOCK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,135,72,10
+    CONTROL         "ステータスバーをフィルターする(&J)",IDC_CHK_MSG_FILTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,147,117,10
+    CONTROL         "マウス・ジェスチャーを使用する(&K)",IDC_CHK_MOUSE_GESTURE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,159,115,10
+    CONTROL         "mailto:無効(&L)",IDC_CHK_BLOCK_MAILTO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,171,57,10
+    CONTROL         "なし(&1)",IDC_RADIO_RELOAD_NONE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,145,30,103,8
+    CONTROL         "15秒(&2)",IDC_RADIO_RELOAD_15SEC,"Button",BS_AUTORADIOBUTTON,145,42,103,8
+    CONTROL         "30秒(&3)",IDC_RADIO_RELOAD_30SEC,"Button",BS_AUTORADIOBUTTON,145,54,103,8
+    CONTROL         "1分(&4)",IDC_RADIO_RELOAD_1MIN,"Button",BS_AUTORADIOBUTTON,145,66,103,8
+    CONTROL         "2分(&5)",IDC_RADIO_RELOAD_2MIN,"Button",BS_AUTORADIOBUTTON,145,78,103,8
+    CONTROL         "5分(&6)",IDC_RADIO_RELOAD_5MIN,"Button",BS_AUTORADIOBUTTON,145,90,103,8
+    CONTROL         "ユーザー設定(&7)",IDC_RADIO_RELOAD_USER,"Button",BS_AUTORADIOBUTTON,145,102,103,8
+    DEFPUSHBUTTON   "OK",IDOK,171,197,50,14,WS_GROUP
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,226,197,50,14
+    LTEXT           "ダウンロードコントロール",IDC_STATIC,16,13,122,9,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "操作オプション",IDC_STATIC,16,120,122,9,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "自動更新",IDC_STATIC,145,13,122,9,SS_SUNKEN | NOT WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_STYLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        VERTGUIDE, 16
+        VERTGUIDE, 145
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 211
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE 17, 1
+#pragma code_page(932)
+#endif //_WIN32
+#include "res\TmpFavGroup.rc2"  // Microsoft Visual C++ 以外のツールで編集されたリソース
+#include "l.jpn\afxres.rc"          // 標準のコンポーネント
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

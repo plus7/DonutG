@@ -1,0 +1,80 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.21022.08 (a3b5aaa5).
+//
+// e:\proj\und\src_plugin\pluginmaking\linkextractbar\debug\api.tlh
+//
+// C++ source equivalent of Win32 type library C:\\Program Files (x86)\\DC-Sakura\\api.dll
+// compiler-generated file created 07/08/08 at 00:47:38 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("5b611d47-1621-426b-b74e-34e5723b4eba"))
+/* LIBID */ __CSAKURAAPILib;
+struct /* coclass */ DCSakuraAPI;
+struct __declspec(uuid("1a8f75a9-a716-4073-a944-c1c08a2364b0"))
+/* dual interface */ IDCSakuraAPI;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IDCSakuraAPI, __uuidof(IDCSakuraAPI));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("d61f00ff-2511-4d60-93eb-eb79aedf63a5"))
+DCSakuraAPI;
+    // [ default ] interface IDCSakuraAPI
+
+struct __declspec(uuid("1a8f75a9-a716-4073-a944-c1c08a2364b0"))
+IDCSakuraAPI : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetUrlsToImport (
+        _bstr_t pszListPath );
+    HRESULT DownloadGoGo (
+        _bstr_t pszUrl );
+    HRESULT SendCommand (
+        _bstr_t pszText );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetUrlsToImport (
+        BSTR pszListPath ) = 0;
+      virtual HRESULT __stdcall raw_DownloadGoGo (
+        BSTR pszUrl ) = 0;
+      virtual HRESULT __stdcall raw_SendCommand (
+        BSTR pszText ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_CSAKURAAPILib =
+    {0x5b611d47,0x1621,0x426b,{0xb7,0x4e,0x34,0xe5,0x72,0x3b,0x4e,0xba}};
+extern "C" const GUID __declspec(selectany) CLSID_DCSakuraAPI =
+    {0xd61f00ff,0x2511,0x4d60,{0x93,0xeb,0xeb,0x79,0xae,0xdf,0x63,0xa5}};
+extern "C" const GUID __declspec(selectany) IID_IDCSakuraAPI =
+    {0x1a8f75a9,0xa716,0x4073,{0xa9,0x44,0xc1,0xc0,0x8a,0x23,0x64,0xb0}};
+
+//
+// Wrapper method implementations
+//
+
+#include "DcSakuraApi.tli"
+
+#pragma pack(pop)

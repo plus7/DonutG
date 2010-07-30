@@ -1,0 +1,161 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.21022.08 (51083980).
+//
+// e:\proj\und\src_plugin\pluginmaking\linkextractbar\debug\jccatch.tlh
+//
+// C++ source equivalent of Win32 type library C:\Program Files (x86)\FlashGet\Jccatch.dll
+// compiler-generated file created 07/07/08 at 02:48:49 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("79de8d41-161c-11d3-8b9b-df77640ba112"))
+/* LIBID */ __FGCATCHURLLib;
+struct /* coclass */ IECatch;
+struct __declspec(uuid("be2b5965-4249-4c70-81ab-70e2889309f3"))
+/* dual interface */ IIECatch;
+struct /* coclass */ JetCarNetscape;
+struct __declspec(uuid("fb5da723-162b-11d3-8b9b-aa70b4b0b524"))
+/* dual interface */ IJetCarNetscape;
+struct /* coclass */ DownMgr;
+struct __declspec(uuid("54a0200b-d1ae-4887-b5b4-6f8caa99a9e6"))
+/* dual interface */ IDownMgr;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IIECatch, __uuidof(IIECatch));
+_COM_SMARTPTR_TYPEDEF(IJetCarNetscape, __uuidof(IJetCarNetscape));
+_COM_SMARTPTR_TYPEDEF(IDownMgr, __uuidof(IDownMgr));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("2f364306-aa45-47b5-9f9d-39a8b94e7ef7"))
+IECatch;
+    // [ default ] interface IIECatch
+
+struct __declspec(uuid("be2b5965-4249-4c70-81ab-70e2889309f3"))
+IIECatch : IDispatch
+{};
+
+struct __declspec(uuid("fb5da724-162b-11d3-8b9b-aa70b4b0b524"))
+JetCarNetscape;
+    // [ default ] interface IJetCarNetscape
+
+struct __declspec(uuid("fb5da723-162b-11d3-8b9b-aa70b4b0b524"))
+IJetCarNetscape : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL Initialize (
+        _bstr_t pProtocol,
+        _bstr_t pUrl );
+    HRESULT Open (
+        _bstr_t pUrl );
+    HRESULT AddUrl (
+        _bstr_t pUrl,
+        _bstr_t pInfo,
+        _bstr_t pReferer );
+    HRESULT AddUrlList (
+        VARIANT * pList );
+    VARIANT_BOOL IsUrlExist (
+        _bstr_t pUrl );
+    VARIANT_BOOL AddUrlEx (
+        _bstr_t pUrl,
+        _bstr_t pInfo,
+        _bstr_t pReferer,
+        _bstr_t pSaveTo,
+        long uFlags );
+    long AddUrlListEx (
+        VARIANT * pList,
+        _bstr_t pSaveTo,
+        long uFlags );
+    VARIANT_BOOL IsVersion2 ( );
+    HRESULT AddFgUrl (
+        _bstr_t pUrl,
+        _bstr_t pInfo,
+        _bstr_t pReferer );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Initialize (
+        BSTR pProtocol,
+        BSTR pUrl,
+        /*[out,retval]*/ VARIANT_BOOL * Cancel ) = 0;
+      virtual HRESULT __stdcall raw_Open (
+        BSTR pUrl ) = 0;
+      virtual HRESULT __stdcall raw_AddUrl (
+        BSTR pUrl,
+        BSTR pInfo,
+        BSTR pReferer ) = 0;
+      virtual HRESULT __stdcall raw_AddUrlList (
+        VARIANT * pList ) = 0;
+      virtual HRESULT __stdcall raw_IsUrlExist (
+        BSTR pUrl,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall raw_AddUrlEx (
+        BSTR pUrl,
+        BSTR pInfo,
+        BSTR pReferer,
+        BSTR pSaveTo,
+        long uFlags,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall raw_AddUrlListEx (
+        VARIANT * pList,
+        BSTR pSaveTo,
+        long uFlags,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_IsVersion2 (
+        /*[out,retval]*/ VARIANT_BOOL * bOk ) = 0;
+      virtual HRESULT __stdcall raw_AddFgUrl (
+        BSTR pUrl,
+        BSTR pInfo,
+        BSTR pReferer ) = 0;
+};
+
+struct __declspec(uuid("acbcf095-e8c0-420f-8769-2845d9b92e8c"))
+DownMgr;
+    // [ default ] interface IDownMgr
+
+struct __declspec(uuid("54a0200b-d1ae-4887-b5b4-6f8caa99a9e6"))
+IDownMgr : IDispatch
+{};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_FGCATCHURLLib =
+    {0x79de8d41,0x161c,0x11d3,{0x8b,0x9b,0xdf,0x77,0x64,0x0b,0xa1,0x12}};
+extern "C" const GUID __declspec(selectany) CLSID_IECatch =
+    {0x2f364306,0xaa45,0x47b5,{0x9f,0x9d,0x39,0xa8,0xb9,0x4e,0x7e,0xf7}};
+extern "C" const GUID __declspec(selectany) IID_IIECatch =
+    {0xbe2b5965,0x4249,0x4c70,{0x81,0xab,0x70,0xe2,0x88,0x93,0x09,0xf3}};
+extern "C" const GUID __declspec(selectany) CLSID_JetCarNetscape =
+    {0xfb5da724,0x162b,0x11d3,{0x8b,0x9b,0xaa,0x70,0xb4,0xb0,0xb5,0x24}};
+extern "C" const GUID __declspec(selectany) IID_IJetCarNetscape =
+    {0xfb5da723,0x162b,0x11d3,{0x8b,0x9b,0xaa,0x70,0xb4,0xb0,0xb5,0x24}};
+extern "C" const GUID __declspec(selectany) CLSID_DownMgr =
+    {0xacbcf095,0xe8c0,0x420f,{0x87,0x69,0x28,0x45,0xd9,0xb9,0x2e,0x8c}};
+extern "C" const GUID __declspec(selectany) IID_IDownMgr =
+    {0x54a0200b,0xd1ae,0x4887,{0xb5,0xb4,0x6f,0x8c,0xaa,0x99,0xa9,0xe6}};
+
+//
+// Wrapper method implementations
+//
+
+#include "jccatch.tli"
+
+#pragma pack(pop)

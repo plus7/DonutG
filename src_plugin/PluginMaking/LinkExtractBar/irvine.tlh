@@ -1,0 +1,1420 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.21022.08 (fa5e0ebe).
+//
+// e:\proj\und\src_plugin\pluginmaking\linkextractbar\debug\irvine.tlh
+//
+// C++ source equivalent of Win32 type library C:\\ut\\irvine\\irvine.exe
+// compiler-generated file created 07/07/08 at 02:28:34 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("9773ab5c-0ffe-481a-ab8a-8e4084d6d13c"))
+/* LIBID */ __Irvine;
+struct __declspec(uuid("552808b4-8e20-48ef-9168-262fcd0c566e"))
+/* dual interface */ IApi;
+struct __declspec(uuid("1e6da0a3-6449-4864-8798-417dbb297aa5"))
+/* dispinterface */ IApiEvents;
+struct /* coclass */ Api;
+struct __declspec(uuid("c7805ea7-a9a4-46a2-8b35-305326db1e5c"))
+/* dual interface */ IItem;
+struct /* coclass */ Item;
+struct __declspec(uuid("9d18db2e-d84c-4318-817e-0883141597ef"))
+/* dual interface */ IFolder;
+struct /* coclass */ Folder;
+struct __declspec(uuid("34c0ea41-0000-4cde-999c-cd5d04fe9aa0"))
+/* dual interface */ IUrlManager;
+struct __declspec(uuid("346442a3-b78f-49ed-99f2-b468f8ad8635"))
+/* dispinterface */ IUrlManagerEvents;
+struct /* coclass */ UrlManager;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IApiEvents, __uuidof(IApiEvents));
+_COM_SMARTPTR_TYPEDEF(IItem, __uuidof(IItem));
+_COM_SMARTPTR_TYPEDEF(IFolder, __uuidof(IFolder));
+_COM_SMARTPTR_TYPEDEF(IApi, __uuidof(IApi));
+_COM_SMARTPTR_TYPEDEF(IUrlManager, __uuidof(IUrlManager));
+_COM_SMARTPTR_TYPEDEF(IUrlManagerEvents, __uuidof(IUrlManagerEvents));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("1e6da0a3-6449-4864-8798-417dbb297aa5"))
+IApiEvents : IDispatch
+{};
+
+struct __declspec(uuid("a79d8fa5-734e-4ca1-8931-fc76faf5fcfe"))
+Api;
+    // [ default ] interface IApi
+    // [ default, source ] dispinterface IApiEvents
+
+struct __declspec(uuid("c7805ea7-a9a4-46a2-8b35-305326db1e5c"))
+IItem : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetData,put=PutData))
+    _bstr_t Data;
+    __declspec(property(get=GetUrl,put=PutUrl))
+    _bstr_t Url;
+    __declspec(property(get=GetFolder,put=PutFolder))
+    _bstr_t Folder;
+    __declspec(property(get=GetFilename,put=PutFilename))
+    _bstr_t Filename;
+    __declspec(property(get=GetReferer,put=PutReferer))
+    _bstr_t Referer;
+    __declspec(property(get=GetCookie,put=PutCookie))
+    _bstr_t Cookie;
+    __declspec(property(get=GetCheck,put=PutCheck))
+    _bstr_t Check;
+    __declspec(property(get=GetSplitCount,put=PutSplitCount))
+    long SplitCount;
+    __declspec(property(get=GetAuthorization,put=PutAuthorization))
+    VARIANT_BOOL Authorization;
+    __declspec(property(get=GetUserId,put=PutUserId))
+    _bstr_t UserId;
+    __declspec(property(get=GetPassword,put=PutPassword))
+    _bstr_t Password;
+    __declspec(property(get=GetRegistDate,put=PutRegistDate))
+    double RegistDate;
+    __declspec(property(get=GetSuccess,put=PutSuccess))
+    VARIANT_BOOL Success;
+    __declspec(property(get=GetComment,put=PutComment))
+    _bstr_t Comment;
+    __declspec(property(get=GetFileSize,put=PutFileSize))
+    long FileSize;
+    __declspec(property(get=GetDLSize,put=PutDLSize))
+    long DLSize;
+    __declspec(property(get=GetError,put=PutError))
+    VARIANT_BOOL Error;
+    __declspec(property(get=GetDownloadedFilename,put=PutDownloadedFilename))
+    _bstr_t DownloadedFilename;
+    __declspec(property(get=GetSuccessDate,put=PutSuccessDate))
+    double SuccessDate;
+    __declspec(property(get=GetQueue,put=PutQueue))
+    _bstr_t Queue;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetData ( );
+    void PutData (
+        _bstr_t Value );
+    _bstr_t GetUrl ( );
+    void PutUrl (
+        _bstr_t Value );
+    _bstr_t GetFolder ( );
+    void PutFolder (
+        _bstr_t Value );
+    _bstr_t GetFilename ( );
+    void PutFilename (
+        _bstr_t Value );
+    _bstr_t GetReferer ( );
+    void PutReferer (
+        _bstr_t Value );
+    _bstr_t GetCookie ( );
+    void PutCookie (
+        _bstr_t Value );
+    _bstr_t GetCheck ( );
+    void PutCheck (
+        _bstr_t Value );
+    long GetSplitCount ( );
+    void PutSplitCount (
+        long Value );
+    VARIANT_BOOL GetAuthorization ( );
+    void PutAuthorization (
+        VARIANT_BOOL Value );
+    _bstr_t GetUserId ( );
+    void PutUserId (
+        _bstr_t Value );
+    _bstr_t GetPassword ( );
+    void PutPassword (
+        _bstr_t Value );
+    double GetRegistDate ( );
+    void PutRegistDate (
+        double Value );
+    VARIANT_BOOL GetSuccess ( );
+    void PutSuccess (
+        VARIANT_BOOL Value );
+    _bstr_t GetComment ( );
+    void PutComment (
+        _bstr_t Value );
+    long GetFileSize ( );
+    void PutFileSize (
+        long Value );
+    long GetDLSize ( );
+    void PutDLSize (
+        long Value );
+    VARIANT_BOOL GetError ( );
+    void PutError (
+        VARIANT_BOOL Value );
+    _bstr_t GetDownloadedFilename ( );
+    void PutDownloadedFilename (
+        _bstr_t Value );
+    double GetSuccessDate ( );
+    void PutSuccessDate (
+        double Value );
+    _bstr_t GetQueue ( );
+    void PutQueue (
+        _bstr_t Value );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Data (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Data (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Url (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Url (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Folder (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Folder (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Filename (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Filename (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Referer (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Referer (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Cookie (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Cookie (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Check (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Check (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_SplitCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_SplitCount (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_Authorization (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_Authorization (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_UserId (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_UserId (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Password (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Password (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_RegistDate (
+        /*[out,retval]*/ double * Value ) = 0;
+      virtual HRESULT __stdcall put_RegistDate (
+        /*[in]*/ double Value ) = 0;
+      virtual HRESULT __stdcall get_Success (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_Success (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_Comment (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Comment (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_FileSize (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_FileSize (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_DLSize (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_DLSize (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_Error (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_Error (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_DownloadedFilename (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_DownloadedFilename (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_SuccessDate (
+        /*[out,retval]*/ double * Value ) = 0;
+      virtual HRESULT __stdcall put_SuccessDate (
+        /*[in]*/ double Value ) = 0;
+      virtual HRESULT __stdcall get_Queue (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Queue (
+        /*[in]*/ BSTR Value ) = 0;
+};
+
+struct __declspec(uuid("f408c7dc-5329-4498-9c80-6c90e564955b"))
+Item;
+    // [ default ] interface IItem
+
+struct __declspec(uuid("9d18db2e-d84c-4318-817e-0883141597ef"))
+IFolder : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItemCount))
+    long ItemCount;
+    __declspec(property(get=GetItems,put=PutItems))
+    IItemPtr Items[];
+    __declspec(property(get=GetFolderCount))
+    long FolderCount;
+    __declspec(property(get=GetValues,put=PutValues))
+    _bstr_t Values[];
+    __declspec(property(get=GetFolders))
+    IFolderPtr Folders[];
+    __declspec(property(get=GetParent))
+    IFolderPtr Parent;
+    __declspec(property(get=GetData,put=PutData))
+    _bstr_t Data[][];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetAbsolutePath,put=PutAbsolutePath))
+    _bstr_t AbsolutePath;
+    __declspec(property(get=GetPath,put=PutPath))
+    _bstr_t Path;
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetItemData,put=PutItemData))
+    _bstr_t ItemData[];
+    __declspec(property(get=GetActiveDownloadCount))
+    long ActiveDownloadCount;
+    __declspec(property(get=GetActiveQueueCount))
+    long ActiveQueueCount;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetItemCount ( );
+    IItemPtr GetItems (
+        long Index );
+    void PutItems (
+        long Index,
+        struct IItem * Item );
+    long GetFolderCount ( );
+    IFolderPtr GetFolders (
+        long Index );
+    VARIANT_BOOL IsCurrent ( );
+    VARIANT_BOOL IsDefault ( );
+    VARIANT_BOOL IsTrash ( );
+    VARIANT_BOOL IsRoot ( );
+    IFolderPtr GetParent ( );
+    _bstr_t GetData (
+        _bstr_t Section,
+        _bstr_t Ident );
+    void PutData (
+        _bstr_t Section,
+        _bstr_t Ident,
+        _bstr_t Value );
+    long GetCount ( );
+    _bstr_t GetAbsolutePath ( );
+    void PutAbsolutePath (
+        _bstr_t Value );
+    VARIANT_BOOL DataExists (
+        _bstr_t Section,
+        _bstr_t Ident );
+    _bstr_t GetPath ( );
+    void PutPath (
+        _bstr_t Value );
+    _bstr_t GetName ( );
+    long AddItemData (
+        _bstr_t DataText );
+    HRESULT DeleteItem (
+        long Index );
+    HRESULT Start ( );
+    HRESULT Stop ( );
+    HRESULT StartItem (
+        long Index );
+    HRESULT StopItem (
+        long Index );
+    _bstr_t GetItemFilename (
+        long Index );
+    _bstr_t GetItemIndexFilename (
+        long Index );
+    long GetItemFileSize (
+        long Index );
+    HRESULT DownloadItem (
+        long Index );
+    _bstr_t GetItemData (
+        long Index );
+    void PutItemData (
+        long Index,
+        _bstr_t Value );
+    long AddItem (
+        struct IItem * Item );
+    VARIANT_BOOL IsBusy ( );
+    long GetActiveDownloadCount ( );
+    long GetActiveQueueCount ( );
+    VARIANT_BOOL Exists ( );
+    VARIANT_BOOL Make ( );
+    HRESULT ExtractItem (
+        long Index );
+    _bstr_t GetValues (
+        _bstr_t Ident );
+    void PutValues (
+        _bstr_t Ident,
+        _bstr_t Value );
+    VARIANT_BOOL ValueExists (
+        _bstr_t Ident );
+    HRESULT AssignData (
+        struct IFolder * Source );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ItemCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall get_Items (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ struct IItem * * Item ) = 0;
+      virtual HRESULT __stdcall put_Items (
+        /*[in]*/ long Index,
+        /*[in]*/ struct IItem * Item ) = 0;
+      virtual HRESULT __stdcall get_FolderCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall get_Folders (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ struct IFolder * * Value ) = 0;
+      virtual HRESULT __stdcall raw_IsCurrent (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall raw_IsDefault (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall raw_IsTrash (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall raw_IsRoot (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall get_Parent (
+        /*[out,retval]*/ struct IFolder * * Value ) = 0;
+      virtual HRESULT __stdcall get_Data (
+        /*[in]*/ BSTR Section,
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Data (
+        /*[in]*/ BSTR Section,
+        /*[in]*/ BSTR Ident,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall get_AbsolutePath (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_AbsolutePath (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall raw_DataExists (
+        /*[in]*/ BSTR Section,
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ VARIANT_BOOL * RetVal ) = 0;
+      virtual HRESULT __stdcall get_Path (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Path (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall raw_AddItemData (
+        /*[in]*/ BSTR DataText,
+        /*[out,retval]*/ long * Index ) = 0;
+      virtual HRESULT __stdcall raw_DeleteItem (
+        /*[in]*/ long Index ) = 0;
+      virtual HRESULT __stdcall raw_Start ( ) = 0;
+      virtual HRESULT __stdcall raw_Stop ( ) = 0;
+      virtual HRESULT __stdcall raw_StartItem (
+        /*[in]*/ long Index ) = 0;
+      virtual HRESULT __stdcall raw_StopItem (
+        /*[in]*/ long Index ) = 0;
+      virtual HRESULT __stdcall raw_GetItemFilename (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * Filename ) = 0;
+      virtual HRESULT __stdcall raw_GetItemIndexFilename (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * IndexFilename ) = 0;
+      virtual HRESULT __stdcall raw_GetItemFileSize (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ long * FileSize ) = 0;
+      virtual HRESULT __stdcall raw_DownloadItem (
+        /*[in]*/ long Index ) = 0;
+      virtual HRESULT __stdcall get_ItemData (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_ItemData (
+        /*[in]*/ long Index,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall raw_AddItem (
+        /*[in]*/ struct IItem * Item,
+        /*[out,retval]*/ long * Index ) = 0;
+      virtual HRESULT __stdcall raw_IsBusy (
+        /*[out,retval]*/ VARIANT_BOOL * Busy ) = 0;
+      virtual HRESULT __stdcall get_ActiveDownloadCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall get_ActiveQueueCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall raw_Exists (
+        /*[out,retval]*/ VARIANT_BOOL * Existed ) = 0;
+      virtual HRESULT __stdcall raw_Make (
+        /*[out,retval]*/ VARIANT_BOOL * OK ) = 0;
+      virtual HRESULT __stdcall raw_ExtractItem (
+        /*[in]*/ long Index ) = 0;
+      virtual HRESULT __stdcall get_Values (
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Values (
+        /*[in]*/ BSTR Ident,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall raw_ValueExists (
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ VARIANT_BOOL * Existed ) = 0;
+      virtual HRESULT __stdcall raw_AssignData (
+        /*[in]*/ struct IFolder * Source ) = 0;
+};
+
+struct __declspec(uuid("552808b4-8e20-48ef-9168-262fcd0c566e"))
+IApi : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItems,put=PutItems))
+    _bstr_t Items[];
+    __declspec(property(get=GetVersion))
+    _bstr_t Version;
+    __declspec(property(get=GetHInstance))
+    long HInstance;
+    __declspec(property(get=GetWindowHandle))
+    long WindowHandle;
+    __declspec(property(get=GetApplicationPath))
+    _bstr_t ApplicationPath;
+    __declspec(property(get=GetPluginsPath))
+    _bstr_t PluginsPath;
+    __declspec(property(get=GetImportPath))
+    _bstr_t ImportPath;
+    __declspec(property(get=GetItemSelected,put=PutItemSelected))
+    VARIANT_BOOL ItemSelected[];
+    __declspec(property(get=GetTotalBytes))
+    double TotalBytes;
+    __declspec(property(get=GetTotalFiles))
+    double TotalFiles;
+    __declspec(property(get=GetIniFilename))
+    _bstr_t IniFilename;
+    __declspec(property(get=GetFolderData,put=PutFolderData))
+    _bstr_t FolderData[][];
+    __declspec(property(get=GetOptionData,put=PutOptionData))
+    _bstr_t OptionData[][];
+    __declspec(property(get=GetFiltering,put=PutFiltering))
+    VARIANT_BOOL Filtering;
+    __declspec(property(get=GetDefault))
+    IFolderPtr Default;
+    __declspec(property(get=GetScriptsPath))
+    _bstr_t ScriptsPath;
+    __declspec(property(get=GetTrash))
+    IFolderPtr Trash;
+    __declspec(property(get=GetRoot))
+    IFolderPtr Root;
+    __declspec(property(get=GetCurrent,put=PutCurrent))
+    IFolderPtr Current;
+    __declspec(property(get=GetImportLinksDepth,put=PutImportLinksDepth))
+    long ImportLinksDepth;
+    __declspec(property(get=GetImportLinksThreadCount,put=PutImportLinksThreadCount))
+    long ImportLinksThreadCount;
+    __declspec(property(get=GetItemCount))
+    long ItemCount;
+    __declspec(property(get=GetActiveFolderCount))
+    long ActiveFolderCount;
+    __declspec(property(get=GetCurrentQueueFolder,put=PutCurrentQueueFolder))
+    _bstr_t CurrentQueueFolder;
+    __declspec(property(get=GetOptionValues,put=PutOptionValues))
+    _bstr_t OptionValues[];
+    __declspec(property(get=GetFolderValues,put=PutFolderValues))
+    _bstr_t FolderValues[];
+    __declspec(property(get=GetSelectedItemCount))
+    long SelectedItemCount;
+    __declspec(property(get=GetBuild))
+    long Build;
+    __declspec(property(get=GetStatusBarText,put=PutStatusBarText))
+    _bstr_t StatusBarText;
+    __declspec(property(get=GetActiveDownloadCount))
+    long ActiveDownloadCount;
+    __declspec(property(get=GetActiveQueueCount))
+    long ActiveQueueCount;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetVersion ( );
+    long GetHInstance ( );
+    long GetWindowHandle ( );
+    _bstr_t GetApplicationPath ( );
+    _bstr_t GetPluginsPath ( );
+    _bstr_t GetImportPath ( );
+    double GetTotalBytes ( );
+    double GetTotalFiles ( );
+    _bstr_t GetIniFilename ( );
+    HRESULT AddUrl (
+        _bstr_t Urls,
+        long Flag );
+    HRESULT Import (
+        _bstr_t Filename );
+    HRESULT Save ( );
+    HRESULT Quit ( );
+    HRESULT Download (
+        _bstr_t Url,
+        long Flag );
+    _bstr_t GetScriptsPath ( );
+    HRESULT Clear ( );
+    HRESULT ForegroundWindow ( );
+    HRESULT Start (
+        long Flag );
+    HRESULT Stop (
+        long Flag );
+    HRESULT Dialup ( );
+    HRESULT Hangup ( );
+    long GetItemCount ( );
+    HRESULT Paste (
+        long Flag );
+    _bstr_t EnumQueueFolders (
+        _bstr_t AbsolutePath );
+    _bstr_t GetCurrentQueueFolder ( );
+    void PutCurrentQueueFolder (
+        _bstr_t Value );
+    _bstr_t GetOptionData (
+        _bstr_t Section,
+        _bstr_t Ident );
+    HRESULT SetOptionData (
+        _bstr_t Section,
+        _bstr_t Ident,
+        _bstr_t Value );
+    _bstr_t GetFolderData (
+        _bstr_t Section,
+        _bstr_t Ident );
+    HRESULT SetFolderData (
+        _bstr_t Section,
+        _bstr_t Ident,
+        _bstr_t Value );
+    VARIANT_BOOL CreateQueueFolder (
+        _bstr_t Name,
+        VARIANT_BOOL OpenFolder );
+    HRESULT AddIRI (
+        _bstr_t IriaListText );
+    HRESULT ImportLinks (
+        _bstr_t Urls,
+        long Flag );
+    HRESULT AddUrlAndReferer (
+        _bstr_t Urls,
+        _bstr_t Referer,
+        long Flag );
+    VARIANT_BOOL DeleteQueueFolder (
+        _bstr_t AbsolutePath,
+        VARIANT_BOOL Confirm );
+    VARIANT_BOOL CreateQueueItem (
+        _bstr_t DataText,
+        VARIANT_BOOL Confirm );
+    VARIANT_BOOL ExecuteAction (
+        _bstr_t ActionName );
+    long GetSelectedItemCount ( );
+    _bstr_t GetItemData (
+        long Index );
+    HRESULT SetItemData (
+        long Index,
+        _bstr_t Value );
+    VARIANT_BOOL GetItemSelected (
+        long Index );
+    HRESULT SetItemSelected (
+        long Index,
+        VARIANT_BOOL Value );
+    _bstr_t UrlEncode (
+        _bstr_t Str,
+        _bstr_t IgnoreChars,
+        VARIANT_BOOL SpaceToPlus );
+    _bstr_t UrlDecode (
+        _bstr_t Str,
+        VARIANT_BOOL PlusToSpace );
+    HRESULT Invalidate ( );
+    HRESULT BeginProgressBar (
+        long MaxCount );
+    HRESULT EndProgressBar ( );
+    HRESULT ProgressBarStepBy (
+        long Delta );
+    HRESULT DeleteItem (
+        long Index );
+    _bstr_t GetItemFilename (
+        long Index );
+    _bstr_t ForceQueueFolders (
+        _bstr_t AbsolutePath,
+        VARIANT_BOOL OpenFolder,
+        long Flag );
+    VARIANT_BOOL UpQueueFolder ( );
+    HRESULT ChangeTab (
+        long Mode );
+    _bstr_t GetItemIndexFilename (
+        long Index );
+    long GetItemFileSize (
+        long Index );
+    long GetFileSize (
+        _bstr_t Filename );
+    _bstr_t EnumQueueFolders2 (
+        _bstr_t AbsolutePath );
+    _bstr_t GetStatusBarText ( );
+    void PutStatusBarText (
+        _bstr_t Value );
+    long GetActiveDownloadCount ( );
+    long GetActiveQueueCount ( );
+    _bstr_t GetItems (
+        long Index );
+    void PutItems (
+        long Index,
+        _bstr_t ItemData );
+    //VARIANT_BOOL GetItemSelected (
+    //    long Index );
+    void PutItemSelected (
+        long Index,
+        VARIANT_BOOL Value );
+    //_bstr_t GetOptionData (
+    //  _bstr_t Section,
+    //  _bstr_t Ident );
+    void PutOptionData (
+        _bstr_t Section,
+        _bstr_t Ident,
+        _bstr_t Value );
+    //_bstr_t GetFolderData (
+    //    _bstr_t Section,
+    //    _bstr_t Ident );
+    void PutFolderData (
+        _bstr_t Section,
+        _bstr_t Ident,
+        _bstr_t Value );
+    VARIANT_BOOL OptionDataExists (
+        _bstr_t Section,
+        _bstr_t Ident );
+    VARIANT_BOOL FolderDataExists (
+        _bstr_t Section,
+        _bstr_t Ident );
+    HRESULT StartImportLinks ( );
+    HRESULT StopImportLinks ( );
+    _bstr_t AddQueueItem (
+        _bstr_t ParentFolder,
+        _bstr_t DataText );
+    VARIANT_BOOL GetFiltering ( );
+    void PutFiltering (
+        VARIANT_BOOL Value );
+    HRESULT DeleteQueueItem (
+        long Index );
+    HRESULT ClearImportLinks ( );
+    HRESULT SaveImportLinks (
+        _bstr_t Filename );
+    HRESULT LoadImportLinks (
+        _bstr_t Filename );
+    IFolderPtr GetDefault ( );
+    IFolderPtr GetTrash ( );
+    IFolderPtr GetRoot ( );
+    IFolderPtr GetCurrent ( );
+    void PutCurrent (
+        struct IFolder * Value );
+    long GetImportLinksDepth ( );
+    void PutImportLinksDepth (
+        long Value );
+    long GetImportLinksThreadCount ( );
+    void PutImportLinksThreadCount (
+        long Value );
+    HRESULT CloseImportLinks ( );
+    HRESULT RegistImportLinks (
+        _bstr_t FolderPath );
+    VARIANT_BOOL IsBusyImportLinks ( );
+    VARIANT_BOOL IsBusy ( );
+    long GetActiveFolderCount ( );
+    VARIANT_BOOL FolderExists (
+        _bstr_t AbsolutePath );
+    HRESULT ExtractQueueItem (
+        long Index );
+    _bstr_t ExpandUrls (
+        _bstr_t Urls );
+    _bstr_t GetOptionValue (
+        _bstr_t Ident );
+    HRESULT SetOptionValue (
+        _bstr_t Ident,
+        _bstr_t Value );
+    VARIANT_BOOL OptionValueExists (
+        _bstr_t Ident );
+    _bstr_t GetFolderValue (
+        _bstr_t Ident );
+    HRESULT SetFolderValue (
+        _bstr_t Ident,
+        _bstr_t Value );
+    VARIANT_BOOL FolderValueExists (
+        _bstr_t Ident );
+    _bstr_t GetOptionValues (
+        _bstr_t Ident );
+    void PutOptionValues (
+        _bstr_t Ident,
+        _bstr_t Value );
+    _bstr_t GetFolderValues (
+        _bstr_t Ident );
+    void PutFolderValues (
+        _bstr_t Ident,
+        _bstr_t Value );
+    HRESULT Update ( );
+    HRESULT ShowMessage (
+        _bstr_t Title,
+        _bstr_t Msg,
+        long Interval );
+    long ExecuteScript (
+        _bstr_t Event,
+        _bstr_t GUIDSt );
+    HRESULT FlashTrayIcon ( );
+    long GetBuild ( );
+    HRESULT BeginUpdate ( );
+    HRESULT EndUpdate ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Version (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall get_HInstance (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall get_WindowHandle (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall get_ApplicationPath (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall get_PluginsPath (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall get_ImportPath (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall get_TotalBytes (
+        /*[out,retval]*/ double * Value ) = 0;
+      virtual HRESULT __stdcall get_TotalFiles (
+        /*[out,retval]*/ double * Value ) = 0;
+      virtual HRESULT __stdcall get_IniFilename (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall raw_AddUrl (
+        /*[in]*/ BSTR Urls,
+        /*[in]*/ long Flag ) = 0;
+      virtual HRESULT __stdcall raw_Import (
+        /*[in]*/ BSTR Filename ) = 0;
+      virtual HRESULT __stdcall raw_Save ( ) = 0;
+      virtual HRESULT __stdcall raw_Quit ( ) = 0;
+      virtual HRESULT __stdcall raw_Download (
+        /*[in]*/ BSTR Url,
+        /*[in]*/ long Flag ) = 0;
+      virtual HRESULT __stdcall get_ScriptsPath (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall raw_Clear ( ) = 0;
+      virtual HRESULT __stdcall raw_ForegroundWindow ( ) = 0;
+      virtual HRESULT __stdcall raw_Start (
+        /*[in]*/ long Flag ) = 0;
+      virtual HRESULT __stdcall raw_Stop (
+        /*[in]*/ long Flag ) = 0;
+      virtual HRESULT __stdcall raw_Dialup ( ) = 0;
+      virtual HRESULT __stdcall raw_Hangup ( ) = 0;
+      virtual HRESULT __stdcall get_ItemCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall raw_Paste (
+        /*[in]*/ long Flag ) = 0;
+      virtual HRESULT __stdcall raw_EnumQueueFolders (
+        /*[in]*/ BSTR AbsolutePath,
+        /*[out,retval]*/ BSTR * ResultFolders ) = 0;
+      virtual HRESULT __stdcall get_CurrentQueueFolder (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_CurrentQueueFolder (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall raw_GetOptionData (
+        /*[in]*/ BSTR Section,
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall raw_SetOptionData (
+        /*[in]*/ BSTR Section,
+        /*[in]*/ BSTR Ident,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall raw_GetFolderData (
+        /*[in]*/ BSTR Section,
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall raw_SetFolderData (
+        /*[in]*/ BSTR Section,
+        /*[in]*/ BSTR Ident,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall raw_CreateQueueFolder (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ VARIANT_BOOL OpenFolder,
+        /*[out,retval]*/ VARIANT_BOOL * Return ) = 0;
+      virtual HRESULT __stdcall raw_AddIRI (
+        /*[in]*/ BSTR IriaListText ) = 0;
+      virtual HRESULT __stdcall raw_ImportLinks (
+        /*[in]*/ BSTR Urls,
+        /*[in]*/ long Flag ) = 0;
+      virtual HRESULT __stdcall raw_AddUrlAndReferer (
+        /*[in]*/ BSTR Urls,
+        /*[in]*/ BSTR Referer,
+        /*[in]*/ long Flag ) = 0;
+      virtual HRESULT __stdcall raw_DeleteQueueFolder (
+        /*[in]*/ BSTR AbsolutePath,
+        /*[in]*/ VARIANT_BOOL Confirm,
+        /*[out,retval]*/ VARIANT_BOOL * Result ) = 0;
+      virtual HRESULT __stdcall raw_CreateQueueItem (
+        /*[in]*/ BSTR DataText,
+        /*[in]*/ VARIANT_BOOL Confirm,
+        /*[out,retval]*/ VARIANT_BOOL * Return ) = 0;
+      virtual HRESULT __stdcall raw_ExecuteAction (
+        /*[in]*/ BSTR ActionName,
+        /*[out,retval]*/ VARIANT_BOOL * Success ) = 0;
+      virtual HRESULT __stdcall get_SelectedItemCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall raw_GetItemData (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * RetValue ) = 0;
+      virtual HRESULT __stdcall raw_SetItemData (
+        /*[in]*/ long Index,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall raw_GetItemSelected (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ VARIANT_BOOL * RetValue ) = 0;
+      virtual HRESULT __stdcall raw_SetItemSelected (
+        /*[in]*/ long Index,
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall raw_UrlEncode (
+        /*[in]*/ BSTR Str,
+        /*[in]*/ BSTR IgnoreChars,
+        /*[in]*/ VARIANT_BOOL SpaceToPlus,
+        /*[out,retval]*/ BSTR * RetValue ) = 0;
+      virtual HRESULT __stdcall raw_UrlDecode (
+        /*[in]*/ BSTR Str,
+        /*[in]*/ VARIANT_BOOL PlusToSpace,
+        /*[out,retval]*/ BSTR * RetValue ) = 0;
+      virtual HRESULT __stdcall raw_Invalidate ( ) = 0;
+      virtual HRESULT __stdcall raw_BeginProgressBar (
+        /*[in]*/ long MaxCount ) = 0;
+      virtual HRESULT __stdcall raw_EndProgressBar ( ) = 0;
+      virtual HRESULT __stdcall raw_ProgressBarStepBy (
+        /*[in]*/ long Delta ) = 0;
+      virtual HRESULT __stdcall raw_DeleteItem (
+        /*[in]*/ long Index ) = 0;
+      virtual HRESULT __stdcall raw_GetItemFilename (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * Filename ) = 0;
+      virtual HRESULT __stdcall raw_ForceQueueFolders (
+        /*[in]*/ BSTR AbsolutePath,
+        /*[in]*/ VARIANT_BOOL OpenFolder,
+        /*[in]*/ long Flag,
+        /*[out,retval]*/ BSTR * RetAbsolutePath ) = 0;
+      virtual HRESULT __stdcall raw_UpQueueFolder (
+        /*[out,retval]*/ VARIANT_BOOL * Success ) = 0;
+      virtual HRESULT __stdcall raw_ChangeTab (
+        /*[in]*/ long Mode ) = 0;
+      virtual HRESULT __stdcall raw_GetItemIndexFilename (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * Filename ) = 0;
+      virtual HRESULT __stdcall raw_GetItemFileSize (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ long * FileSize ) = 0;
+      virtual HRESULT __stdcall raw_GetFileSize (
+        /*[in]*/ BSTR Filename,
+        /*[out,retval]*/ long * FileSize ) = 0;
+      virtual HRESULT __stdcall raw_EnumQueueFolders2 (
+        /*[in]*/ BSTR AbsolutePath,
+        /*[out,retval]*/ BSTR * ResultFolders ) = 0;
+      virtual HRESULT __stdcall get_StatusBarText (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_StatusBarText (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_ActiveDownloadCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall get_ActiveQueueCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall get_Items (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * ItemData ) = 0;
+      virtual HRESULT __stdcall put_Items (
+        /*[in]*/ long Index,
+        /*[in]*/ BSTR ItemData ) = 0;
+      virtual HRESULT __stdcall get_ItemSelected (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_ItemSelected (
+        /*[in]*/ long Index,
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_OptionData (
+        /*[in]*/ BSTR Section,
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_OptionData (
+        /*[in]*/ BSTR Section,
+        /*[in]*/ BSTR Ident,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_FolderData (
+        /*[in]*/ BSTR Section,
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_FolderData (
+        /*[in]*/ BSTR Section,
+        /*[in]*/ BSTR Ident,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall raw_OptionDataExists (
+        /*[in]*/ BSTR Section,
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ VARIANT_BOOL * Existed ) = 0;
+      virtual HRESULT __stdcall raw_FolderDataExists (
+        /*[in]*/ BSTR Section,
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ VARIANT_BOOL * Existed ) = 0;
+      virtual HRESULT __stdcall raw_StartImportLinks ( ) = 0;
+      virtual HRESULT __stdcall raw_StopImportLinks ( ) = 0;
+      virtual HRESULT __stdcall raw_AddQueueItem (
+        /*[in]*/ BSTR ParentFolder,
+        /*[in]*/ BSTR DataText,
+        /*[out,retval]*/ BSTR * RetFolder ) = 0;
+      virtual HRESULT __stdcall get_Filtering (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_Filtering (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall raw_DeleteQueueItem (
+        /*[in]*/ long Index ) = 0;
+      virtual HRESULT __stdcall raw_ClearImportLinks ( ) = 0;
+      virtual HRESULT __stdcall raw_SaveImportLinks (
+        /*[in]*/ BSTR Filename ) = 0;
+      virtual HRESULT __stdcall raw_LoadImportLinks (
+        /*[in]*/ BSTR Filename ) = 0;
+      virtual HRESULT __stdcall get_Default (
+        /*[out,retval]*/ struct IFolder * * Value ) = 0;
+      virtual HRESULT __stdcall get_Trash (
+        /*[out,retval]*/ struct IFolder * * Value ) = 0;
+      virtual HRESULT __stdcall get_Root (
+        /*[out,retval]*/ struct IFolder * * Value ) = 0;
+      virtual HRESULT __stdcall get_Current (
+        /*[out,retval]*/ struct IFolder * * Value ) = 0;
+      virtual HRESULT __stdcall put_Current (
+        /*[in]*/ struct IFolder * Value ) = 0;
+      virtual HRESULT __stdcall get_ImportLinksDepth (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_ImportLinksDepth (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_ImportLinksThreadCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_ImportLinksThreadCount (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall raw_CloseImportLinks ( ) = 0;
+      virtual HRESULT __stdcall raw_RegistImportLinks (
+        /*[in]*/ BSTR FolderPath ) = 0;
+      virtual HRESULT __stdcall raw_IsBusyImportLinks (
+        /*[out,retval]*/ VARIANT_BOOL * Busy ) = 0;
+      virtual HRESULT __stdcall raw_IsBusy (
+        /*[out,retval]*/ VARIANT_BOOL * Busy ) = 0;
+      virtual HRESULT __stdcall get_ActiveFolderCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall raw_FolderExists (
+        /*[in]*/ BSTR AbsolutePath,
+        /*[out,retval]*/ VARIANT_BOOL * Existed ) = 0;
+      virtual HRESULT __stdcall raw_ExtractQueueItem (
+        /*[in]*/ long Index ) = 0;
+      virtual HRESULT __stdcall raw_ExpandUrls (
+        /*[in]*/ BSTR Urls,
+        /*[out,retval]*/ BSTR * ExpandedUrls ) = 0;
+      virtual HRESULT __stdcall raw_GetOptionValue (
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall raw_SetOptionValue (
+        /*[in]*/ BSTR Ident,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall raw_OptionValueExists (
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ VARIANT_BOOL * Existed ) = 0;
+      virtual HRESULT __stdcall raw_GetFolderValue (
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall raw_SetFolderValue (
+        /*[in]*/ BSTR Ident,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall raw_FolderValueExists (
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ VARIANT_BOOL * Existed ) = 0;
+      virtual HRESULT __stdcall get_OptionValues (
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_OptionValues (
+        /*[in]*/ BSTR Ident,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_FolderValues (
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_FolderValues (
+        /*[in]*/ BSTR Ident,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall raw_Update ( ) = 0;
+      virtual HRESULT __stdcall raw_ShowMessage (
+        /*[in]*/ BSTR Title,
+        /*[in]*/ BSTR Msg,
+        /*[in]*/ long Interval ) = 0;
+      virtual HRESULT __stdcall raw_ExecuteScript (
+        /*[in]*/ BSTR Event,
+        /*[in]*/ BSTR GUIDSt,
+        /*[out,retval]*/ long * RetValue ) = 0;
+      virtual HRESULT __stdcall raw_FlashTrayIcon ( ) = 0;
+      virtual HRESULT __stdcall get_Build (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall raw_BeginUpdate ( ) = 0;
+      virtual HRESULT __stdcall raw_EndUpdate ( ) = 0;
+};
+
+//struct __declspec(uuid("dd7aad75-594d-445f-8ef4-fb2244bead2f"))
+//Folder;
+    // [ default ] interface IFolder
+
+struct __declspec(uuid("34c0ea41-0000-4cde-999c-cd5d04fe9aa0"))
+IUrlManager : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetOptionValues,put=PutOptionValues))
+    _bstr_t OptionValues[];
+    __declspec(property(get=GetItems,put=PutItems))
+    _bstr_t Items[];
+    __declspec(property(get=GetItemCount))
+    long ItemCount;
+    __declspec(property(get=GetItemSelected,put=PutItemSelected))
+    VARIANT_BOOL ItemSelected[];
+    __declspec(property(get=GetReferer,put=PutReferer))
+    _bstr_t Referer;
+    __declspec(property(get=GetDepth,put=PutDepth))
+    long Depth;
+    __declspec(property(get=GetThreadCount,put=PutThreadCount))
+    long ThreadCount;
+    __declspec(property(get=GetUserAgent,put=PutUserAgent))
+    _bstr_t UserAgent;
+    __declspec(property(get=GetSelectedItemCount))
+    long SelectedItemCount;
+    __declspec(property(get=GetTagAHREF,put=PutTagAHREF))
+    VARIANT_BOOL TagAHREF;
+    __declspec(property(get=GetTagIMGSRC,put=PutTagIMGSRC))
+    VARIANT_BOOL TagIMGSRC;
+    __declspec(property(get=GetTagFRAMESRC,put=PutTagFRAMESRC))
+    VARIANT_BOOL TagFRAMESRC;
+    __declspec(property(get=GetTagIFRAMESRC,put=PutTagIFRAMESRC))
+    VARIANT_BOOL TagIFRAMESRC;
+    __declspec(property(get=GetTagMETAREFRESH,put=PutTagMETAREFRESH))
+    VARIANT_BOOL TagMETAREFRESH;
+    __declspec(property(get=GetTagBGSOUND,put=PutTagBGSOUND))
+    VARIANT_BOOL TagBGSOUND;
+    __declspec(property(get=GetTagOther,put=PutTagOther))
+    VARIANT_BOOL TagOther;
+    __declspec(property(get=GetExtHTML,put=PutExtHTML))
+    VARIANT_BOOL ExtHTML;
+    __declspec(property(get=GetExtTEXT,put=PutExtTEXT))
+    VARIANT_BOOL ExtTEXT;
+    __declspec(property(get=GetExtIMAGE,put=PutExtIMAGE))
+    VARIANT_BOOL ExtIMAGE;
+    __declspec(property(get=GetExtARCHIVE,put=PutExtARCHIVE))
+    VARIANT_BOOL ExtARCHIVE;
+    __declspec(property(get=GetExtAUDIO,put=PutExtAUDIO))
+    VARIANT_BOOL ExtAUDIO;
+    __declspec(property(get=GetExtMOVIE,put=PutExtMOVIE))
+    VARIANT_BOOL ExtMOVIE;
+    __declspec(property(get=GetExtEtc,put=PutExtEtc))
+    VARIANT_BOOL ExtEtc;
+    __declspec(property(get=GetExtRegExp,put=PutExtRegExp))
+    VARIANT_BOOL ExtRegExp;
+    __declspec(property(get=GetProxy,put=PutProxy))
+    _bstr_t Proxy;
+    __declspec(property(get=GetUseProxy,put=PutUseProxy))
+    VARIANT_BOOL UseProxy;
+    __declspec(property(get=GetProxyUserId,put=PutProxyUserId))
+    _bstr_t ProxyUserId;
+    __declspec(property(get=GetProxyPassword,put=PutProxyPassword))
+    _bstr_t ProxyPassword;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Close ( );
+    HRESULT Start ( );
+    HRESULT Stop ( );
+    HRESULT Clear ( );
+    HRESULT Show ( );
+    _bstr_t GetOptionValues (
+        _bstr_t Ident );
+    void PutOptionValues (
+        _bstr_t Ident,
+        _bstr_t Value );
+    VARIANT_BOOL OptionValueExists (
+        _bstr_t Ident );
+    _bstr_t GetItems (
+        long Index );
+    void PutItems (
+        long Index,
+        _bstr_t Value );
+    long GetItemCount ( );
+    VARIANT_BOOL GetItemSelected (
+        long Index );
+    void PutItemSelected (
+        long Index,
+        VARIANT_BOOL Value );
+    HRESULT IsBusy ( );
+    HRESULT Regist ( );
+    long GetDepth ( );
+    void PutDepth (
+        long Value );
+    long GetThreadCount ( );
+    void PutThreadCount (
+        long Value );
+    HRESULT AddQueue (
+        _bstr_t Urls );
+    HRESULT ClearQueue ( );
+    long GetSelectedItemCount ( );
+    HRESULT SelectExt ( );
+    VARIANT_BOOL GetTagAHREF ( );
+    void PutTagAHREF (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetTagIMGSRC ( );
+    void PutTagIMGSRC (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetTagFRAMESRC ( );
+    void PutTagFRAMESRC (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetTagIFRAMESRC ( );
+    void PutTagIFRAMESRC (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetTagMETAREFRESH ( );
+    void PutTagMETAREFRESH (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetTagBGSOUND ( );
+    void PutTagBGSOUND (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetTagOther ( );
+    void PutTagOther (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetExtHTML ( );
+    void PutExtHTML (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetExtTEXT ( );
+    void PutExtTEXT (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetExtIMAGE ( );
+    void PutExtIMAGE (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetExtARCHIVE ( );
+    void PutExtARCHIVE (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetExtAUDIO ( );
+    void PutExtAUDIO (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetExtMOVIE ( );
+    void PutExtMOVIE (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetExtEtc ( );
+    void PutExtEtc (
+        VARIANT_BOOL Value );
+    VARIANT_BOOL GetExtRegExp ( );
+    void PutExtRegExp (
+        VARIANT_BOOL Value );
+    _bstr_t GetReferer ( );
+    void PutReferer (
+        _bstr_t Value );
+    _bstr_t GetUserAgent ( );
+    void PutUserAgent (
+        _bstr_t Value );
+    _bstr_t GetProxy ( );
+    void PutProxy (
+        _bstr_t Value );
+    VARIANT_BOOL GetUseProxy ( );
+    void PutUseProxy (
+        VARIANT_BOOL Value );
+    _bstr_t GetProxyUserId ( );
+    void PutProxyUserId (
+        _bstr_t Value );
+    _bstr_t GetProxyPassword ( );
+    void PutProxyPassword (
+        _bstr_t Value );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Close ( ) = 0;
+      virtual HRESULT __stdcall raw_Start ( ) = 0;
+      virtual HRESULT __stdcall raw_Stop ( ) = 0;
+      virtual HRESULT __stdcall raw_Clear ( ) = 0;
+      virtual HRESULT __stdcall raw_Show ( ) = 0;
+      virtual HRESULT __stdcall get_OptionValues (
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_OptionValues (
+        /*[in]*/ BSTR Ident,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall raw_OptionValueExists (
+        /*[in]*/ BSTR Ident,
+        /*[out,retval]*/ VARIANT_BOOL * Existed ) = 0;
+      virtual HRESULT __stdcall get_Items (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Items (
+        /*[in]*/ long Index,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_ItemCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall get_ItemSelected (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_ItemSelected (
+        /*[in]*/ long Index,
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall raw_IsBusy ( ) = 0;
+      virtual HRESULT __stdcall raw_Regist ( ) = 0;
+      virtual HRESULT __stdcall get_Depth (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_Depth (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall get_ThreadCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall put_ThreadCount (
+        /*[in]*/ long Value ) = 0;
+      virtual HRESULT __stdcall raw_AddQueue (
+        /*[in]*/ BSTR Urls ) = 0;
+      virtual HRESULT __stdcall raw_ClearQueue ( ) = 0;
+      virtual HRESULT __stdcall get_SelectedItemCount (
+        /*[out,retval]*/ long * Value ) = 0;
+      virtual HRESULT __stdcall raw_SelectExt ( ) = 0;
+      virtual HRESULT __stdcall get_TagAHREF (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_TagAHREF (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_TagIMGSRC (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_TagIMGSRC (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_TagFRAMESRC (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_TagFRAMESRC (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_TagIFRAMESRC (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_TagIFRAMESRC (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_TagMETAREFRESH (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_TagMETAREFRESH (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_TagBGSOUND (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_TagBGSOUND (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_TagOther (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_TagOther (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_ExtHTML (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_ExtHTML (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_ExtTEXT (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_ExtTEXT (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_ExtIMAGE (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_ExtIMAGE (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_ExtARCHIVE (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_ExtARCHIVE (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_ExtAUDIO (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_ExtAUDIO (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_ExtMOVIE (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_ExtMOVIE (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_ExtEtc (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_ExtEtc (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_ExtRegExp (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_ExtRegExp (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_Referer (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Referer (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_UserAgent (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_UserAgent (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Proxy (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Proxy (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_UseProxy (
+        /*[out,retval]*/ VARIANT_BOOL * Value ) = 0;
+      virtual HRESULT __stdcall put_UseProxy (
+        /*[in]*/ VARIANT_BOOL Value ) = 0;
+      virtual HRESULT __stdcall get_ProxyUserId (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_ProxyUserId (
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_ProxyPassword (
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_ProxyPassword (
+        /*[in]*/ BSTR Value ) = 0;
+};
+
+struct __declspec(uuid("346442a3-b78f-49ed-99f2-b468f8ad8635"))
+IUrlManagerEvents : IDispatch
+{};
+
+struct __declspec(uuid("21c0de0b-9111-46a5-973e-14a74ce2ca82"))
+UrlManager;
+    // [ default ] interface IUrlManager
+    // [ default, source ] dispinterface IUrlManagerEvents
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_Irvine =
+    {0x9773ab5c,0x0ffe,0x481a,{0xab,0x8a,0x8e,0x40,0x84,0xd6,0xd1,0x3c}};
+extern "C" const GUID __declspec(selectany) DIID_IApiEvents =
+    {0x1e6da0a3,0x6449,0x4864,{0x87,0x98,0x41,0x7d,0xbb,0x29,0x7a,0xa5}};
+extern "C" const GUID __declspec(selectany) CLSID_Api =
+    {0xa79d8fa5,0x734e,0x4ca1,{0x89,0x31,0xfc,0x76,0xfa,0xf5,0xfc,0xfe}};
+extern "C" const GUID __declspec(selectany) IID_IItem =
+    {0xc7805ea7,0xa9a4,0x46a2,{0x8b,0x35,0x30,0x53,0x26,0xdb,0x1e,0x5c}};
+extern "C" const GUID __declspec(selectany) CLSID_Item =
+    {0xf408c7dc,0x5329,0x4498,{0x9c,0x80,0x6c,0x90,0xe5,0x64,0x95,0x5b}};
+extern "C" const GUID __declspec(selectany) IID_IFolder =
+    {0x9d18db2e,0xd84c,0x4318,{0x81,0x7e,0x08,0x83,0x14,0x15,0x97,0xef}};
+extern "C" const GUID __declspec(selectany) IID_IApi =
+    {0x552808b4,0x8e20,0x48ef,{0x91,0x68,0x26,0x2f,0xcd,0x0c,0x56,0x6e}};
+extern "C" const GUID __declspec(selectany) CLSID_Folder =
+    {0xdd7aad75,0x594d,0x445f,{0x8e,0xf4,0xfb,0x22,0x44,0xbe,0xad,0x2f}};
+extern "C" const GUID __declspec(selectany) IID_IUrlManager =
+    {0x34c0ea41,0x0000,0x4cde,{0x99,0x9c,0xcd,0x5d,0x04,0xfe,0x9a,0xa0}};
+extern "C" const GUID __declspec(selectany) DIID_IUrlManagerEvents =
+    {0x346442a3,0xb78f,0x49ed,{0x99,0xf2,0xb4,0x68,0xf8,0xad,0x86,0x35}};
+extern "C" const GUID __declspec(selectany) CLSID_UrlManager =
+    {0x21c0de0b,0x9111,0x46a5,{0x97,0x3e,0x14,0xa7,0x4c,0xe2,0xca,0x82}};
+
+//
+// Wrapper method implementations
+//
+
+#include "irvine.tli"
+
+#pragma pack(pop)
