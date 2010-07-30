@@ -1,0 +1,13 @@
+GeckoとIEではセッション履歴の復元方法が決定的に違う！
+どうしたものか．
+
+SetWaitBeforeNavigate2Flagのある理由がさっぱりわからないので消してしまおうと思う
+
+CheckImageAutoSizeは自前でやるまでもない。
+たぶんDOMのクリックイベントを発行すればよい。
+というわけでいったん削除
+
+parseFramesCollectionはフレームを手繰っているみたいだがなんのためにやっているのか？
+長くて読む気がしない
+
+TODO:プリントのキャンセル nsIWebBrowserPrint::Cancel() でおｋ？
