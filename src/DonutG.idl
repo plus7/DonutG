@@ -1,0 +1,60 @@
+#include "nsISupports.idl"
+interface nsIDOMDocument;
+interface nsIDOMWindow;
+interface nsIWebBrowser;
+interface nsILocalFile;
+[scriptable, uuid(6D70C628-B3CE-4d1f-A6E3-BBEFCBB45CB1)]
+interface donutIAPI : nsISupports
+{
+  const unsigned long CHROME_MODAL            = 0x20000000; 
+
+  //IAPI Compatible
+  void close(in long index);
+  nsIDOMDocument getDocumentObject(in long index);
+  nsIDOMWindow   getWindowObject(in long index);
+  nsIWebBrowser  getWebBrowserObject(in long index);
+  attribute long tabIndex;
+  readonly attribute long tabCount;
+  void moveToTab(in long wBefor, in long wAfter);
+  void newWindow(in wstring url, in boolean bActive);
+  long messageBox(in wstring text, in wstring caption, in unsigned long type);
+  void showPanelBar();
+  readonly attribute nsIDOMDocument panelDocumentObject;
+  readonly attribute nsIDOMWindow   panelWindowObject;
+  readonly attribute nsIWebBrowser  panelWebBrowserObject;
+  long getTabState(in long index);
+
+  //IAPI2 Compatible
+  void executeCommand(in long command);
+  attribute wstring searchText;
+  attribute wstring addressText;
+  long getExtendedTabState(in long index);
+  void setExtendedTabState(in long index, in long state);
+  long keyState(in long key);
+
+  long getProfileInt      (in wstring file, in wstring section, in wstring key,  in long defval);
+  void writeProfileInt    (in wstring file, in wstring section, in wstring key,  in long value);
+  wstring getProfileString(in wstring file, in wstring section, in wstring key, in wstring defval);
+  void writeProfileString (in wstring file, in wstring section, in wstring key, in wstring text);
+  
+  //not path string but nsILocalFile
+  readonly attribute nsILocalFile scriptFolder;
+  readonly attribute nsILocalFile cssFolder;
+  readonly attribute nsILocalFile baseFolder;
+  readonly attribute nsILocalFile exePath;
+
+  //HRESULT SetStyleSheet(int index, in wstring StyleSheet, BOOLEAN bOff);
+
+  //IAPI3 Compatible
+  /*
+  HRESULT SaveGroup(in wstring GroupFile);
+  HRESULT LoadGroup(in wstring GroupFile, BOOLEAN bClose);
+  HRESULT EncryptString(in wstring String, in wstring Pass, [out, retval]in wstring *Ret);
+  HRESULT DecryptString(in wstring String, [out,retval]in wstring *Ret);
+  long inputBox(in wstring title, in wstring desc, in wstring default, in long flag);
+  long newWindow3(in wstring URL, BOOLEAN bActive, long ExStyle, [in] const long *pHistInfo);
+  long addGroupItem(in wstring GroupFile, long nIndex);
+  long deleteGroupItem(in wstring GroupFile, long nIndex);
+  */
+
+};
