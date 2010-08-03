@@ -249,6 +249,13 @@ LRESULT CDonutView::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL &)
 
 	rv = m_spBrowser->SetParentURIContentListener(static_cast<nsIURIContentListener*>(m_impl));
 
+	nsCOMPtr<nsIDOMWindow> win;
+	rv = m_spBrowser->GetContentDOMWindow(getter_AddRefs(win));
+	nsCOMPtr<nsIDOMWindow2> win2 = do_QueryInterface(win, &rv);
+	nsCOMPtr<nsIDOMEventTarget> target;
+	rv = win2->GetWindowRoot(getter_AddRefs(target));
+	target->AddEventListener(NS_LITERAL_STRING("click"), this, PR_FALSE);
+
 	nsCOMPtr<nsIWebBrowserFocus> focus = do_QueryInterface(m_spBrowser);
 	focus->Activate();
 
@@ -563,7 +570,9 @@ NS_IMETHODIMP CDonutView::HandleEvent(nsIDOMEvent *event)
 	if(dragEvent){
 		nsEmbedString type;
 		dragEvent->GetType(type);
-		if(type.Compare(_T("dragenter")) == 0){
+		if(type.Compare(_T("click")) == 0){
+			//event->PreventDefault(); TODO:
+		}else if(type.Compare(_T("dragenter")) == 0){
 			event->PreventDefault();
 		}else if(type.Compare(_T("dragover")) == 0){
 			event->PreventDefault();
