@@ -2979,11 +2979,11 @@
 			Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
 			>
 			<File
-				RelativePath=".\API.rgs"
+				RelativePath=".\res\API.rgs"
 				>
 			</File>
 			<File
-				RelativePath=".\res\API.rgs"
+				RelativePath=".\API.rgs"
 				>
 			</File>
 			<File
@@ -3070,6 +3070,10 @@
 		<Filter
 			Name="Gecko"
 			>
+			<File
+				RelativePath=".\DonutG.h"
+				>
+			</File>
 			<File
 				RelativePath=".\GeckoBrowserImpl.cpp"
 				>
