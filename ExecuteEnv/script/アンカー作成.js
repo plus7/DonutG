@@ -1,14 +1,16 @@
-var DonutP;
-var index;
-var document, window;
-var strAnchor;
+var donut = Components.classes["@tnose.net/donut/api-service;1"]
+    .getService(Components.interfaces.donutIAPI);
 
-DonutP = new ActiveXObject("DonutP.API"); 
-index  = DonutP.TabIndex; 
-document = DonutP.GetDocumentObject(index); 
-window =   DonutP.GetWindowObject(index); 
+var index = donut.tabIndex;
+var document = donut.getDocumentObject(index);
+
 if (index != -1) { 
-	strAnchor = "<A HREF=\"" + document.URL + "\">" + document.title + "</A>";
-	window.clipboardData.setData("text",strAnchor); 
-} 
-DonutP = null; 
+	var text = "<a href=\"" +
+	    document.URL + 
+	    "\">" +
+	    document.title +
+	    "</a>";
+	const gClipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].  
+	    getService(Components.interfaces.nsIClipboardHelper);
+	gClipboardHelper.copyString(text);
+}
