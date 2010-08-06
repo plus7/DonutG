@@ -1,0 +1,7 @@
+*~
+*.suo
+*.map
+*.ilk
+*.ncb
+*.user
+ExecuteEnv/components/*.dat
