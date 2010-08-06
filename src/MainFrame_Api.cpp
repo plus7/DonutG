@@ -8,8 +8,8 @@
 #include "stdafx.h"
 
 #include "MainFrame.h"								//+++ "MainFrm.h"
-#include "api.h"
-#include "PluginEventImpl.h"
+//#include "api.h"
+//#include "PluginEventImpl.h"
 
 
 #if defined USE_ATLDBGMEM
@@ -27,7 +27,7 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////
 
 
-IDispatch *CMainFrame::ApiGetDocumentObject(int nTabIndex)
+nsIDOMDocument *CMainFrame::ApiGetDocumentObject(int nTabIndex)
 {
 	HWND					  hTabWnd = m_MDITab.GetTabHwnd(nTabIndex);
 	if (hTabWnd == NULL)
@@ -41,7 +41,8 @@ IDispatch *CMainFrame::ApiGetDocumentObject(int nTabIndex)
 	nsCOMPtr<nsIDOMDocument> doc;
 	win->GetDocument(getter_AddRefs(doc));
 
-	return NULL;//doc; TODO:
+	NS_ADDREF(doc);
+	return doc;//doc; TODO:
 }
 
 

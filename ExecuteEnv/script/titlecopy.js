@@ -1,8 +1,12 @@
 //アクティブタブのタイトルをクリップボードにコピー
+var donut = Components.classes["@tnose.net/donut/api-service;1"]
+    .getService(Components.interfaces.donutIAPI);
 
-var Donut = new ActiveXObject("DonutP.API");
-var nIndex = Donut.TabIndex;
-var document = Donut.GetDocumentObject(nIndex);
-var window = Donut.GetWindowObject(nIndex);
+var nIndex = donut.tabIndex;
+var document = donut.getDocumentObject(nIndex);
 
-window.clipboardData.setData("text", document.title);
+var text = document.title;
+
+const gClipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].  
+getService(Components.interfaces.nsIClipboardHelper);
+gClipboardHelper.copyString(text);

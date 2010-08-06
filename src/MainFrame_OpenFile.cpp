@@ -8,7 +8,7 @@
 #include "stdafx.h"
 #include "MainFrame.h"
 #include "dialog/OpenURLDialog.h"
-
+#include "DonutScriptLoader.h"
 
 #if defined USE_ATLDBGMEM
 #define new DEBUG_NEW
@@ -65,6 +65,15 @@ HWND CMainFrame::OnUserOpenFile(const CString& strUrl, DWORD dwOpenFlag)
 			return NULL;
 	}
    #endif
+
+	CString 	dotJS = str.Right(3);
+	if(dotJS.CompareNoCase(_T(".js")) == 0){
+		nsCOMPtr<donutIScriptLoader> loader = do_GetService("@tnose.net/donut/loader-service;1");
+		nsCOMPtr<nsILocalFile> scriptFile;
+		NS_NewLocalFile(nsEmbedString(str), PR_FALSE, getter_AddRefs(scriptFile)); 
+		nsresult rv = loader->LoadFile(scriptFile);
+		return NULL;
+	}
 
 	DWORD dwExProp	 = 0xFFFFFFFF;
 	DWORD dwExProp2	 = 8;

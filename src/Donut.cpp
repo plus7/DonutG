@@ -59,7 +59,7 @@
 
 #include "ParseInternetShortcutFile.h"				//+++
 
-#include "API.h"
+//#include "API.h"
 
 #ifdef USE_ATL3_BASE_HOSTEX /*_ATL_VER < 0x700*/	//+++
 #include "for_ATL3/AtlifaceEx_i.c"
@@ -110,14 +110,14 @@ bool				g_bNoReposition 		  = FALSE;
 
 CServerAppModule	_Module;
 CMainFrame *		g_pMainWnd				  = NULL;
-CAPI *				g_pAPI					  = NULL;
+//CAPI *				g_pAPI					  = NULL;
 
 
-
+/*
 BEGIN_OBJECT_MAP(ObjectMap)
 	OBJECT_ENTRY(CLSID_API, CAPI)
 END_OBJECT_MAP()
-
+*/
 
 static void CommandLineArg(CMainFrame& wndMain, LPTSTR lpstrCmdLine);
 
@@ -536,8 +536,8 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR lp
 	::InitCommonControls();
  #endif
 
-	hRes	= _Module.Init(ObjectMap, hInstance, &LIBID_ATLLib);
-	//hRes	= _Module.Init(NULL, hInstance);
+	//hRes	= _Module.Init(ObjectMap, hInstance, &LIBID_ATLLib);
+	hRes	= _Module.Init(NULL, hInstance);
 	ATLASSERT( SUCCEEDED(hRes) );
 
 	int 	nRet		 = 0;
@@ -646,17 +646,18 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR lp
 // CChildFrame
 void CChildFrame::PreDocumentComplete( /*[in]*/ IDispatch *pDisp, /*[in]*/ VARIANT *URL)
 {
-	if (!g_pAPI)
+	return;
+	/*if (!g_pAPI)
 		return;
 
 	int nTabIndex = m_MDITab.GetTabIndex(m_hWnd);
-	g_pAPI->Fire_DocumentComplete( nTabIndex, pDisp, V_BSTR(URL) );
+	g_pAPI->Fire_DocumentComplete( nTabIndex, pDisp, V_BSTR(URL) );*/
 }
 
 
 /////////////////////////////////////////////////////////////////////////////
 // CAPI
-HRESULT STDMETHODCALLTYPE CAPI::Advise(IUnknown *pUnk, DWORD *pdwCookie)
+/*HRESULT STDMETHODCALLTYPE CAPI::Advise(IUnknown *pUnk, DWORD *pdwCookie)
 {
 	HRESULT hr = CProxyIDonutPEvents<CAPI>::Advise(pUnk, pdwCookie);
 
@@ -685,7 +686,7 @@ HRESULT STDMETHODCALLTYPE CAPI::Unadvise(DWORD dwCookie)
 	//::MessageBox(NULL,_T("unadvise"),_T("check"),MB_OK);
 	return hr;
 }
-
+*/
 
 
 

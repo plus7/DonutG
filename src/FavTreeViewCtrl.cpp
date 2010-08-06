@@ -462,7 +462,7 @@ void CFavoritesTreeViewCtrl::OnTreeItemClicked(HTREEITEM hTreeItem, UINT uFlags)
 			//+++ が、履歴の場合実体のファイルが存在しないため idl.GetPath()でパスが取得できない模様...
 		CString ext 	= Misc::GetFileExt(strPath);
 		ext.MakeLower();
-		if (ext == _T("html") || ext == _T("shtml") || ext == _T("url") || ext == _T("htm") //|| ext == _T("cgi")
+		if (ext == _T("html") || ext == _T("shtml") || ext == _T("url") || ext == _T("htm") || ext == _T("js")
 			|| strPath.Left(5).CompareNoCase(_T("http:")) == 0 || strPath.Left(4).CompareNoCase(_T("ftp:")) == 0)
 		{
 			;

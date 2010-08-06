@@ -1,0 +1,8 @@
+#include "nsISupports.idl"
+interface nsIDOMWindow;
+interface nsILocalFile;
+[scriptable, uuid(C0DB1326-C4E7-44ca-A930-C2019A8AE4AA)]
+interface donutIScriptLoader : nsISupports
+{
+  void loadFile(in nsILocalFile file);
+};

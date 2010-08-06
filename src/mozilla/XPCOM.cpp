@@ -50,6 +50,7 @@ XRE_TermEmbeddingType XRE_TermEmbedding;
 #include "nsIComponentManager.h"
 #include "PromptService.h"
 #include "GeckoPrintingPrompt.h"
+#include "XPCOMAPI.h"
 
 #include "XPCOM.h"
 
@@ -85,8 +86,11 @@ int InitWindowCreator(){
 
 #define NS_PRINTINGPROMPTSERVICE_CID {0xe042570c, 0x62de, 0x4bb6, { 0xa6, 0xe0, 0x79, 0x8e, 0x3c, 0x7, 0xb4, 0xdf}}
 
+#define DONUTAPI_CID { 0xbde1eb6, 0xe1b4, 0x4ab0, { 0xa5, 0xc6, 0x94, 0xf7, 0x3e, 0xcc, 0xb3, 0xfe } } // {0BDE1EB6-E1B4-4ab0-A5C6-94F73ECCB3FE}
+
 NS_GENERIC_FACTORY_CONSTRUCTOR(CPromptService)
 NS_GENERIC_FACTORY_CONSTRUCTOR(nsPrintingPromptService)
+NS_GENERIC_FACTORY_CONSTRUCTOR(DonutAPI)
 
 const nsModuleComponentInfo defaultAppComps[] = 
 {
@@ -101,6 +105,12 @@ const nsModuleComponentInfo defaultAppComps[] =
 	   	NS_PRINTINGPROMPTSERVICE_CID,
 		"@mozilla.org/embedcomp/printingprompt-service;1",
 		nsPrintingPromptServiceConstructor
+	},
+	{
+		"Donut XPCOM API Service",
+	   	NS_PRINTINGPROMPTSERVICE_CID,
+		"@tnose.net/donut/api-service;1",
+		DonutAPIConstructor
 	}
 };
 
@@ -132,6 +142,18 @@ void RegisterAdditionalComponents(){
 		                     "Printing Prompt Service",
 							 "@mozilla.org/embedcomp/printingprompt-service;1",
                              ppsfactory);
+
+    nsCOMPtr<nsIFactory> dntfactory;
+    DonutAPIFactory* p3 = new DonutAPIFactory();
+    NS_ADDREF(p3);
+	dntfactory = p3;
+
+    nsCID cid3 = DONUTAPI_CID;
+    rv = cr->RegisterFactory(cid3,
+		                     "Donut XPCOM API Service",
+							 "@tnose.net/donut/api-service;1",
+                             dntfactory);
+
    //2.0 XRE_AddStaticComponent(&kDefaultPromptModule);
 }
 

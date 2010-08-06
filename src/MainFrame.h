@@ -124,7 +124,7 @@ public:
 	CChildFrame*	GetActiveChildFrame();
 	CString 		GetActiveSelectedText();
 
-	LRESULT 		OnPluginCommand(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL &bHandled); //PluginEventImpl.h‚ÅŽÀ‘•
+	//LRESULT 		OnPluginCommand(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL &bHandled); //PluginEventImpl.h‚ÅŽÀ‘•
 
 	static BOOL AddSimpleReBarBandCtrl(
 					HWND	hWndReBar,
@@ -143,7 +143,7 @@ public:
 	// DonutP API
 	/////////////////////////////////////////////
 
-	IDispatch*	ApiGetDocumentObject(int nTabIndex);
+	nsIDOMDocument*	ApiGetDocumentObject(int nTabIndex);
 	IDispatch*	ApiGetWindowObject(int nTabIndex);
 	IDispatch*	ApiGetWebBrowserObject(int nTabIndex);
 	long 		ApiGetTabIndex();
@@ -411,8 +411,8 @@ public:
 		COMMAND_ID_HANDLER( ID_SEARCH_HISTORY,		OnSearchHistory 	)
 		COMMAND_ID_HANDLER( ID_JUMP_WEBSITE,		OnJumpToWebSite 	)
 
-		#define WM_PLUGIN_COMMAND	ID_PLUGIN_COMMAND
-		MESSAGE_HANDLER 			( WM_PLUGIN_COMMAND, OnPluginCommand )
+		//#define WM_PLUGIN_COMMAND	ID_PLUGIN_COMMAND
+		//MESSAGE_HANDLER 			( WM_PLUGIN_COMMAND, OnPluginCommand )
 		USER_MSG_WM_OPEN_WITHEXPROP ( OnOpenWithExProp	)
 		USER_MSG_WM_GET_SEARCHBAR	( OnGetSearchBar	)
 		USER_MSG_WM_SHOW_TOOLBARMENU( OnShowToolBarMenu )

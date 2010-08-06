@@ -1354,10 +1354,6 @@
 				>
 			</File>
 			<File
-				RelativePath="API.h"
-				>
-			</File>
-			<File
 				RelativePath=".\appconst.cpp"
 				>
 			</File>
@@ -1805,10 +1801,6 @@
 			</File>
 			<File
 				RelativePath="PluginBar.h"
-				>
-			</File>
-			<File
-				RelativePath="PluginEventImpl.h"
 				>
 			</File>
 			<File
@@ -2979,11 +2971,11 @@
 			Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
 			>
 			<File
-				RelativePath=".\res\API.rgs"
+				RelativePath=".\API.rgs"
 				>
 			</File>
 			<File
-				RelativePath=".\API.rgs"
+				RelativePath=".\res\API.rgs"
 				>
 			</File>
 			<File
@@ -3072,6 +3064,10 @@
 			>
 			<File
 				RelativePath=".\DonutG.h"
+				>
+			</File>
+			<File
+				RelativePath=".\DonutScriptLoader.h"
 				>
 			</File>
 			<File
@@ -3172,6 +3168,14 @@
 			</File>
 			<File
 				RelativePath=".\mozilla\XPCOM.h"
+				>
+			</File>
+			<File
+				RelativePath=".\XPCOMAPI.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\XPCOMAPI.h"
 				>
 			</File>
 		</Filter>

@@ -234,210 +234,210 @@ class NS_NO_VTABLE NS_SCRIPTABLE donutIAPI : public nsISupports {
 /* Use the code below as a template for the implementation class for this interface. */
 
 /* Header file */
-class _MYCLASS_ : public donutIAPI
+class DonutAPI : public donutIAPI
 {
 public:
   NS_DECL_ISUPPORTS
   NS_DECL_DONUTIAPI
 
-  _MYCLASS_();
+  DonutAPI();
 
 private:
-  ~_MYCLASS_();
+  ~DonutAPI();
 
 protected:
   /* additional members */
 };
 
 /* Implementation file */
-NS_IMPL_ISUPPORTS1(_MYCLASS_, donutIAPI)
+NS_IMPL_ISUPPORTS1(DonutAPI, donutIAPI)
 
-_MYCLASS_::_MYCLASS_()
+DonutAPI::DonutAPI()
 {
   /* member initializers and constructor code */
 }
 
-_MYCLASS_::~_MYCLASS_()
+DonutAPI::~DonutAPI()
 {
   /* destructor code */
 }
 
 /* void close (in long index); */
-NS_IMETHODIMP _MYCLASS_::Close(PRInt32 index)
+NS_IMETHODIMP DonutAPI::Close(PRInt32 index)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* nsIDOMDocument getDocumentObject (in long index); */
-NS_IMETHODIMP _MYCLASS_::GetDocumentObject(PRInt32 index, nsIDOMDocument **_retval NS_OUTPARAM)
+NS_IMETHODIMP DonutAPI::GetDocumentObject(PRInt32 index, nsIDOMDocument **_retval NS_OUTPARAM)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* nsIDOMWindow getWindowObject (in long index); */
-NS_IMETHODIMP _MYCLASS_::GetWindowObject(PRInt32 index, nsIDOMWindow **_retval NS_OUTPARAM)
+NS_IMETHODIMP DonutAPI::GetWindowObject(PRInt32 index, nsIDOMWindow **_retval NS_OUTPARAM)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* nsIWebBrowser getWebBrowserObject (in long index); */
-NS_IMETHODIMP _MYCLASS_::GetWebBrowserObject(PRInt32 index, nsIWebBrowser **_retval NS_OUTPARAM)
+NS_IMETHODIMP DonutAPI::GetWebBrowserObject(PRInt32 index, nsIWebBrowser **_retval NS_OUTPARAM)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* attribute long tabIndex; */
-NS_IMETHODIMP _MYCLASS_::GetTabIndex(PRInt32 *aTabIndex)
+NS_IMETHODIMP DonutAPI::GetTabIndex(PRInt32 *aTabIndex)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
-NS_IMETHODIMP _MYCLASS_::SetTabIndex(PRInt32 aTabIndex)
+NS_IMETHODIMP DonutAPI::SetTabIndex(PRInt32 aTabIndex)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* readonly attribute long tabCount; */
-NS_IMETHODIMP _MYCLASS_::GetTabCount(PRInt32 *aTabCount)
+NS_IMETHODIMP DonutAPI::GetTabCount(PRInt32 *aTabCount)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* void moveToTab (in long wBefor, in long wAfter); */
-NS_IMETHODIMP _MYCLASS_::MoveToTab(PRInt32 wBefor, PRInt32 wAfter)
+NS_IMETHODIMP DonutAPI::MoveToTab(PRInt32 wBefor, PRInt32 wAfter)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* void newWindow (in wstring url, in boolean bActive); */
-NS_IMETHODIMP _MYCLASS_::NewWindow(const PRUnichar *url, PRBool bActive)
+NS_IMETHODIMP DonutAPI::NewWindow(const PRUnichar *url, PRBool bActive)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* long messageBox (in wstring text, in wstring caption, in unsigned long type); */
-NS_IMETHODIMP _MYCLASS_::MessageBox(const PRUnichar *text, const PRUnichar *caption, PRUint32 type, PRInt32 *_retval NS_OUTPARAM)
+NS_IMETHODIMP DonutAPI::MessageBox(const PRUnichar *text, const PRUnichar *caption, PRUint32 type, PRInt32 *_retval NS_OUTPARAM)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* void showPanelBar (); */
-NS_IMETHODIMP _MYCLASS_::ShowPanelBar()
+NS_IMETHODIMP DonutAPI::ShowPanelBar()
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* readonly attribute nsIDOMDocument panelDocumentObject; */
-NS_IMETHODIMP _MYCLASS_::GetPanelDocumentObject(nsIDOMDocument * *aPanelDocumentObject)
+NS_IMETHODIMP DonutAPI::GetPanelDocumentObject(nsIDOMDocument * *aPanelDocumentObject)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* readonly attribute nsIDOMWindow panelWindowObject; */
-NS_IMETHODIMP _MYCLASS_::GetPanelWindowObject(nsIDOMWindow * *aPanelWindowObject)
+NS_IMETHODIMP DonutAPI::GetPanelWindowObject(nsIDOMWindow * *aPanelWindowObject)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* readonly attribute nsIWebBrowser panelWebBrowserObject; */
-NS_IMETHODIMP _MYCLASS_::GetPanelWebBrowserObject(nsIWebBrowser * *aPanelWebBrowserObject)
+NS_IMETHODIMP DonutAPI::GetPanelWebBrowserObject(nsIWebBrowser * *aPanelWebBrowserObject)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* long getTabState (in long index); */
-NS_IMETHODIMP _MYCLASS_::GetTabState(PRInt32 index, PRInt32 *_retval NS_OUTPARAM)
+NS_IMETHODIMP DonutAPI::GetTabState(PRInt32 index, PRInt32 *_retval NS_OUTPARAM)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* void executeCommand (in long command); */
-NS_IMETHODIMP _MYCLASS_::ExecuteCommand(PRInt32 command)
+NS_IMETHODIMP DonutAPI::ExecuteCommand(PRInt32 command)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* attribute wstring searchText; */
-NS_IMETHODIMP _MYCLASS_::GetSearchText(PRUnichar * *aSearchText)
+NS_IMETHODIMP DonutAPI::GetSearchText(PRUnichar * *aSearchText)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
-NS_IMETHODIMP _MYCLASS_::SetSearchText(const PRUnichar * aSearchText)
+NS_IMETHODIMP DonutAPI::SetSearchText(const PRUnichar * aSearchText)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* attribute wstring addressText; */
-NS_IMETHODIMP _MYCLASS_::GetAddressText(PRUnichar * *aAddressText)
+NS_IMETHODIMP DonutAPI::GetAddressText(PRUnichar * *aAddressText)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
-NS_IMETHODIMP _MYCLASS_::SetAddressText(const PRUnichar * aAddressText)
+NS_IMETHODIMP DonutAPI::SetAddressText(const PRUnichar * aAddressText)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* long getExtendedTabState (in long index); */
-NS_IMETHODIMP _MYCLASS_::GetExtendedTabState(PRInt32 index, PRInt32 *_retval NS_OUTPARAM)
+NS_IMETHODIMP DonutAPI::GetExtendedTabState(PRInt32 index, PRInt32 *_retval NS_OUTPARAM)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* void setExtendedTabState (in long index, in long state); */
-NS_IMETHODIMP _MYCLASS_::SetExtendedTabState(PRInt32 index, PRInt32 state)
+NS_IMETHODIMP DonutAPI::SetExtendedTabState(PRInt32 index, PRInt32 state)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* long keyState (in long key); */
-NS_IMETHODIMP _MYCLASS_::KeyState(PRInt32 key, PRInt32 *_retval NS_OUTPARAM)
+NS_IMETHODIMP DonutAPI::KeyState(PRInt32 key, PRInt32 *_retval NS_OUTPARAM)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* long getProfileInt (in wstring file, in wstring section, in wstring key, in long defval); */
-NS_IMETHODIMP _MYCLASS_::GetProfileInt(const PRUnichar *file, const PRUnichar *section, const PRUnichar *key, PRInt32 defval, PRInt32 *_retval NS_OUTPARAM)
+NS_IMETHODIMP DonutAPI::GetProfileInt(const PRUnichar *file, const PRUnichar *section, const PRUnichar *key, PRInt32 defval, PRInt32 *_retval NS_OUTPARAM)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* void writeProfileInt (in wstring file, in wstring section, in wstring key, in long value); */
-NS_IMETHODIMP _MYCLASS_::WriteProfileInt(const PRUnichar *file, const PRUnichar *section, const PRUnichar *key, PRInt32 value)
+NS_IMETHODIMP DonutAPI::WriteProfileInt(const PRUnichar *file, const PRUnichar *section, const PRUnichar *key, PRInt32 value)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* wstring getProfileString (in wstring file, in wstring section, in wstring key, in wstring defval); */
-NS_IMETHODIMP _MYCLASS_::GetProfileString(const PRUnichar *file, const PRUnichar *section, const PRUnichar *key, const PRUnichar *defval, PRUnichar **_retval NS_OUTPARAM)
+NS_IMETHODIMP DonutAPI::GetProfileString(const PRUnichar *file, const PRUnichar *section, const PRUnichar *key, const PRUnichar *defval, PRUnichar **_retval NS_OUTPARAM)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* void writeProfileString (in wstring file, in wstring section, in wstring key, in wstring text); */
-NS_IMETHODIMP _MYCLASS_::WriteProfileString(const PRUnichar *file, const PRUnichar *section, const PRUnichar *key, const PRUnichar *text)
+NS_IMETHODIMP DonutAPI::WriteProfileString(const PRUnichar *file, const PRUnichar *section, const PRUnichar *key, const PRUnichar *text)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* readonly attribute nsILocalFile scriptFolder; */
-NS_IMETHODIMP _MYCLASS_::GetScriptFolder(nsILocalFile * *aScriptFolder)
+NS_IMETHODIMP DonutAPI::GetScriptFolder(nsILocalFile * *aScriptFolder)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* readonly attribute nsILocalFile cssFolder; */
-NS_IMETHODIMP _MYCLASS_::GetCssFolder(nsILocalFile * *aCssFolder)
+NS_IMETHODIMP DonutAPI::GetCssFolder(nsILocalFile * *aCssFolder)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* readonly attribute nsILocalFile baseFolder; */
-NS_IMETHODIMP _MYCLASS_::GetBaseFolder(nsILocalFile * *aBaseFolder)
+NS_IMETHODIMP DonutAPI::GetBaseFolder(nsILocalFile * *aBaseFolder)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
 
 /* readonly attribute nsILocalFile exePath; */
-NS_IMETHODIMP _MYCLASS_::GetExePath(nsILocalFile * *aExePath)
+NS_IMETHODIMP DonutAPI::GetExePath(nsILocalFile * *aExePath)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }
