@@ -518,27 +518,30 @@ public:
 	}
 
 
-	IDispatch *GetPanelWebBrowserObject()
+	nsIWebBrowser *GetPanelWebBrowserObject()
 	{
-		return NULL;//m_spBrowser; TODO
+		NS_ADDREF(m_spBrowser);
+		return m_spBrowser;
 	}
 
 
-	IDispatch *GetPanelWindowObject()
+	nsIDOMWindow *GetPanelWindowObject()
 	{
 		nsCOMPtr<nsIDOMWindow> win;
 		m_spBrowser->GetContentDOMWindow(getter_AddRefs(win));
-		return NULL;//win; TODO
+		NS_ADDREF(win);
+		return win;
 	}
 
 
-	IDispatch *GetPanelDocumentObject()
+	nsIDOMDocument *GetPanelDocumentObject()
 	{
 		nsCOMPtr<nsIDOMWindow> win;
 		m_spBrowser->GetContentDOMWindow(getter_AddRefs(win));
 		nsCOMPtr<nsIDOMDocument> doc;
 		win->GetDocument(getter_AddRefs(doc));
-		return NULL; //doc; TODO
+		NS_ADDREF(doc);
+		return doc;
 	}
 };
 

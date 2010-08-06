@@ -111,9 +111,9 @@ void CMainFrame::ApiMoveToTab(int nBeforIndex, int nAfterIndex)
 }
 
 
-int CMainFrame::ApiNewWindow(BSTR bstrURL, BOOL bActive)
+int CMainFrame::ApiNewWindow(const PRUnichar *url, BOOL bActive)
 {
-	CString 	 strURL(bstrURL);
+	CString 	 strURL(url);
 
 	int 		 nCmdShow = bActive ? -1 : SW_SHOWNOACTIVATE;
 
@@ -162,7 +162,7 @@ long CMainFrame::ApiGetTabState(int nIndex)
 }
 
 
-IDispatch *CMainFrame::ApiGetPanelWebBrowserObject()
+nsIWebBrowser *CMainFrame::ApiGetPanelWebBrowserObject()
 {
 	if ( !m_ExplorerBar.m_PanelBar.IsWindow() )
 		m_ExplorerBar.m_PanelBar.CreatePanelBar(m_hWnd, FALSE);
@@ -171,7 +171,7 @@ IDispatch *CMainFrame::ApiGetPanelWebBrowserObject()
 }
 
 
-IDispatch *CMainFrame::ApiGetPanelWindowObject()
+nsIDOMWindow *CMainFrame::ApiGetPanelWindowObject()
 {
 	if ( !m_ExplorerBar.m_PanelBar.IsWindow() )
 		m_ExplorerBar.m_PanelBar.CreatePanelBar(m_hWnd, FALSE);
@@ -180,7 +180,7 @@ IDispatch *CMainFrame::ApiGetPanelWindowObject()
 }
 
 
-IDispatch *CMainFrame::ApiGetPanelDocumentObject()
+nsIDOMDocument *CMainFrame::ApiGetPanelDocumentObject()
 {
 	if ( !m_ExplorerBar.m_PanelBar.IsWindow() )
 		m_ExplorerBar.m_PanelBar.CreatePanelBar(m_hWnd, FALSE);
@@ -196,7 +196,7 @@ void CMainFrame::ApiExecuteCommand(int nCommand)
 }
 
 
-void CMainFrame::ApiGetSearchText( /*[out, retval]*/ BSTR *bstrText)
+void CMainFrame::ApiGetSearchText(PRUnichar **text)
 {
 	CString strBuf;
 	CEdit	edit = m_SearchBar.GetEditCtrl();
@@ -204,13 +204,14 @@ void CMainFrame::ApiGetSearchText( /*[out, retval]*/ BSTR *bstrText)
 
 	edit.GetWindowText(strBuf.GetBuffer(len), len);
 	strBuf.ReleaseBuffer();
-	*bstrText = CComBSTR(strBuf).Copy();
+	*text = (PRUnichar*)NS_Alloc(sizeof(PRUnichar) * (strBuf.GetLength() + 1));
+	wcscpy(*text, strBuf);
 }
 
 
-void CMainFrame::ApiSetSearchText(BSTR bstrText)
+void CMainFrame::ApiSetSearchText(const PRUnichar *text)
 {
-	CString strText = bstrText;
+	CString strText = text;
 	CEdit	edit	= m_SearchBar.GetEditCtrl();
 
 	edit.SendMessage(WM_CHAR, 'P');
@@ -218,7 +219,7 @@ void CMainFrame::ApiSetSearchText(BSTR bstrText)
 }
 
 
-void CMainFrame::ApiGetAddressText( /*[out, retval]*/ BSTR *bstrText)
+void CMainFrame::ApiGetAddressText(PRUnichar **text)
 {
 	CString strBuf;
 	CEdit	edit = m_AddressBar.GetEditCtrl();
@@ -226,13 +227,14 @@ void CMainFrame::ApiGetAddressText( /*[out, retval]*/ BSTR *bstrText)
 
 	edit.GetWindowText(strBuf.GetBuffer(len), len);
 	strBuf.ReleaseBuffer();
-	*bstrText = CComBSTR(strBuf).Copy();
+	*text = (PRUnichar*)NS_Alloc(sizeof(PRUnichar) * (strBuf.GetLength() + 1));
+	wcscpy(*text, strBuf);
 }
 
 
-void CMainFrame::ApiSetAddressText(BSTR bstrText)
+void CMainFrame::ApiSetAddressText(const PRUnichar *text)
 {
-	CString strText = bstrText;
+	CString strText = text;
 	CEdit	edit	= m_AddressBar.GetEditCtrl();
 
 	edit.SendMessage(WM_CHAR, 'P');
@@ -269,45 +271,46 @@ LRESULT CMainFrame::ApiGetKeyState(int nKey)
 }
 
 
-long CMainFrame::ApiGetProfileInt(BSTR bstrFile, BSTR bstrSection, BSTR bstrKey, int nDefault)
+long CMainFrame::ApiGetProfileInt(const PRUnichar *file, const PRUnichar *section, const PRUnichar* key, int nDefault)
 {
-	CString 	strFile    = bstrFile;
-	CString 	strSection = bstrSection;
-	CString 	strKey	   = bstrKey;
+	CString 	strFile    = file;
+	CString 	strSection = section;
+	CString 	strKey	   = key;
 	CIniFileI	pr(strFile, strSection);
 	return (long)pr.GetValue( strKey, nDefault );
 }
 
 
-void CMainFrame::ApiWriteProfileInt(BSTR bstrFile, BSTR bstrSection, BSTR bstrKey, int nValue)
+void CMainFrame::ApiWriteProfileInt(const PRUnichar *file, const PRUnichar *section, const PRUnichar* key, int nValue)
 {
-	CString 	strFile    = bstrFile;
-	CString 	strSection = bstrSection;
-	CString 	strKey	   = bstrKey;
+	CString 	strFile    = file;
+	CString 	strSection = section;
+	CString 	strKey	   = key;
 	CIniFileO	pr(strFile, strSection);
 	pr.SetValue(nValue, strKey);
 	//x pr.Close(); 	//+++
 }
 
 
-void CMainFrame::ApiGetProfileString(BSTR bstrFile, BSTR bstrSection, BSTR bstrKey, BSTR bstrDefault, /*[out, retval]*/ BSTR *bstrText)
+void CMainFrame::ApiGetProfileString(const PRUnichar *file, const PRUnichar *section, const PRUnichar* key, const PRUnichar* Default, PRUnichar **text)
 {
-	CString 	strFile 	= bstrFile;
-	CString 	strSection	= bstrSection;
-	CString 	strKey		= bstrKey;
-	CString 	strDefault	= bstrDefault;
+	CString 	strFile 	= file;
+	CString 	strSection	= section;
+	CString 	strKey		= key;
+	CString 	strDefault	= Default;
 	CIniFileI	pr(strFile, strSection);
 	CString 	strBuf		= pr.GetStringUW(strKey, strDefault, 0xFFFFFFFF); //+++ size=0xFFFFFFFFの場合はバッファサイズ拡張ありで取得.
-	*bstrText = CComBSTR(strBuf).Copy();
+	*text = (PRUnichar*)NS_Alloc(sizeof(PRUnichar) * (strBuf.GetLength() + 1));
+	wcscpy(*text, strBuf);
 }
 
 
-void CMainFrame::ApiWriteProfileString(BSTR bstrFile, BSTR bstrSection, BSTR bstrKey, BSTR bstrText)
+void CMainFrame::ApiWriteProfileString(const PRUnichar *file, const PRUnichar *section, const PRUnichar* key, const PRUnichar *text)
 {
-	CString 		strFile    = bstrFile;
-	CString 		strSection = bstrSection;
-	CString 		strKey	   = bstrKey;
-	CString 		strText    = bstrText;
+	CString 		strFile    = file;
+	CString 		strSection = section;
+	CString 		strKey	   = key;
+	CString 		strText    = text;
 	CIniFileO	pr(strFile, strSection);
 	pr.SetStringUW( strText, strKey );
 }

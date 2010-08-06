@@ -86,13 +86,20 @@ NS_IMETHODIMP DonutAPI::GetTabCount(PRInt32 *aTabCount)
 /* void moveToTab (in long wBefor, in long wAfter); */
 NS_IMETHODIMP DonutAPI::MoveToTab(PRInt32 wBefor, PRInt32 wAfter)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiMoveToTab(wBefor, wAfter);
+	return NS_OK;
 }
 
 /* void newWindow (in wstring url, in boolean bActive); */
 NS_IMETHODIMP DonutAPI::NewWindow(const PRUnichar *url, PRBool bActive)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	//*pVal = g_pMainWnd->ApiNewWindow(url, bActive); TODO:
+	g_pMainWnd->ApiNewWindow(url, bActive);
+	return NS_OK;
 }
 
 /* long messageBox (in wstring text, in wstring caption, in unsigned long type); */
@@ -110,99 +117,154 @@ NS_IMETHODIMP DonutAPI::MessageBox(const PRUnichar *text, const PRUnichar *capti
 /* void showPanelBar (); */
 NS_IMETHODIMP DonutAPI::ShowPanelBar()
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiShowPanelBar();
+	return NS_OK;
 }
 
 /* readonly attribute nsIDOMDocument panelDocumentObject; */
 NS_IMETHODIMP DonutAPI::GetPanelDocumentObject(nsIDOMDocument * *aPanelDocumentObject)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	*aPanelDocumentObject = NULL;
+	if (!g_pMainWnd)
+		return NS_OK;
+	*aPanelDocumentObject = g_pMainWnd->ApiGetPanelDocumentObject();
+	return NS_OK;
 }
 
 /* readonly attribute nsIDOMWindow panelWindowObject; */
 NS_IMETHODIMP DonutAPI::GetPanelWindowObject(nsIDOMWindow * *aPanelWindowObject)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	*aPanelWindowObject = NULL;
+	if (!g_pMainWnd)
+		return NS_OK;
+	*aPanelWindowObject = g_pMainWnd->ApiGetPanelWindowObject();
+	return NS_OK;
 }
 
 /* readonly attribute nsIWebBrowser panelWebBrowserObject; */
 NS_IMETHODIMP DonutAPI::GetPanelWebBrowserObject(nsIWebBrowser * *aPanelWebBrowserObject)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	*aPanelWebBrowserObject = NULL;
+	if (!g_pMainWnd)
+		return NS_OK;
+	*aPanelWebBrowserObject = g_pMainWnd->ApiGetPanelWebBrowserObject();
+	return NS_OK;
 }
 
 /* long getTabState (in long index); */
 NS_IMETHODIMP DonutAPI::GetTabState(PRInt32 index, PRInt32 *_retval NS_OUTPARAM)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	*_retval = 0;
+	if (!g_pMainWnd)
+		return NS_OK;
+	*_retval = g_pMainWnd->ApiGetTabState(index);
+	return NS_OK;
 }
 
 /* void executeCommand (in long command); */
 NS_IMETHODIMP DonutAPI::ExecuteCommand(PRInt32 command)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiExecuteCommand(command);
+	return NS_OK;
 }
 
 /* attribute wstring searchText; */
 NS_IMETHODIMP DonutAPI::GetSearchText(PRUnichar * *aSearchText)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiGetSearchText(aSearchText);
+	return NS_OK;
 }
 NS_IMETHODIMP DonutAPI::SetSearchText(const PRUnichar * aSearchText)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiSetSearchText(aSearchText);
+	return NS_OK;
 }
 
 /* attribute wstring addressText; */
 NS_IMETHODIMP DonutAPI::GetAddressText(PRUnichar * *aAddressText)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiGetAddressText(aAddressText);
+	return NS_OK;
 }
 NS_IMETHODIMP DonutAPI::SetAddressText(const PRUnichar * aAddressText)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiSetAddressText(aAddressText);
+	return NS_OK;
 }
 
 /* long getExtendedTabState (in long index); */
 NS_IMETHODIMP DonutAPI::GetExtendedTabState(PRInt32 index, PRInt32 *_retval NS_OUTPARAM)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	*_retval = g_pMainWnd->ApiGetExtendedTabState(index);
+	return NS_OK;
 }
 
 /* void setExtendedTabState (in long index, in long state); */
 NS_IMETHODIMP DonutAPI::SetExtendedTabState(PRInt32 index, PRInt32 state)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiSetExtendedTabState(index, state);
+	return NS_OK;
 }
 
 /* long keyState (in long key); */
 NS_IMETHODIMP DonutAPI::KeyState(PRInt32 key, PRInt32 *_retval NS_OUTPARAM)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	*_retval = g_pMainWnd->ApiGetKeyState(key);
+	return NS_OK;
 }
 
 /* long getProfileInt (in wstring file, in wstring section, in wstring key, in long defval); */
 NS_IMETHODIMP DonutAPI::GetProfileInt(const PRUnichar *file, const PRUnichar *section, const PRUnichar *key, PRInt32 defval, PRInt32 *_retval NS_OUTPARAM)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	*_retval = g_pMainWnd->ApiGetProfileInt(file, section, key, defval);
+	return NS_OK;
 }
 
 /* void writeProfileInt (in wstring file, in wstring section, in wstring key, in long value); */
 NS_IMETHODIMP DonutAPI::WriteProfileInt(const PRUnichar *file, const PRUnichar *section, const PRUnichar *key, PRInt32 value)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiWriteProfileInt(file, section, key, value);
+	return NS_OK;
 }
 
 /* wstring getProfileString (in wstring file, in wstring section, in wstring key, in wstring defval); */
 NS_IMETHODIMP DonutAPI::GetProfileString(const PRUnichar *file, const PRUnichar *section, const PRUnichar *key, const PRUnichar *defval, PRUnichar **_retval NS_OUTPARAM)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiGetProfileString(file, section, key, defval, _retval);
+	return NS_OK;
 }
 
 /* void writeProfileString (in wstring file, in wstring section, in wstring key, in wstring text); */
 NS_IMETHODIMP DonutAPI::WriteProfileString(const PRUnichar *file, const PRUnichar *section, const PRUnichar *key, const PRUnichar *text)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiWriteProfileString(file, section, key, text);
+	return NS_OK;
 }
 
 /* readonly attribute nsILocalFile scriptFolder; */
