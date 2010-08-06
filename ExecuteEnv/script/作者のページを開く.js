@@ -1,5 +1,4 @@
-var unDonut
+var donut = Components.classes["@tnose.net/donut/api-service;1"]
+    .getService(Components.interfaces.donutIAPI);
 
-unDonut = new ActiveXObject("DonutP.API");
-
-unDonut.NewWindow("http://www5.ocn.ne.jp/~minute/tab/", 1);
+donut.newWindow("http://donut.tnose.net/", 1);
