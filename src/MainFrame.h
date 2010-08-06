@@ -52,8 +52,6 @@
 #include "FavoriteMenu.h"
 
 #include "initguid.h"
-#include "DonutP.h"
-//#include "DonutP_i.c"
 
 //+++ #include "FileCriticalSection.h"				//+++ 別の方法をとるので、不要になった.
 #include "MDIChildUserMessenger.h"

@@ -47,8 +47,6 @@
 #include "FavoriteMenu.h"
 
 #include "initguid.h"
-#include "DonutP.h"
-#include "DonutP_i.c"
 
 #include "ie_feature_control.h"
 //+++ #include "FileCriticalSection.h"				//+++ 別の方法にした
@@ -412,81 +410,6 @@ static HRESULT UnRegisterCLSIDInCategory(REFCLSID clsid, CATID catid)
 }
 
 
-
-static int RegisterCOMServer(int &nRet, bool &bRun, bool &bAutomation, bool &bTray)
-{
-	HRESULT hRes;
-	TCHAR	szTokens[] = _T("-/");
-
-	LPCTSTR lpszToken  = _Module.FindOneOf(::GetCommandLine(), szTokens);
-
-	while (lpszToken != NULL) {
-		CString strToken = Misc::GetStrWord(lpszToken, &lpszToken);	//+++
-		//if (lstrcmpi( lpszToken, _T("UnregServer") ) == 0)
-		if (strToken.CompareNoCase(_T("UnregServer") ) == 0)		//+++
-		{
-			nRet = _Module.UnregisterServer();
-			nRet = UnRegisterCLSIDInCategory(CLSID_API, CATID_SafeForInitializing);
-			if ( FAILED(nRet) )
-				return nRet;
-
-			nRet = UnRegisterCLSIDInCategory(CLSID_API, CATID_SafeForScripting);
-			if ( FAILED(nRet) )
-				return nRet;
-
-			::MessageBox(NULL, _T("COMサーバー削除しました。"), _T("unDonut"), 0);
-			bRun = false;
-			break;
-
-		//} else if (lstrcmpi( lpszToken, _T("RegServer") ) == 0) {
-		} else if (strToken.CompareNoCase(_T("RegServer") ) == 0) {		//+++
-			nRet = _Module.RegisterServer(TRUE, &CLSID_API);
-			if (nRet == S_OK) {
-				// Mark the control as safe for initializing.
-				hRes = CreateComponentCategory(CATID_SafeForInitializing, L"Controls safely initializable from persistent data");
-				if ( FAILED(hRes) )
-					return hRes;
-
-				hRes = RegisterCLSIDInCategory(CLSID_API, CATID_SafeForInitializing);
-				if ( FAILED(hRes) )
-					return hRes;
-
-				// Mark the control as safe for scripting.
-				hRes = CreateComponentCategory(CATID_SafeForScripting, L"Controls that are safely scriptable");
-				if ( FAILED(hRes) )
-					return hRes;
-
-				hRes = RegisterCLSIDInCategory(CLSID_API, CATID_SafeForScripting);
-				if ( FAILED(hRes) )
-					return hRes;
-				::MessageBox(NULL, _T("COMサーバー登録しました。"), _T("unDonut"), 0);
-			} else
-				::MessageBox(NULL, _T("COMサーバー登録失敗しました。"), _T("unDonut"), 0);
-
-			bRun = false;
-			break;
-		//} else if ( (lstrcmpi( lpszToken, _T("Automation") ) == 0)
-		//		  || (lstrcmpi( lpszToken, _T("Embedding") ) == 0) )
-		} else if (strToken.CompareNoCase(_T("Automation")) == 0
-			||    (strToken.CompareNoCase(_T("Embedding" )) == 0) )	//+++
-		{
-			bAutomation = true;
-			break;
-	  #if 1	//+++
-		//} else if (lstrcmpi( lpszToken, _T("tray") ) == 0) {
-		} else if (strToken.CompareNoCase(_T("tray") ) == 0) {		//+++
-			bTray = true;
-			break;
-	  #endif
-		}
-
-		lpszToken = _Module.FindOneOf(lpszToken, szTokens);
-	}
-
-	return S_OK;
-}
-
-
 //+++ struct SInit1 { SInit1() {Misc::setHeapAllocLowFlagmentationMode();} };
 //+++ static SInit1 s_init1;
 
@@ -555,14 +478,6 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR lp
 		goto END_APP;
 
 	AtlAxWinInit();
-
-	//コマンドライン入力によってはCOMサーバー登録及び解除を行う
-	nRet		= RegisterCOMServer(nRet, bRun, bAutomation, bTray);
-	if ( FAILED(nRet) ) {
-		ErrorLogPrintf(_T("RegisterCOMServerでエラー\n"));
-		nRet = -1;
-		goto END_APP;
-	}
 
 	CDonutSimpleEventManager::RaiseEvent(EVENT_PROCESS_START);
 

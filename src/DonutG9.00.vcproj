@@ -1560,10 +1560,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\DonutP.idl"
-				>
-			</File>
-			<File
 				RelativePath="DonutPanelBar.h"
 				>
 			</File>
