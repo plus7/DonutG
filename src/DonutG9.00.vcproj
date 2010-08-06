@@ -2746,219 +2746,219 @@
 			Name="atl"
 			>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlacc.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlacc.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlalloc.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlalloc.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlassem.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlassem.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlbase.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlbase.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlbase.inl"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlbase.inl"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlbuild.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlbuild.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlchecked.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlchecked.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlcoll.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlcoll.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlcom.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlcom.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlcomcli.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlcomcli.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\ATLComMem.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\ATLComMem.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\ATLComTime.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\ATLComTime.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\ATLComTime.inl"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\ATLComTime.inl"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlconv.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlconv.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlcore.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlcore.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlctl.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlctl.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlcur.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlcur.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atldb.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atldb.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atldbcli.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atldbcli.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atldbgmem.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atldbgmem.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atldbsch.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atldbsch.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atldebugapi.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atldebugapi.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atldef.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atldef.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlenc.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlenc.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlevent.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlevent.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlexcept.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlexcept.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlfile.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlfile.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlhost.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlhost.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atliface.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atliface.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atliface.idl"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atliface.idl"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlimage.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlimage.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlmem.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlmem.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlpath.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlpath.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlplus.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlplus.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlrc.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlrc.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsafe.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsafe.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsecurity.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsecurity.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsecurity.inl"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsecurity.inl"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsimpcoll.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsimpcoll.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsimpstr.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsimpstr.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsnap.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsnap.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsocket.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsocket.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsocket.inl"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsocket.inl"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlstdthunk.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlstdthunk.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlstr.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlstr.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsync.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsync.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsync.inl"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlsync.inl"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atltime.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atltime.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atltime.inl"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atltime.inl"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atltrace.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atltrace.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atltypes.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atltypes.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atltypes.inl"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atltypes.inl"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlutil.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlutil.h"
 				>
 			</File>
 			<File
-				RelativePath="C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlwin.h"
+				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlwin.h"
 				>
 			</File>
 		</Filter>
