@@ -316,46 +316,59 @@ void CMainFrame::ApiWriteProfileString(const PRUnichar *file, const PRUnichar *s
 }
 
 
-void CMainFrame::ApiGetScriptFolder( /*[out, retval]*/ BSTR *bstrFolder)
+void CMainFrame::ApiGetScriptFolder(nsILocalFile **folder)
 {
-	ATLASSERT(bstrFolder != 0);
 	CString 	strBuf = Misc::GetExeDirectory() + _T("Script\\");
 	if (::GetFileAttributes(strBuf) == 0xFFFFFFFF)
 		strBuf.Empty();
 
-	*bstrFolder = CComBSTR(strBuf).Copy();
+	nsCOMPtr<nsILocalFile> f;
+	NS_NewLocalFile(nsEmbedString(strBuf), PR_FALSE, getter_AddRefs(f));
+
+	NS_ADDREF(f);
+	*folder = f;
 }
 
 
-void CMainFrame::ApiGetCSSFolder( /*[out, retval]*/ BSTR *bstrFolder)
+void CMainFrame::ApiGetCSSFolder(nsILocalFile **folder)
 {
-	ATLASSERT(bstrFolder != 0);
 	CString 	strBuf = Misc::GetExeDirectory() + _T("CSS\\");
 	if (::GetFileAttributes(strBuf) == 0xFFFFFFFF)
 		strBuf.Empty();
 
-	*bstrFolder = CComBSTR(strBuf).Copy();
+	nsCOMPtr<nsILocalFile> f;
+	NS_NewLocalFile(nsEmbedString(strBuf), PR_FALSE, getter_AddRefs(f));
+
+	NS_ADDREF(f);
+	*folder = f;
 }
 
 
-void CMainFrame::ApiGetBaseFolder( /*[out, retval]*/ BSTR *bstrFolder)
+void CMainFrame::ApiGetBaseFolder(nsILocalFile **folder)
 {
-	ATLASSERT(bstrFolder != 0);
 	CString 	strBuf = Misc::GetExeDirectory();
 	if (::GetFileAttributes(strBuf) == 0xFFFFFFFF)
 		strBuf.Empty();
 
-	*bstrFolder = CComBSTR(strBuf).Copy();
+	nsCOMPtr<nsILocalFile> f;
+	NS_NewLocalFile(nsEmbedString(strBuf), PR_FALSE, getter_AddRefs(f));
+
+	NS_ADDREF(f);
+	*folder = f;
 }
 
 
-void CMainFrame::ApiGetExePath( /*[out, retval]*/ BSTR *bstrPath)
+void CMainFrame::ApiGetExePath(nsILocalFile **file)
 {
-	ATLASSERT(bstrPath != 0);
 	TCHAR Buf[MAX_PATH];
 	Buf[0]		= 0;	//+++
 	::GetModuleFileName(_Module.GetModuleInstance(), Buf, MAX_PATH);
-	*bstrPath 	= CComBSTR(Buf).Copy();
+
+	nsCOMPtr<nsILocalFile> f;
+	NS_NewLocalFile(nsEmbedString(Buf), PR_FALSE, getter_AddRefs(f));
+
+	NS_ADDREF(f);
+	*file = f;
 }
 
 

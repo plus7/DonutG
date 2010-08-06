@@ -167,10 +167,10 @@ public:
 	void 		ApiWriteProfileInt(const PRUnichar *file, const PRUnichar *section, const PRUnichar* key, int nValue);
 	void 		ApiGetProfileString(const PRUnichar *file, const PRUnichar *section, const PRUnichar* key, const PRUnichar* Default, PRUnichar **text);
 	void 		ApiWriteProfileString(const PRUnichar *file, const PRUnichar *section, const PRUnichar* key, const PRUnichar *text);
-	void 		ApiGetScriptFolder( /*[out, retval]*/ BSTR *bstrFolder);
-	void 		ApiGetCSSFolder( /*[out, retval]*/ BSTR *bstrFolder);
-	void 		ApiGetBaseFolder( /*[out, retval]*/ BSTR *bstrFolder);
-	void 		ApiGetExePath( /*[out, retval]*/ BSTR *bstrPath);
+	void 		ApiGetScriptFolder(nsILocalFile **folder);
+	void 		ApiGetCSSFolder(nsILocalFile **folder);
+	void 		ApiGetBaseFolder(nsILocalFile **folder);
+	void 		ApiGetExePath(nsILocalFile **file);
 	void 		ApiSetStyleSheet(int nIndex, BSTR bstrStyleSheet, BOOL bOff);
 	void 		ApiSaveGroup(BSTR bstrGroupFile);
 	void 		ApiLoadGroup(BSTR bstrGroupFile, BOOL bClose);

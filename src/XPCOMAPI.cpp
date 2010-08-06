@@ -270,23 +270,35 @@ NS_IMETHODIMP DonutAPI::WriteProfileString(const PRUnichar *file, const PRUnicha
 /* readonly attribute nsILocalFile scriptFolder; */
 NS_IMETHODIMP DonutAPI::GetScriptFolder(nsILocalFile * *aScriptFolder)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiGetScriptFolder(aScriptFolder);
+	return NS_OK;
 }
 
 /* readonly attribute nsILocalFile cssFolder; */
 NS_IMETHODIMP DonutAPI::GetCssFolder(nsILocalFile * *aCssFolder)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiGetCSSFolder(aCssFolder);
+	return NS_OK;
 }
 
 /* readonly attribute nsILocalFile baseFolder; */
 NS_IMETHODIMP DonutAPI::GetBaseFolder(nsILocalFile * *aBaseFolder)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiGetBaseFolder(aBaseFolder);
+	return NS_OK;
 }
 
 /* readonly attribute nsILocalFile exePath; */
 NS_IMETHODIMP DonutAPI::GetExePath(nsILocalFile * *aExePath)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	g_pMainWnd->ApiGetExePath(aExePath);
+	return NS_OK;
 }
