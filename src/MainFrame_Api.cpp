@@ -42,11 +42,11 @@ nsIDOMDocument *CMainFrame::ApiGetDocumentObject(int nTabIndex)
 	win->GetDocument(getter_AddRefs(doc));
 
 	NS_ADDREF(doc);
-	return doc;//doc; TODO:
+	return doc;
 }
 
 
-IDispatch *CMainFrame::ApiGetWindowObject(int nTabIndex)
+nsIDOMWindow *CMainFrame::ApiGetWindowObject(int nTabIndex)
 {
 	HWND					  hTabWnd = m_MDITab.GetTabHwnd(nTabIndex);
 	if (hTabWnd == NULL)
@@ -57,11 +57,13 @@ IDispatch *CMainFrame::ApiGetWindowObject(int nTabIndex)
 	nsCOMPtr<nsIDOMWindow> win;
 	browser.m_spBrowser->GetContentDOMWindow(getter_AddRefs(win));
 
-	return NULL;//win; TODO:
+	NS_ADDREF(win);
+
+	return win;
 }
 
 
-IDispatch *CMainFrame::ApiGetWebBrowserObject(int nTabIndex)
+nsIWebBrowser *CMainFrame::ApiGetWebBrowserObject(int nTabIndex)
 {
 	HWND					  hTabWnd = m_MDITab.GetTabHwnd(nTabIndex);
 	if (hTabWnd == NULL)
@@ -69,7 +71,9 @@ IDispatch *CMainFrame::ApiGetWebBrowserObject(int nTabIndex)
 
 	CGeckoBrowser			  browser = DonutGetNsIWebBrowser(hTabWnd);
 
-	return NULL;//browser.m_spBrowser;TODO:
+	NS_ADDREF(browser.m_spBrowser);
+
+	return browser.m_spBrowser;
 }
 
 

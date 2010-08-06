@@ -144,8 +144,8 @@ public:
 	/////////////////////////////////////////////
 
 	nsIDOMDocument*	ApiGetDocumentObject(int nTabIndex);
-	IDispatch*	ApiGetWindowObject(int nTabIndex);
-	IDispatch*	ApiGetWebBrowserObject(int nTabIndex);
+	nsIDOMWindow*	ApiGetWindowObject(int nTabIndex);
+	nsIWebBrowser*	ApiGetWebBrowserObject(int nTabIndex);
 	long 		ApiGetTabIndex();
 	void 		ApiSetTabIndex(int nTabIndex);
 	void 		ApiClose(int nTabIndex);

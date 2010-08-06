@@ -43,13 +43,19 @@ NS_IMETHODIMP DonutAPI::GetDocumentObject(PRInt32 index, nsIDOMDocument **_retva
 /* nsIDOMWindow getWindowObject (in long index); */
 NS_IMETHODIMP DonutAPI::GetWindowObject(PRInt32 index, nsIDOMWindow **_retval NS_OUTPARAM)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	*_retval = g_pMainWnd->ApiGetWindowObject(index);
+	return NS_OK;
 }
 
 /* nsIWebBrowser getWebBrowserObject (in long index); */
 NS_IMETHODIMP DonutAPI::GetWebBrowserObject(PRInt32 index, nsIWebBrowser **_retval NS_OUTPARAM)
 {
-    return NS_ERROR_NOT_IMPLEMENTED;
+	if (!g_pMainWnd)
+		return NS_OK;
+	*_retval = g_pMainWnd->ApiGetWebBrowserObject(index);
+	return NS_OK;
 }
 
 /* attribute long tabIndex; */
