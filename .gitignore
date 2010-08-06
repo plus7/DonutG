@@ -5,3 +5,9 @@
 *.ncb
 *.user
 ExecuteEnv/components/*.dat
+ExecuteEnv/Default.bak.dfg
+ExecuteEnv/Default.dfg
+ExecuteEnv/DonutG.INI
+ExecuteEnv/DonutG.exe
+ExecuteEnv/RecentClose.ini
+src/Debug/
