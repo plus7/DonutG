@@ -279,6 +279,13 @@ void CDonutView::OnDestroy()
 {
 	SetMsgHandled(FALSE);
 
+	nsCOMPtr<nsIDOMWindow> win;
+	nsresult rv = m_spBrowser->GetContentDOMWindow(getter_AddRefs(win));
+	nsCOMPtr<nsIDOMWindow2> win2 = do_QueryInterface(win, &rv);
+	nsCOMPtr<nsIDOMEventTarget> target;
+	rv = win2->GetWindowRoot(getter_AddRefs(target));
+	target->RemoveEventListener(NS_LITERAL_STRING("click"), this, PR_FALSE);
+
 	m_ViewOption.Uninit();
 }
 
