@@ -158,7 +158,7 @@ void RegisterAdditionalComponents(){
 }
 
  int StartXPCOM(){
-	nsresult rv;
+	nsresult rv = NS_ERROR_BASE;
     const GREVersionRange vr = {
         "1.9.2",
         PR_TRUE,
@@ -169,7 +169,17 @@ void RegisterAdditionalComponents(){
     char xpcomPath[_MAX_PATH];
     rv = GRE_GetGREPathWithProperties(&vr, 1, nsnull, 0,
                                       xpcomPath, sizeof(xpcomPath));
-    if (NS_FAILED(rv))
+	if (NS_FAILED(rv)){
+		char *fxXpcomPath = "C:\\Program Files\\Mozilla Firefox\\xpcom.dll";
+		if(::PathFileExistsA( fxXpcomPath )){
+			strcpy(xpcomPath, fxXpcomPath); 
+			rv = NS_OK;
+		}else{
+			rv = NS_ERROR_BASE;
+		}
+	}
+
+	if (NS_FAILED(rv))
         return 1;
     char *lastslash = ns_strrpbrk(xpcomPath, "/\\");
     if (!lastslash)
