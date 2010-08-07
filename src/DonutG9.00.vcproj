@@ -2018,6 +2018,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Thumbnail.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Thumbnail.h"
 				>
 			</File>
@@ -2653,6 +2657,99 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="Resource Files"
+				Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
+				>
+				<File
+					RelativePath=".\res\API.rgs"
+					>
+				</File>
+				<File
+					RelativePath=".\API.rgs"
+					>
+				</File>
+				<File
+					RelativePath=".\Donut.rc"
+					>
+				</File>
+				<File
+					RelativePath=".\res\DonutDoc.ico"
+					>
+				</File>
+				<File
+					RelativePath=".\res\DonutP.rgs"
+					>
+				</File>
+				<File
+					RelativePath=".\DonutP.rgs"
+					>
+				</File>
+				<File
+					RelativePath=".\res\ExpBar.bmp"
+					>
+				</File>
+				<File
+					RelativePath=".\res\FavBar.bmp"
+					>
+				</File>
+				<File
+					RelativePath=".\res\FavBarHot.bmp"
+					>
+				</File>
+				<File
+					RelativePath=".\res\Go.bmp"
+					>
+				</File>
+				<File
+					RelativePath=".\res\GoHot.bmp"
+					>
+				</File>
+				<File
+					RelativePath=".\res\Icon_100.ico"
+					>
+				</File>
+				<File
+					RelativePath=".\res\Icon_64.ico"
+					>
+				</File>
+				<File
+					RelativePath=".\res\SearchBar.bmp"
+					>
+				</File>
+				<File
+					RelativePath=".\res\SearchBarDis.bmp"
+					>
+				</File>
+				<File
+					RelativePath=".\res\SearchBarHot.bmp"
+					>
+				</File>
+				<File
+					RelativePath=".\res\secure.bmp"
+					>
+				</File>
+				<File
+					RelativePath=".\res\Small.bmp"
+					>
+				</File>
+				<File
+					RelativePath=".\res\SmallDisable.bmp"
+					>
+				</File>
+				<File
+					RelativePath=".\res\SmallHot.bmp"
+					>
+				</File>
+				<File
+					RelativePath=".\res\tab.bmp"
+					>
+				</File>
+				<File
+					RelativePath=".\res\text1.bin"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="WTL"
@@ -2959,99 +3056,6 @@
 			</File>
 			<File
 				RelativePath="C:\Program Files\Microsoft Visual Studio 9.0\VC\atlmfc\include\atlwin.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="Resource Files"
-			Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
-			>
-			<File
-				RelativePath=".\API.rgs"
-				>
-			</File>
-			<File
-				RelativePath=".\res\API.rgs"
-				>
-			</File>
-			<File
-				RelativePath=".\Donut.rc"
-				>
-			</File>
-			<File
-				RelativePath=".\res\DonutDoc.ico"
-				>
-			</File>
-			<File
-				RelativePath=".\res\DonutP.rgs"
-				>
-			</File>
-			<File
-				RelativePath=".\DonutP.rgs"
-				>
-			</File>
-			<File
-				RelativePath=".\res\ExpBar.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\res\FavBar.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\res\FavBarHot.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\res\Go.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\res\GoHot.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\res\Icon_100.ico"
-				>
-			</File>
-			<File
-				RelativePath=".\res\Icon_64.ico"
-				>
-			</File>
-			<File
-				RelativePath=".\res\SearchBar.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\res\SearchBarDis.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\res\SearchBarHot.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\res\secure.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\res\Small.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\res\SmallDisable.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\res\SmallHot.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\res\tab.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\res\text1.bin"
 				>
 			</File>
 		</Filter>

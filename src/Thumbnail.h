@@ -10,9 +10,8 @@
 #define __THUMBNAIL_H_
 
 #define USE_THUMBNAIL
-#include <nsContentCID.h>
-#include <nsIDOMHTMLCanvasElement.h>
-#include <nsIDOMCanvasRenderingContext2D.h>
+#include "resource.h"
+//#include "MtlWin.h"
 
 class CThumbnailDlg : public CDialogImpl<CThumbnailDlg> /*, public CMessageFilter*/ {
 public:
@@ -431,47 +430,21 @@ private:
 			, m_nHeight(PictHeight)
 		{
 		}
-
-		void 	operator ()(HWND hWnd)
+		bool CreateOnHGlobal(IStream** ppIStream)
 		{
-			nsresult rv;
-			nsCOMPtr<nsIWebBrowser> wb;
-			wb = DonutGetNsIWebBrowser(hWnd);
-			nsCOMPtr<nsIDOMWindow> win;
-			wb->GetContentDOMWindow(getter_AddRefs(win));
+			HRESULT	hr;
 
-			if (win) {
-				//テンポラリなHTMLDocumentを生成
-				const nsCID hoge = NS_HTMLDOCUMENT_CID;
-				nsCOMPtr<nsIDOMHTMLDocument> htmlDocument(do_CreateInstance(hoge, &rv));
-				nsCOMPtr<nsIDOMElement> elm;
-				htmlDocument->CreateElement(NS_LITERAL_STRING("canvas"), getter_AddRefs(elm));
-				nsCOMPtr<nsIDOMHTMLCanvasElement> canvas = do_QueryInterface(elm);
-				if(!canvas) return;
+			if(ppIStream == NULL)
+				return	false;
+			hr = ::CreateStreamOnHGlobal(NULL,TRUE,ppIStream);
+			if(SUCCEEDED(hr) && *ppIStream)
+				return	true;
 
-				nsCOMPtr<nsISupports> suppCtx;
-				canvas->GetContext(NS_LITERAL_STRING("2d"), getter_AddRefs(suppCtx));
-
-				nsCOMPtr<nsIDOMCanvasRenderingContext2D> ctx = do_QueryInterface(suppCtx);
-				if(!ctx) return;
-#if COMMENT
-				ctx->DrawWindow(win, 0, 0, 300, 300, NS_LITERAL_STRING("rgb(255,255,255)"));
-
-				nsCOMPtr<nsIInputStream> is;
-				ctx->GetInputStream(NS_LITERAL_CSTRING("image/png"), nsEmbedString(), getter_AddRefs(is));
-				if (!is) return;
-
-				CImage img;
-#endif
-
-				CClientDC 	tmpClientDc( ::GetDesktopWindow() );
-				CDC 		hdc 	= ::CreateCompatibleDC(tmpClientDc);
-				CBitmap 	bmp		= ::CreateCompatibleBitmap(tmpClientDc, m_nWidth, m_nHeight);
-
-				m_ImgList.Add(bmp);
-			}
+			*ppIStream = NULL;
+			return	false;
 		}
 
+		void 	operator ()(HWND hWnd);
 
 		//+++ 未使用.
 		bool SaveBitmap(HDC hDC, HBITMAP hBmp, int index)
