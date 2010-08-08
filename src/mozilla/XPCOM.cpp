@@ -37,6 +37,7 @@
 
 XRE_InitEmbeddingType XRE_InitEmbedding;
 XRE_TermEmbeddingType XRE_TermEmbedding;
+XRE_NotifyProfileType XRE_NotifyProfile;
 
 #include "nsXPCOMGlue.h"
 #include "nsStringAPI.h"
@@ -53,6 +54,58 @@ XRE_TermEmbeddingType XRE_TermEmbedding;
 #include "XPCOMAPI.h"
 
 #include "XPCOM.h"
+
+
+CString GetAppDataPath(){
+	TCHAR szPath[MAX_PATH+1];
+	LPITEMIDLIST pidl;
+
+	IMalloc *pMalloc;
+	SHGetMalloc( &pMalloc );
+
+	HRESULT hr = ::SHGetSpecialFolderLocation(NULL, CSIDL_APPDATA, &pidl);
+
+	if(SUCCEEDED(hr)){
+		SHGetPathFromIDList(pidl,szPath);
+		pMalloc->Free(pidl);
+	}
+
+	pMalloc->Release();
+
+	return CString(szPath);
+}
+
+/* Implementation file */
+NS_IMPL_ISUPPORTS1(DonutDirectoryServiceProvider, nsIDirectoryServiceProvider)
+
+DonutDirectoryServiceProvider::DonutDirectoryServiceProvider()
+{
+}
+
+DonutDirectoryServiceProvider::~DonutDirectoryServiceProvider()
+{
+}
+
+NS_IMETHODIMP DonutDirectoryServiceProvider::GetFile(const char *prop, PRBool *persistent, nsIFile **_retval)
+{
+	if (!strcmp(prop, NS_APP_USER_PROFILE_50_DIR)
+	 || !strcmp(prop, NS_APP_PROFILE_DIR_STARTUP))
+	{
+		*persistent = PR_TRUE;
+		nsCOMPtr<nsILocalFile> dir;
+		NS_NewLocalFile(nsEmbedString(GetAppDataPath()), PR_FALSE, getter_AddRefs(dir));
+		dir->Append(NS_LITERAL_STRING("Donut"));
+		PRBool exists;
+		dir->Exists(&exists);
+		if(!exists){
+			dir->Create(nsIFile::DIRECTORY_TYPE, 0664);
+		}
+		return dir->Clone(_retval);
+	}
+	return NS_ERROR_FAILURE;
+}
+
+static DonutDirectoryServiceProvider *kDirSvcProvider;
 
 char*
 ns_strrpbrk(char *string, const char *strCharSet)
@@ -217,6 +270,13 @@ void RegisterAdditionalComponents(){
         return 5;
     }
 
+    XRE_NotifyProfile =
+        (XRE_NotifyProfileType) GetProcAddress(xulModule,  "XRE_NotifyProfile");
+    if (!XRE_NotifyProfile) {
+        fprintf(stderr, "Error: %i\n", GetLastError());
+        return 5;
+    }
+
     // Scope all the XPCOM stuff
     {
         nsCOMPtr<nsILocalFile> xuldir;
@@ -243,9 +303,14 @@ void RegisterAdditionalComponents(){
         if (NS_FAILED(rv))
             return 8;
 
-        rv = XRE_InitEmbedding(xuldir, appdir, nsnull, nsnull, 0);
+		kDirSvcProvider = new DonutDirectoryServiceProvider();
+		kDirSvcProvider->AddRef();
+
+        rv = XRE_InitEmbedding(xuldir, appdir, kDirSvcProvider, nsnull, 0);
         if (NS_FAILED(rv))
             return 9;
+
+		XRE_NotifyProfile();
 
 		RegisterAdditionalComponents();
 
@@ -254,6 +319,7 @@ void RegisterAdditionalComponents(){
 }
 
 int TermXPCOM(){
+	kDirSvcProvider->Release();
 	XRE_TermEmbedding();
 	XPCOMGlueShutdown();
 	return 0;
