@@ -47,10 +47,10 @@ void CThumbnailDlg::_Function_EnumChild_MakeThumbnail::operator ()(HWND hWnd) {
 
 		double scale = (double)m_nWidth/(double)w;
 		canvas->SetWidth(m_nWidth);
-		canvas->SetHeight(h * scale);
+		canvas->SetHeight(m_nHeight);
 
 		ctx->Scale(scale, scale);
-		ctx->DrawWindow(win, 0, 0, w, h, /*m_nWidth, m_nHeight,*/ NS_LITERAL_STRING("rgb(255,255,255)"), 0);
+		ctx->DrawWindow(win, 0, 0, w, h, NS_LITERAL_STRING("rgb(255,255,255)"), 0);
 
 		nsEmbedString data;
 		nsresult rv = canvas->ToDataURLAs(NS_LITERAL_STRING("image/png"),
