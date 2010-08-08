@@ -13,6 +13,7 @@
 #include <nsIDOMHTMLDocument.h>
 #include <nsIDOMHTMLCanvasElement.h>
 #include <nsIDOMCanvasRenderingContext2D.h>
+#include <nsIDOMWindowInternal.h>
 
 void CThumbnailDlg::_Function_EnumChild_MakeThumbnail::operator ()(HWND hWnd) {
 	nsresult rv;
@@ -32,11 +33,24 @@ void CThumbnailDlg::_Function_EnumChild_MakeThumbnail::operator ()(HWND hWnd) {
 
 		nsCOMPtr<nsISupports> suppCtx;
 		canvas->GetContext(NS_LITERAL_STRING("2d"), getter_AddRefs(suppCtx));
+		if(!suppCtx) return;
 
 		nsCOMPtr<nsIDOMCanvasRenderingContext2D> ctx = do_QueryInterface(suppCtx);
 		if(!ctx) return;
 
-		ctx->DrawWindow(win, 0, 0, m_nWidth, m_nHeight, NS_LITERAL_STRING("rgb(255,255,255)"), 0);
+		nsCOMPtr<nsIDOMWindowInternal> win_i = do_QueryInterface(win);
+		if(!win_i) return;
+
+		PRInt32 h, w;
+		win_i->GetInnerHeight(&h);
+		win_i->GetInnerWidth(&w);
+
+		double scale = (double)m_nWidth/(double)w;
+		canvas->SetWidth(m_nWidth);
+		canvas->SetHeight(h * scale);
+
+		ctx->Scale(scale, scale);
+		ctx->DrawWindow(win, 0, 0, w, h, /*m_nWidth, m_nHeight,*/ NS_LITERAL_STRING("rgb(255,255,255)"), 0);
 
 		nsEmbedString data;
 		nsresult rv = canvas->ToDataURLAs(NS_LITERAL_STRING("image/png"),
