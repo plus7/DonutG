@@ -10,4 +10,7 @@ ExecuteEnv/Default.dfg
 ExecuteEnv/DonutG.INI
 ExecuteEnv/DonutG.exe
 ExecuteEnv/RecentClose.ini
+ExecuteEnv/WordHistory.ini
 src/Debug/
+src/Release/
+atliface*
