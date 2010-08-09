@@ -687,7 +687,7 @@ END
 
 IDR_MOUSE_EX_SEL MENU 
 BEGIN
-    MENUITEM "リンクを新しいウィンドで開く",              IDM_FOLLOWLINKN
+    MENUITEM "リンクを新しいウィンドで開く",              ID_OPEN_LINK_NEWTAB
 END
 
 IDR_PANEL_TYPE MENU 
