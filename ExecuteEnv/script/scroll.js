@@ -1,8 +1,10 @@
 //実行時引数に指定した量だけスクロール
 
-var Donut = new ActiveXObject("DonutP.API");
-var nIndex = Donut.TabIndex;
-var window = Donut.GetWindowObject(nIndex);
+var donut = Components.classes["@tnose.net/donut/api-service;1"]
+    .getService(Components.interfaces.donutIAPI);
 
-var amount = eval(WScript.Arguments(0));
+var nIndex = donut.tabIndex;
+var window = donut.getWindowObject(nIndex);
+
+var amount = 100;
 window.scrollBy(0,amount);
