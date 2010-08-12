@@ -153,6 +153,7 @@ BEGIN
             MENUITEM "クリップボード(&C)",                 ID_VIEW_CLIPBOARDBAR
             MENUITEM "パネル(&P)",                     ID_VIEW_PANELBAR
             MENUITEM "プラグインバー(&P)",                 ID_VIEW_PLUGINBAR
+            MENUITEM "Gecko履歴(&K)",                 ID_VIEW_GHISTBAR
             MENUITEM SEPARATOR
             MENUITEM "エクスプローラバーを自動で表示(&A)",         ID_EXPLORERBAR_AUTOSHOW
             MENUITEM "タブ表示(&T)",                    ID_VIEW_EXPLORERBAR_TAB
@@ -1826,6 +1827,13 @@ BEGIN
     LTEXT           "%",IDC_STATIC,81,55,8,8
     CONTROL         "ページ幅に合わせる",IDC_SHRINKTOFIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,94,54,69,10
     CONTROL         "背景の色や画像も含めて印刷する",IDC_PRINTBACKGROUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,95,109,10
+END
+
+IDD_GECKOHISTORY_FORM DIALOGEX 0, 0, 185, 93
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 9, "MS UI Gothic", 400, 0, 0x0
+BEGIN
+    LTEXT           "TODO: フォーム ビューをレイアウトしてください。",IDC_STATIC,37,39,137,8
 END
 
 

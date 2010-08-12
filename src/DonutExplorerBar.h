@@ -9,6 +9,7 @@
 
 #include "option/ExplorerBarDialog.h"
 #include "FavTreeViewCtrl.h"
+#include "DonutGeckoHistoryBar.h"
 #include "DonutClipboardBar.h"
 #include "DonutPanelBar.h"
 #include "DonutPFunc.h"
@@ -30,6 +31,7 @@ private:
 		DEB_EX_CLPBAR		= 0x00000002L,
 		DEB_EX_PANELBAR 	= 0x00000004L,
 		DEB_EX_PLUGINBAR	= 0x00000008L,
+		DEB_EX_GHISTBAR		= 0x00000010L,
 	};
 
 	// Data members
@@ -37,11 +39,12 @@ private:
 	CHorSplitterWindow &	m_wndAdditionalSplit;
 
 public:
-	CDonutFavoritesBar	m_FavBar;
-	CDonutClipboardBar	m_ClipBar;
-	CDonutPanelBar		m_PanelBar;
-	CPluginBar			m_PluginBar;
-	DWORD				m_dwExStyle;
+	CDonutFavoritesBar		m_FavBar;
+	CDonutGeckoHistoryBar	m_GHistBar;
+	CDonutClipboardBar		m_ClipBar;
+	CDonutPanelBar			m_PanelBar;
+	CPluginBar				m_PluginBar;
+	DWORD					m_dwExStyle;
 
 private:
 	std::vector<int>	m_aryID;
@@ -70,7 +73,7 @@ public:
 		static const int aryID[] = {
 			ID_VIEW_FAVEXPBAR,		  ID_VIEW_FAVEXPBAR_GROUP, ID_VIEW_FAVEXPBAR_HIST,
 			ID_VIEW_FAVEXPBAR_SCRIPT, ID_VIEW_CLIPBOARDBAR,    ID_VIEW_PANELBAR,
-			ID_VIEW_PLUGINBAR
+			ID_VIEW_PLUGINBAR,        ID_VIEW_GHISTBAR
 		};
 		enum { aryID_NUM = ( sizeof (aryID) / sizeof (aryID[0]) ) };
 		for (int ii = 0; ii < aryID_NUM; ii++)
@@ -165,6 +168,7 @@ public:
 		COMMAND_ID_HANDLER( ID_VIEW_CLIPBOARDBAR	, OnViewClipboardBar	)
 		COMMAND_ID_HANDLER( ID_VIEW_PANELBAR		, OnViewPanelBar		)
 		COMMAND_ID_HANDLER( ID_VIEW_PLUGINBAR		, OnViewPluginBar		)
+		COMMAND_ID_HANDLER( ID_VIEW_GHISTBAR		, OnViewGeckoHistoryBar	)
 		COMMAND_ID_HANDLER( ID_PANE_CLOSE			, OnIDPaneClose 		)
 		COMMAND_ID_HANDLER( ID_VIEW_EXPLORERBAR_TAB , OnViewExpBarTabs		)
 
@@ -478,6 +482,24 @@ private:
 		return 0;
 	}
 
+	LRESULT OnViewGeckoHistoryBar(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL & /*bHandled*/)
+	{
+		if ( IsExplorerBarHidden() ) {
+			if ( (CMainOption::s_dwExplorerBarStyle & MAIN_EXPLORER_AUTOSHOW) != MAIN_EXPLORER_AUTOSHOW ) {
+				ShowBar(DEB_EX_GHISTBAR, true);
+			} else {
+				if (m_dwExStyle == DEB_EX_GHISTBAR)
+					m_dwExStyle = DEB_EX_NONE;
+				else
+					ShowBar(DEB_EX_GHISTBAR, true);
+			}
+		} else if ( !IsGeckoHistoryBarVisible() ) {
+			ShowBar(DEB_EX_GHISTBAR);
+		} else {
+			HideBar();
+		}
+		return 0;
+	}
 
 	LRESULT OnIDPaneClose(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL & /*bHandled*/)
 	{
@@ -508,10 +530,11 @@ private:
 public:
 	BYTE PreTranslateMessage(MSG *pMsg)
 	{
-		if		( IsFavBarVisible() 	  ) return m_FavBar.PreTranslateMessage(pMsg);
-		else if ( IsClipboardBarVisible() ) return m_ClipBar.PreTranslateMessage(pMsg);
-		else if ( IsPanelBarVisible()	  ) return m_PanelBar.PreTranslateMessage(pMsg);
-		else if ( IsPluginBarVisible()	  ) return m_PluginBar.PreTranslateMessage(pMsg);
+		if		( IsFavBarVisible() 	 		) return m_FavBar.PreTranslateMessage(pMsg);
+		else if ( IsClipboardBarVisible()		) return m_ClipBar.PreTranslateMessage(pMsg);
+		else if ( IsPanelBarVisible()			) return m_PanelBar.PreTranslateMessage(pMsg);
+		else if ( IsPluginBarVisible()			) return m_PluginBar.PreTranslateMessage(pMsg);
+		else if ( IsGeckoHistoryBarVisible()	) return m_GHistBar.PreTranslateMessage(pMsg);
 		else								return _MTL_TRANSLATE_PASS;
 	}
 
@@ -540,6 +563,10 @@ public:
 		return _check_flag(DEB_EX_PLUGINBAR, m_dwExStyle);
 	}
 
+	bool IsGeckoHistoryBarVisible()
+	{
+		return _check_flag(DEB_EX_GHISTBAR, m_dwExStyle);
+	}
 
 	bool IsExplorerBarHidden()
 	{
@@ -632,6 +659,10 @@ private:
 			m_PluginBar.ShowWindow(SW_SHOW);
 			SetClient(m_PluginBar.m_hWnd);
 			SetTitle( MtlGetWindowText(m_PluginBar.m_hWnd) );
+		} else if ( _check_flag(DEB_EX_GHISTBAR, dwStyle) ) {	// プラグインバー
+			m_GHistBar.ShowWindow(SW_SHOW);
+			SetClient(m_GHistBar.m_hWnd);
+			SetTitle( MtlGetWindowText(m_GHistBar.m_hWnd) );
 		}
 	}
 
@@ -642,6 +673,7 @@ private:
 		if (m_ClipBar.m_hWnd   != NULL) 	m_ClipBar.ShowWindow(SW_HIDE);
 		if (m_PanelBar.m_hWnd  != NULL) 	m_PanelBar.ShowWindow(SW_HIDE);
 		if (m_PluginBar.m_hWnd != NULL) 	m_PluginBar.ShowWindow(SW_HIDE);
+		if (m_GHistBar.m_hWnd  != NULL) 	m_GHistBar.ShowWindow(SW_HIDE);
 	}
 
 
@@ -685,6 +717,14 @@ private:
 				m_PluginBar.SetWindowText( _T("プラグインバー") );
 			}
 		}
+
+		// Gecko履歴バー
+		else if ( _check_flag(DEB_EX_GHISTBAR, dwExStyle) ) {
+			if (!m_GHistBar.m_hWnd) {
+				m_GHistBar.Create(m_hWnd, TRUE);
+				m_GHistBar.SetWindowText( _T("Gecko履歴バー") );
+			}
+		}
 	}
 
 
@@ -695,14 +735,15 @@ public:
 			int nIndexAct = m_nIndexAct;
 
 			switch (m_aryID[ii]) {
-			case ID_VIEW_FAVEXPBAR: 		if ( IsFavBarVisibleNormal() )	m_nIndexAct = ii;	break;
-			case ID_VIEW_FAVEXPBAR_HIST:	if ( IsFavBarVisibleHist()	 )	m_nIndexAct = ii;	break;
-			case ID_VIEW_FAVEXPBAR_GROUP:	if ( IsFavBarVisibleGroup()  )	m_nIndexAct = ii;	break;
-			case ID_VIEW_FAVEXPBAR_USER:	if ( IsFavBarVisibleUser()	 )	m_nIndexAct = ii;	break;
-			case ID_VIEW_FAVEXPBAR_SCRIPT:	if ( IsFavBarVisibleScript() )	m_nIndexAct = ii;	break;
-			case ID_VIEW_CLIPBOARDBAR:		if ( IsClipboardBarVisible() )	m_nIndexAct = ii;	break;
-			case ID_VIEW_PANELBAR:			if ( IsPanelBarVisible()	 )	m_nIndexAct = ii;	break;
-			case ID_VIEW_PLUGINBAR: 		if ( IsPluginBarVisible()	 )	m_nIndexAct = ii;	break;
+			case ID_VIEW_FAVEXPBAR: 		if ( IsFavBarVisibleNormal()	)	m_nIndexAct = ii;	break;
+			case ID_VIEW_FAVEXPBAR_HIST:	if ( IsFavBarVisibleHist()		)	m_nIndexAct = ii;	break;
+			case ID_VIEW_FAVEXPBAR_GROUP:	if ( IsFavBarVisibleGroup()		)	m_nIndexAct = ii;	break;
+			case ID_VIEW_FAVEXPBAR_USER:	if ( IsFavBarVisibleUser()		)	m_nIndexAct = ii;	break;
+			case ID_VIEW_FAVEXPBAR_SCRIPT:	if ( IsFavBarVisibleScript()	)	m_nIndexAct = ii;	break;
+			case ID_VIEW_CLIPBOARDBAR:		if ( IsClipboardBarVisible()	)	m_nIndexAct = ii;	break;
+			case ID_VIEW_PANELBAR:			if ( IsPanelBarVisible()   		)	m_nIndexAct = ii;	break;
+			case ID_VIEW_PLUGINBAR: 		if ( IsPluginBarVisible()		)	m_nIndexAct = ii;	break;
+			case ID_VIEW_GHISTBAR:			if ( IsGeckoHistoryBarVisible()	)	m_nIndexAct = ii;	break;
 			}
 			if (nIndexAct != m_nIndexAct) {
 				Invalidate(FALSE);
@@ -717,6 +758,7 @@ public:
 		UPDATE_COMMAND_UI_SETCHECK_IF( ID_VIEW_CLIPBOARDBAR 	, IsClipboardBarVisible()	)
 		UPDATE_COMMAND_UI_SETCHECK_IF( ID_VIEW_PANELBAR 		, IsPanelBarVisible()		)
 		UPDATE_COMMAND_UI_SETCHECK_IF( ID_VIEW_PLUGINBAR		, IsPluginBarVisible()		)
+		UPDATE_COMMAND_UI_SETCHECK_IF( ID_VIEW_GHISTBAR			, IsGeckoHistoryBarVisible())
 		UPDATE_COMMAND_UI_SETCHECK_IF( ID_EXPLORERBAR			, IsWindowVisible() 		)	// IsFavBarVisible())
 		UPDATE_COMMAND_UI_SETCHECK_IF_PASS( ID_VIEW_EXPLORERBAR_TAB, !m_bHideTab )
 		CHAIN_UPDATE_COMMAND_UI_MEMBER(m_FavBar)

@@ -2662,11 +2662,11 @@
 				Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
 				>
 				<File
-					RelativePath=".\res\API.rgs"
+					RelativePath=".\API.rgs"
 					>
 				</File>
 				<File
-					RelativePath=".\API.rgs"
+					RelativePath=".\res\API.rgs"
 					>
 				</File>
 				<File
@@ -3064,6 +3064,14 @@
 			>
 			<File
 				RelativePath=".\DonutG.h"
+				>
+			</File>
+			<File
+				RelativePath=".\DonutGeckoHistoryBar.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\DonutGeckoHistoryBar.h"
 				>
 			</File>
 			<File

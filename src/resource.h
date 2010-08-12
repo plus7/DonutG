@@ -126,6 +126,7 @@
 #define IDD_DIALOG_PAGESETUP            309
 #define IDD_PPAGE_MARGINS               310
 #define IDD_PPAGE_FORMAT                311
+#define IDD_GECKOHISTORY_FORM           312
 #define IDC_SLIDER                      1000
 #define IDC_IGNORED_URL_LIST            1000
 #define IDC_EDIT                        1001
@@ -838,6 +839,9 @@
 #define ID_SAVE_IMAGE                   33206
 #define ID_COPY_IMAGE_URI               33207
 #define ID_OPEN_IMAGE_NEWTAB            33208
+#define ID_33209                        33209
+#define ID_GECKOHISTORY_BAR             33210
+#define ID_VIEW_GHISTBAR                33211
 #define ID_PLUGIN_COMMAND               33333
 #define COMMAND_RANGE_END               34000
 #define ID_INSERTPOINT_CSSMENU          35000
@@ -882,7 +886,7 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        310
-#define _APS_NEXT_COMMAND_VALUE         33209
+#define _APS_NEXT_COMMAND_VALUE         33212
 #define _APS_NEXT_CONTROL_VALUE         1354
 #define _APS_NEXT_SYMED_VALUE           130
 #endif
