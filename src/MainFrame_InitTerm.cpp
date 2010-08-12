@@ -113,7 +113,7 @@ LRESULT CMainFrame::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL & /*b
 	InitSkin();										//スキンを初期化
 
 	CDonutSimpleEventManager::RaiseEvent(EVENT_INITIALIZE_COMPLETE);	// イベント関係の準備
-	CDialogHook::InstallHook(m_hWnd);				// ダイアログ関係の準備
+	//CDialogHook::InstallHook(m_hWnd);				// ダイアログ関係の準備
 
 	init_loadPlugins();								// プラグインを読み込む
 
@@ -654,7 +654,7 @@ void CMainFrame::OnDestroy()
 	MtlSendCommand(m_hWnd, ID_VIEW_STOP_ALL);									// added by DOGSTORE
 
 	//CSearchBoxHook::UninstallSearchHook();
-	CDialogHook::UninstallHook();
+	//CDialogHook::UninstallHook();
 
 	//デバッグウィンドウ削除
 	m_wndDebug.Destroy();
