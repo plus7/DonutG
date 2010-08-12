@@ -14,6 +14,8 @@
 #include "MtlProfile.h"
 #include "IniFile.h"
 
+#include <nsISHistoryInternal.h>
+
 
 ///+++ .dfg へ書き込むセーブ情報.
 struct SDfgSaveInfo {
@@ -157,6 +159,7 @@ private:
 public:
 	void	WriteProfile(const CString &strFileName, int nIndex);	//+++	未使用状態
 	void	GetProfile(const CString &strFileName, int nIndex, bool bGetChildFrameState);
+	void    LoadSession(CIniFileI& pr, bool bGetChildFrameState);
 	void	_GetProfile(const CString &strFileName, const CString &strSection, bool bGetChildFrameState);
 
 public:
@@ -438,6 +441,78 @@ DONUTVIEWOPTION(void) ::GetProfile(const CString &strFileName, int nIndex, bool 
 }
 
 
+DONUTVIEWOPTION(void) ::LoadSession(CIniFileI& pr, bool bGetChildFrameState)
+//ここで適切なのだろうか
+{
+	// 戻る・進むの項目を設定する
+	/*if (CMainOption::s_bTravelLogGroup) {
+		_Load_OptionalData(pChild, strFileName, strSection);
+	}*/
+
+	/*TCHAR		szUrl[INTERNET_MAX_PATH_LENGTH];
+	szUrl[0]			= 0;
+	DWORD		dwBytes = INTERNET_MAX_PATH_LENGTH;
+
+	if (pr.QueryString(szUrl, _T("Location_URL"), &dwBytes) == ERROR_SUCCESS) {
+		// avoid endless loop
+		CString strURL(szUrl);
+		bool	bMaybeEndless = ( strURL == _T("javascript:location.reload()") );
+
+		if (!bMaybeEndless)
+			__m_pDonutView->Navigate2(szUrl);
+	}*/
+	std::vector<std::pair<CString, CString> >	shArr;
+	CString 		strKey;
+	unsigned index = -1;
+	unsigned i;
+	if (true/*CMainOption::s_bTravelLogGroup*/) { //???
+		for (i = 0; i < 0x7fffffff; ++i) {
+			strKey.Format(_T("Back_URL%d"), i);
+			CString strURL = pr.GetString(strKey/*, NULL, MAX_PATH*/);
+			if (strURL.IsEmpty())
+				break;
+			strKey.Format(_T("Back_Title%d"), i);
+			CString strTitle = pr.GetStringUW(strKey/*, NULL, 1024*/);
+			if (strTitle.IsEmpty())
+				break;
+			shArr.push_back( std::make_pair(strTitle, strURL) );
+			index++;
+		}
+	}
+
+	CString strURL = pr.GetString( _T("Location_URL")/*, NULL, MAX_PATH*/);
+	shArr.push_back( std::make_pair(_T(""), strURL) );
+	index = index + 1;
+
+	if (true/*CMainOption::s_bTravelLogGroup*/) { //???
+		for (unsigned i = 0; i < 0x7fffffff; ++i) {
+			strKey.Format(_T("Fore_URL%d"), i);
+			CString strURL = pr.GetString(strKey/*, NULL, MAX_PATH*/);
+			if (strURL.IsEmpty())
+				break;
+			strKey.Format(_T("Fore_Title%d"), i);
+			CString strTitle = pr.GetStringUW(strKey/*, NULL, 1024*/);
+			if (strTitle.IsEmpty())
+				break;
+			shArr.push_back( std::make_pair(strTitle, strURL) );
+		}
+	}
+
+	nsCOMPtr<nsIWebNavigation> nav = do_QueryInterface(__m_pDonutView->m_spBrowser);
+	nsCOMPtr<nsISHistory> sh;
+	nav->GetSessionHistory(getter_AddRefs(sh));
+	nsCOMPtr<nsISHistoryInternal> shi = do_QueryInterface(sh);
+
+	for (unsigned int i = 0; i < shArr.size(); i++) {
+		nsCOMPtr<nsISHEntry> newEntry = do_CreateInstance("@mozilla.org/browser/session-history-entry;1");
+		nsCOMPtr<nsIURI> uri;
+		NS_NewURI(getter_AddRefs(uri), NS_LossyConvertUTF16toASCII(shArr[i].second));
+		newEntry->SetURI(uri);
+		newEntry->SetTitle(nsEmbedString(shArr[i].first));
+		shi->AddEntry(newEntry, true);
+	}
+	nav->GotoIndex(index);
+}
 
 DONUTVIEWOPTION(void) ::_GetProfile(const CString &strFileName, const CString & strSection, bool bGetChildFrameState)
 {
@@ -450,18 +525,7 @@ DONUTVIEWOPTION(void) ::_GetProfile(const CString &strFileName, const CString & 
 	if (pr.QueryValue( dwDLControlFlags, _T("DL_Control_Flags") ) == ERROR_SUCCESS)
 		__m_pDonutView->PutDLControlFlags(dwDLControlFlags);
 
-	TCHAR		szUrl[INTERNET_MAX_PATH_LENGTH];
-	szUrl[0]			= 0;
-	DWORD		dwBytes = INTERNET_MAX_PATH_LENGTH;
-
-	if (pr.QueryString(szUrl, _T("Location_URL"), &dwBytes) == ERROR_SUCCESS) {
-		// avoid endless loop
-		CString strURL(szUrl);
-		bool	bMaybeEndless = ( strURL == _T("javascript:location.reload()") );
-
-		if (!bMaybeEndless)
-			__m_pDonutView->Navigate2(szUrl);
-	}
+	LoadSession(pr, bGetChildFrameState);
 
 	pr.QueryValue( m_dwAutoRefreshStyle, _T("Auto_Refresh_Style") );
 	_SetTimer();

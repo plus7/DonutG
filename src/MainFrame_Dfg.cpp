@@ -241,13 +241,6 @@ void CMainFrame::_LoadGroupOption(const CString &strFileName, bool bClose)
 		// if tab mode, no need to load window placement.
 		pChild->view().m_ViewOption.GetProfile(strFileName, dw, !CMainOption::s_bTabMode);
 
-		// –ß‚éEi‚Ş‚Ì€–Ú‚ğİ’è‚·‚é
-		if (CMainOption::s_bTravelLogGroup) {
-			CString 	strSection;
-			strSection.Format(_T("Window%d"), dw);
-			_Load_OptionalData(pChild, strFileName, strSection);
-		}
-
 		if (dw == dwActive)
 			pChildActive = pChild;
 	}
