@@ -11,6 +11,7 @@ ExecuteEnv/DonutG.INI
 ExecuteEnv/DonutG.exe
 ExecuteEnv/RecentClose.ini
 ExecuteEnv/WordHistory.ini
+ExecuteEnv/DonutG.html
 src/Debug/
 src/Release/
 atliface*
