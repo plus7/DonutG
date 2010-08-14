@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////
 【 ソフト名 】DonutG
-【バージョン】0.2.6
-【  作成日  】2010/07/29
+【バージョン】0.2.9
+【  作成日  】2010/08/15
 【改  変  者】plus7
 【 必要環境 】日本語版 WindowsXP, Vista, 7
 　　　　　　　XULRunner1.9.2 以上
@@ -34,7 +34,7 @@ Internet Explorer に似せたインターフェイス(概観および操作性)で豊富な機能
 
 ■新規インストール方法
 
-□Step1. XULRunnerの導入
+□Step1-a. XULRunnerの導入
 http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/
 からバージョン1.9.2系列のXULRunner(xulrunner-1.9.2.??.en-US.win32.zip)を
 ダウンロードし，お好みの位置に解凍します．次に，
@@ -42,6 +42,12 @@ http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/
 xulrunner.exe --register-user
 というコマンドを実行してください．これでシステムへのGeckoエンジンの
 登録が完了します．
+
+□Step1-b. Firefox3.6.xの導入
+または，Firefox3.6.xをC:\Program File\Mozilla Firefoxにインストールしておくと，
+DonutGがそれを検知し，そのGeckoエンジンを利用することができます．
+厳密なバージョンチェックはしておりませんので，かならず3.6.xが入っていることを
+確認してください．
 
 □Step2. DonutG本体の導入
 ダウンロードしたファイル(donutg.zip)を解凍ツールを利用して解凍します．
@@ -132,7 +138,4 @@ Vistaアプリらしくするために，そろそろ設定ファイルをexeと同じところに置くのをやめ
 
 
 ■想定問答集
-
-□XULRunnerのインストールが面倒くさい
-Firefox3以降はFirefoxのGeckoエンジンが外部からも利用できるので，自動的に検知する仕組みを
-作りたいところです．XULRunner同梱版は私が面倒くさい…．
+N/A
