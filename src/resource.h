@@ -50,6 +50,7 @@
 #define IDB_MAINFRAME_TOOLBAR           216
 #define IDB_MAINFRAME_TOOLBAR_HOT       217
 #define IDB_MDITAB                      218
+#define IDC_CHOOSE                      218
 #define IDB_MAINFRAME_LARGE_TOOLBAR_HOT 219
 #define IDB_MAINFRAME_LARGE_TOOLBAR     220
 #define IDR_MENU_FAVTREE_BAR            221
@@ -116,6 +117,8 @@
 #define IDD_DIALOG_EXPROPERTY2          296
 #define IDD_DIALOG_EXPROPERTY           297
 #define IDD_DIALOG_CONTEXTMENU          300
+#define IDC_OPENWITHAPP                 300
+#define IDC_SAVETOFILE                  301
 #define IDD_DIALOG_ALPHA                302
 #define IDD_FINDBAR_FORM                304
 #define IDD_DIALOG1                     305
@@ -127,6 +130,7 @@
 #define IDD_PPAGE_MARGINS               310
 #define IDD_PPAGE_FORMAT                311
 #define IDD_GECKOHISTORY_FORM           312
+#define IDD_HELPERAPP                   313
 #define IDC_SLIDER                      1000
 #define IDC_IGNORED_URL_LIST            1000
 #define IDC_EDIT                        1001
@@ -268,6 +272,8 @@
 #define IDC_EDIT1                       1120
 #define IDC_CHECK_MAIN_DEL_CASH         1121
 #define IDC_MARGIN_RIGHT                1121
+#define IDC_EDIT3                       1121
+#define IDC_CONTENTTYPE                 1121
 #define IDC_RAND_CHK                    1122
 #define IDC_MARGIN_BOTTOM               1122
 #define IDC_CHECK_MAIN_DEL_COOKIE       1123
@@ -515,6 +521,9 @@
 #define IDC_HDR_RIGHT                   1353
 #define IDC_PAGE_MARKER                 1353
 #define IDC_FTR_RIGHT                   1354
+#define IDC_PLACES_TREEVIEW             1356
+#define IDC_URL                         1358
+#define IDC_APPLICATION                 1359
 #define IDC_CHECK_VIDEO                 2000
 #define IDC_CHECK_SOUND                 2001
 #define IDC_CHECK_IMAGE                 2002
@@ -885,9 +894,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        310
+#define _APS_NEXT_RESOURCE_VALUE        314
 #define _APS_NEXT_COMMAND_VALUE         33212
-#define _APS_NEXT_CONTROL_VALUE         1354
+#define _APS_NEXT_CONTROL_VALUE         1360
 #define _APS_NEXT_SYMED_VALUE           130
 #endif
 #endif

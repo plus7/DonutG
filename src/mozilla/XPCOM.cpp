@@ -54,6 +54,7 @@ XRE_NotifyProfileType XRE_NotifyProfile;
 #include "XPCOMAPI.h"
 
 #include "XPCOM.h"
+#include "HelperAppDlg.h"
 
 
 CString GetAppDataPath(){
@@ -141,6 +142,9 @@ int InitWindowCreator(){
 
 #define DONUTAPI_CID { 0xbde1eb6, 0xe1b4, 0x4ab0, { 0xa5, 0xc6, 0x94, 0xf7, 0x3e, 0xcc, 0xb3, 0xfe } } // {0BDE1EB6-E1B4-4ab0-A5C6-94F73ECCB3FE}
 
+#define NS_HELPERAPPLAUNCHERDIALOG_CID \
+     {0xf68578eb, 0x6ec2, 0x4169, {0xae, 0x19, 0x8c, 0x62, 0x43, 0xf0, 0xab, 0xe1}}
+
 NS_GENERIC_FACTORY_CONSTRUCTOR(CPromptService)
 NS_GENERIC_FACTORY_CONSTRUCTOR(nsPrintingPromptService)
 NS_GENERIC_FACTORY_CONSTRUCTOR(DonutAPI)
@@ -175,7 +179,10 @@ void RegisterAdditionalComponents(){
 	if(NS_FAILED(rv)) return;
 
     nsCOMPtr<nsIFactory> psfactory;
+
     CPromptServiceFactory* p = new CPromptServiceFactory();
+	if(!p) return;
+
     NS_ADDREF(p);
 	psfactory = p;
 
@@ -186,7 +193,10 @@ void RegisterAdditionalComponents(){
                              psfactory);
 
     nsCOMPtr<nsIFactory> ppsfactory;
+
     CPrintingPromptServiceFactory* p2 = new CPrintingPromptServiceFactory();
+	if(!p2) return;
+
     NS_ADDREF(p2);
 	ppsfactory = p2;
 
@@ -197,7 +207,10 @@ void RegisterAdditionalComponents(){
                              ppsfactory);
 
     nsCOMPtr<nsIFactory> dntfactory;
+
     DonutAPIFactory* p3 = new DonutAPIFactory();
+	if(!p3) return;
+
     NS_ADDREF(p3);
 	dntfactory = p3;
 
@@ -207,6 +220,17 @@ void RegisterAdditionalComponents(){
 							 "@tnose.net/donut/api-service;1",
                              dntfactory);
 
+    nsCOMPtr<nsIFactory> hlpfactory;
+
+	NS_NewHelperAppLauncherDlgFactory(getter_AddRefs(hlpfactory));
+	if(!hlpfactory) return;
+
+	nsCID cid4 = NS_HELPERAPPLAUNCHERDIALOG_CID; 
+	rv = cr->RegisterFactory(cid4,
+		                     "Helper App Launcher Dialog",
+							 "@mozilla.org/helperapplauncherdialog;1",
+							 hlpfactory);
+ 
    //2.0 XRE_AddStaticComponent(&kDefaultPromptModule);
 }
 
